@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Playwright MCP
+.playwright-mcp/
+
+# Screenshot files (not needed in repo)
+mkb-home-desktop-top.png
+mkb-home-desktop.png
+mkb-home-mobile-final.png
+mkb-home-mobile-top-fixed.png
+mkb-home-mobile-top.png
