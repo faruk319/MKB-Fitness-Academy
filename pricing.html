@@ -81,8 +81,10 @@
     </div>
   </header>
 
+  <!-- Sliders Section -->
+  <section class="pricing-section">
   <!-- Category Navigation -->
-  <nav class="pricing-nav" data-animate="slide-up" id="pricingNav">
+  <nav class="pricing-nav" id="pricingNav">
     <button class="pricing-nav__btn active" data-target="gym">GYM</button>
     <button class="pricing-nav__btn" data-target="swimming">SWIMMING</button>
     <button class="pricing-nav__btn" data-target="kids">KIDS ACTIVITIES</button>
@@ -90,22 +92,9 @@
     <button class="pricing-nav__btn" data-target="wellness">WELLNESS THERAPY</button>
     <button class="pricing-nav__btn" data-target="combo">COMBO PLANS</button>
   </nav>
-
-  <!-- Sliders Section -->
-  <section class="pricing-section">
-    <!-- GYM SLIDER -->
-    <div class="pricing-slider active" id="slider-gym">
-      <div class="pricing-slider__controls">
-        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
-        <div class="pricing-slider__arrows">
-          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="pricing-slider__track">
-        
-        <!-- 1 Month -->
-        <div class="pricing-card pricing-card--light">
+  <div class="pricing-slider active" id="main-slider">
+    <div class="pricing-slider__track">
+      <div data-category="gym" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Gym</div>
           <h3 class="pricing-card__name">1 Month</h3>
           <p class="pricing-card__desc">Flexible monthly gym access to get you started.</p>
@@ -123,11 +112,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Locker/changing facilities</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Basic fitness guidance</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%201%20Month%20Plan%20%28%E2%82%B91%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 3 Months -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="gym" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Gym</div>
           <h3 class="pricing-card__name">3 Months</h3>
           <p class="pricing-card__desc">Quarterly commitment for steady progress.</p>
@@ -145,11 +133,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Workout guidance</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Member benefits</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%203%20Months%20Plan%20%28%E2%82%B93%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 6 Months (Featured) -->
-        <div class="pricing-card pricing-card--dark">
+      <div data-category="gym" class="pricing-card pricing-card--dark">
           <div class="pricing-card__badge">BEST VALUE</div>
           <div class="pricing-card__category">Gym</div>
           <h3 class="pricing-card__name">6 Months</h3>
@@ -168,11 +155,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Workout guidance</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Member benefits</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%206%20Months%20Plan%20%28%E2%82%B96%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 12 Months -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="gym" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Gym</div>
           <h3 class="pricing-card__name">12 Months</h3>
           <p class="pricing-card__desc">Annual membership with maximum savings.</p>
@@ -190,26 +176,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Guest passes (2/month)</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Pause membership (15 days)</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%2012%20Months%20Plan%20%28%E2%82%B911%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-      </div>
-      <div class="pricing-slider__dots"></div>
-    </div>
-
-    <!-- SWIMMING SLIDER -->
-    <div class="pricing-slider" id="slider-swimming">
-      <div class="pricing-slider__controls">
-        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
-        <div class="pricing-slider__arrows">
-          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="pricing-slider__track">
-        
-        <!-- Weekend Batch -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="swimming" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Swimming (Without Trainer)</div>
           <h3 class="pricing-card__name">Weekend Batch</h3>
           <p class="pricing-card__desc">Perfect for weekend relaxation and casual swimming.</p>
@@ -226,11 +196,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Changing room access</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Flexible timings</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Swimming%20%28Without%20Trainer%29%20-%20Weekend%20Batch%20Plan%20%28%E2%82%B9999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 1 Month (Without Trainer) -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="swimming" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Swimming (Without Trainer)</div>
           <h3 class="pricing-card__name">1 Month</h3>
           <p class="pricing-card__desc">Regular pool access for experienced swimmers.</p>
@@ -247,11 +216,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Changing room access</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Flexible timings</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Swimming%20%28Without%20Trainer%29%20-%201%20Month%20Plan%20%28%E2%82%B91%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 3 Months (With Trainer) -->
-        <div class="pricing-card pricing-card--dark">
+      <div data-category="swimming" class="pricing-card pricing-card--dark">
           <div class="pricing-card__badge">POPULAR</div>
           <div class="pricing-card__category">Swimming (With Trainer)</div>
           <h3 class="pricing-card__name">3 Months Coaching</h3>
@@ -270,26 +238,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Skill progression</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Swimming%20%28With%20Trainer%29%20-%203%20Months%20Coaching%20Plan%20%28%E2%82%B95%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-      </div>
-      <div class="pricing-slider__dots"></div>
-    </div>
-
-    <!-- KIDS ACTIVITIES SLIDER -->
-    <div class="pricing-slider" id="slider-kids">
-      <div class="pricing-slider__controls">
-        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
-        <div class="pricing-slider__arrows">
-          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="pricing-slider__track">
-        
-        <!-- Weekend Batch -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="kids" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Kids Activities</div>
           <h3 class="pricing-card__name">Weekend Batch</h3>
           <p class="pricing-card__desc">Fun weekend activities for kids to stay active.</p>
@@ -306,11 +258,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Weekend activities</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Kids%20Activities%20-%20Weekend%20Batch%20Plan%20%28%E2%82%B91%2C199%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- Kids Swimming -->
-        <div class="pricing-card pricing-card--dark">
+      <div data-category="kids" class="pricing-card pricing-card--dark">
           <div class="pricing-card__badge">MOST LOVED</div>
           <div class="pricing-card__category">Kids Swimming</div>
           <h3 class="pricing-card__name">Monthly Swim</h3>
@@ -329,11 +280,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Confidence building</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Kids%20Swimming%20-%20Monthly%20Swim%20Plan%20%28%E2%82%B92%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- Monthly Kids Plan -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="kids" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Kids Activities</div>
           <h3 class="pricing-card__name">Monthly Fitness</h3>
           <p class="pricing-card__desc">General fitness and agility training for children.</p>
@@ -350,26 +300,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Agility and coordination</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Kids%20Activities%20-%20Monthly%20Fitness%20Plan%20%28%E2%82%B91%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-      </div>
-      <div class="pricing-slider__dots"></div>
-    </div>
-
-    <!-- PERSONAL TRAINING SLIDER -->
-    <div class="pricing-slider" id="slider-pt">
-      <div class="pricing-slider__controls">
-        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
-        <div class="pricing-slider__arrows">
-          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="pricing-slider__track">
-        
-        <!-- 1 Month -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="pt" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Personal Training</div>
           <h3 class="pricing-card__name">1 Month</h3>
           <p class="pricing-card__desc">Intensive 1-on-1 coaching to kickstart your goals.</p>
@@ -386,11 +320,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Nutrition guidance</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Personal%20Training%20-%201%20Month%20Plan%20%28%E2%82%B95%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 3 Months -->
-        <div class="pricing-card pricing-card--dark">
+      <div data-category="pt" class="pricing-card pricing-card--dark">
           <div class="pricing-card__badge">RECOMMENDED</div>
           <div class="pricing-card__category">Personal Training</div>
           <h3 class="pricing-card__name">3 Months</h3>
@@ -409,11 +342,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Advanced nutrition guidance</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Dedicated coaching</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Personal%20Training%20-%203%20Months%20Plan%20%28%E2%82%B915%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 6 Months -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="pt" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Personal Training</div>
           <h3 class="pricing-card__name">6 Months</h3>
           <p class="pricing-card__desc">Long-term coaching for lasting results.</p>
@@ -430,26 +362,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Continuous progress tracking</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Nutrition & lifestyle guidance</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Personal%20Training%20-%206%20Months%20Plan%20%28%E2%82%B929%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-      </div>
-      <div class="pricing-slider__dots"></div>
-    </div>
-
-    <!-- WELLNESS THERAPY SLIDER -->
-    <div class="pricing-slider" id="slider-wellness">
-      <div class="pricing-slider__controls">
-        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
-        <div class="pricing-slider__arrows">
-          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="pricing-slider__track">
-        
-        <!-- Single Session -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="wellness" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Wellness Therapy</div>
           <h3 class="pricing-card__name">Single Session</h3>
           <p class="pricing-card__desc">Experience a single wellness and recovery session.</p>
@@ -465,11 +381,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Recovery session (45m)</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Stretching / relaxation</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Wellness%20Therapy%20-%20Single%20Session%20Plan%20%28%E2%82%B9999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- 5 Sessions -->
-        <div class="pricing-card pricing-card--dark">
+      <div data-category="wellness" class="pricing-card pricing-card--dark">
           <div class="pricing-card__badge">POPULAR</div>
           <div class="pricing-card__category">Wellness Therapy</div>
           <h3 class="pricing-card__name">5 Sessions</h3>
@@ -487,11 +402,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized wellness guidance</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Wellness%20Therapy%20-%205%20Sessions%20Plan%20%28%E2%82%B94%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- Monthly Plan -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="wellness" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Wellness Therapy</div>
           <h3 class="pricing-card__name">Monthly Plan</h3>
           <p class="pricing-card__desc">Regular wellness integration for optimal recovery.</p>
@@ -508,26 +422,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Stretching / relaxation session</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized wellness guidance</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Wellness%20Therapy%20-%20Monthly%20Plan%20Plan%20%28%E2%82%B96%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-      </div>
-      <div class="pricing-slider__dots"></div>
-    </div>
-
-    <!-- COMBO PLANS SLIDER -->
-    <div class="pricing-slider" id="slider-combo">
-      <div class="pricing-slider__controls">
-        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
-        <div class="pricing-slider__arrows">
-          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="pricing-slider__track">
-        
-        <!-- Gym + Swimming -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="combo" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Combo Plan</div>
           <h3 class="pricing-card__name">Gym + Swimming</h3>
           <p class="pricing-card__desc">The perfect blend of strength and cardiovascular training.</p>
@@ -544,11 +442,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Locker facilities</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Basic fitness guidance</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Combo%20Plan%20-%20Gym%20%2B%20Swimming%20Plan%20%28%E2%82%B92%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- Complete Fitness Plan -->
-        <div class="pricing-card pricing-card--dark">
+      <div data-category="combo" class="pricing-card pricing-card--dark">
           <div class="pricing-card__badge">BEST VALUE</div>
           <div class="pricing-card__category">Combo Plan</div>
           <h3 class="pricing-card__name">Complete Fitness Plan</h3>
@@ -567,11 +464,10 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness sessions (2x)</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Progress tracking</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Combo%20Plan%20-%20Complete%20Fitness%20Plan%20Plan%20%28%E2%82%B99%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-        <!-- Gym + Wellness -->
-        <div class="pricing-card pricing-card--light">
+      <div data-category="combo" class="pricing-card pricing-card--light">
           <div class="pricing-card__category">Combo Plan</div>
           <h3 class="pricing-card__name">Gym + Wellness</h3>
           <p class="pricing-card__desc">Train hard and recover optimally with combined wellness.</p>
@@ -588,13 +484,12 @@
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
             <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
           </ul>
-          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Combo%20Plan%20-%20Gym%20%2B%20Wellness%20Plan%20%28%E2%82%B93%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
         </div>
 
-      </div>
-      <div class="pricing-slider__dots"></div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Features Comparison -->
   <section class="pricing-features">
