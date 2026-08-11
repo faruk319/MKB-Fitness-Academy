@@ -6,15 +6,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | MKB Fitness Academy — Ravet, Pune</title>
-  <meta name="description" content="Contact MKB Fitness Academy in Ravet, Pune. Call 9503834888 or WhatsApp +91 9370813366 for Gym & Swimming pool inquiries.">
+  <meta name="description" content="Contact MKB Fitness Academy in Ravet, Pune. Call 9503834888 or WhatsApp +91 9370813366 for Gym & Swimming pool inquiries. Form entries save directly to Google Sheets.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; script-src 'self' 'unsafe-inline';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/contact.css">
 
   <script type="application/ld+json">
   {
@@ -47,7 +48,7 @@
   }
   </script>
 </head>
-<body>
+<body class="page-contact">
 
   <!-- COMMON NAVBAR HEADER -->
   <nav class="navbar" id="navbar">
@@ -70,7 +71,7 @@
             <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
             <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
             <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="personal-trainer.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
+            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
             <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
           </div>
         </div>
@@ -89,114 +90,314 @@
   </nav>
 
   <main>
-    <!-- Compact Hero Section -->
-    <header class="hero hero--page hero--compact">
-      <div class="hero__bg">
-        <img src="images/hero-gym.jpg" alt="Contact MKB Fitness Academy Ravet">
-      </div>
-      <div class="hero__overlay"></div>
-      <div class="hero__content" data-animate>
-        <h1 class="hero__title">CONTACT & INQUIRIES</h1>
-        <p class="hero__subtitle">Send an inquiry or reach out to us directly on WhatsApp & Phone!</p>
+    <!-- 1. HERO SECTION (MATCHES HOME HERO NAVY THEME) -->
+    <header class="contact-hero">
+      <div class="container">
+        <span class="contact-kicker">Gym, Swimming & Wellness in Ravet</span>
+        <h1 class="contact-hero__title">GET IN TOUCH WITH <span>MKB FITNESS</span></h1>
+        <p class="contact-hero__subtitle">Have questions about memberships, swimming classes, personal training, or facilities? We're here to help you kickstart your fitness journey.</p>
+        <div class="contact-hero__tags">
+          <span class="contact-tag">⚡ Instant Callback</span>
+          <span class="contact-tag">📍 Ravet, Pune</span>
+          <span class="contact-tag">⏰ Open 7 Days</span>
+        </div>
       </div>
     </header>
 
-    <!-- Compact Main Contact Section -->
-    <section class="section section--compact">
+    <!-- 2. CONTACT PROMPT BANNER -->
+    <section class="contact-prompt">
+      <div class="container">
+        <div class="contact-prompt__card">
+          <div class="contact-prompt__content">
+            <h3>💬 Visiting us today or have a quick question?</h3>
+            <p>Our front desk team in Ravet is active and ready to guide you immediately!</p>
+          </div>
+          <div class="contact-prompt__actions">
+            <a href="tel:9503834888" class="btn-home-gold">📞 Call 9503834888</a>
+            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" rel="noopener" class="btn-home-blue">💬 Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MAIN FORM & CARDS SECTION -->
+    <section class="section" style="padding-top: 50px; padding-bottom: 70px;">
       <div class="container">
         <div class="contact-grid">
           
-          <!-- Inquiry Form Column -->
-          <div class="card" data-animate>
-            <h2 style="font-size: var(--fs-h4); margin-bottom: 4px;">Send Us An Inquiry</h2>
-            <p class="text-muted" style="margin-bottom: var(--space-sm); font-size: var(--fs-xs);">Inquiries are automatically saved into Google Sheets for instant callback!</p>
+          <!-- CONTACT FORM CARD -->
+          <div class="form-card" data-animate>
+            <div class="form-card__header">
+              <span class="form-card__tag">Instant Desk Logging</span>
+              <h2 class="form-card__title">Send Us An Inquiry</h2>
+              <p class="form-card__subtitle">Fill out the form below. Your request will be directly logged into our Google Sheet desk database for immediate response.</p>
+            </div>
 
             <div id="form-alert" class="form-alert"></div>
 
             <form id="contact-form" class="contact-form">
-              <div class="form-row">
+              <div class="form-grid-2">
                 <div class="form-group">
-                  <label for="name">Full Name *</label>
-                  <input type="text" id="name" name="name" placeholder="Your name" required>
+                  <label for="name">Full Name <span class="required-star">*</span></label>
+                  <div class="form-input-wrapper">
+                    <span class="form-input-icon">👤</span>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                  </div>
                 </div>
+
                 <div class="form-group">
-                  <label for="phone">Phone Number *</label>
-                  <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required>
+                  <label for="phone">Phone Number <span class="required-star">*</span></label>
+                  <div class="form-input-wrapper">
+                    <span class="form-input-icon">📞</span>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 9876543210" required>
+                  </div>
                 </div>
               </div>
 
-              <div class="form-row">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="name@example.com">
+                  <div class="form-input-wrapper">
+                    <span class="form-input-icon">📩</span>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="name@example.com">
+                  </div>
                 </div>
+
                 <div class="form-group">
-                  <label for="program">Program Interested *</label>
-                  <select id="program" name="program" required>
-                    <option value="Gym Membership">🏋️ Gym Membership</option>
-                    <option value="Swimming Classes">🏊 Swimming Classes (Kids 3+ / Adults)</option>
-                    <option value="Kids Fitness Routine">👶 Kids 10-Day Fitness Challenge</option>
-                    <option value="Personal Training">🏋️‍♂️ 1-on-1 Personal Trainer</option>
-                    <option value="Wellness Therapy">💆 Wellness Therapy (Pre-Book 10% OFF)</option>
-                    <option value="General Inquiry">❓ General Question / Visit</option>
-                  </select>
+                  <label for="program">Program Interested <span class="required-star">*</span></label>
+                  <div class="form-input-wrapper">
+                    <span class="form-input-icon">🎯</span>
+                    <select id="program" name="program" class="form-select" required>
+                      <option value="Gym Membership">🏋️ Gym Membership</option>
+                      <option value="Swimming Classes">🏊 Swimming Classes (Kids 3+ / Adults)</option>
+                      <option value="Kids Fitness Routine">👶 Kids 10-Day Fitness Challenge</option>
+                      <option value="Personal Training">🏋️‍♂️ 1-on-1 Personal Trainer</option>
+                      <option value="Wellness Therapy">💆 Wellness Therapy (Pre-Book 10% OFF)</option>
+                      <option value="General Inquiry">❓ General Question / Tour Visit</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
-              <div class="form-group" style="margin-bottom: var(--space-sm);">
-                <label for="message">Your Goal / Message</label>
-                <textarea id="message" name="message" style="min-height: 80px;" placeholder="Tell us your fitness goals or questions..."></textarea>
+              <div class="form-group">
+                <label for="message">Your Fitness Goals / Questions</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your current fitness goals, preferred batch timing, or questions..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn--whatsapp" style="width: 100%; font-size: var(--fs-body); padding: 14px 20px;">
-                🚀 Submit Inquiry & Chat on WhatsApp
+              <button type="submit" class="btn-submit-home">
+                🚀 Submit Inquiry & Connect on WhatsApp
               </button>
             </form>
           </div>
 
-          <!-- Contact Details Grid Column -->
-          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+          <!-- MODERN CONTACT CARDS COLUMN -->
+          <div class="contact-cards-column">
             
-            <div class="contact-info-grid">
-              <div class="card" data-animate style="padding: var(--space-md);">
-                <div class="card__icon" style="width: 40px; height: 40px; font-size: 1.2rem; margin-bottom: 8px;">📍</div>
-                <h3 style="font-size: var(--fs-body); margin-bottom: 4px;">Address</h3>
-                <p class="text-muted" style="font-size: var(--fs-xs); line-height: 1.4;">Sector 29, Aditya Malhar Road, Ravet, Pune - 412101</p>
-              </div>
-
-              <div class="card" data-animate style="padding: var(--space-md);">
-                <div class="card__icon" style="width: 40px; height: 40px; font-size: 1.2rem; margin-bottom: 8px;">📞</div>
-                <h3 style="font-size: var(--fs-body); margin-bottom: 4px;">Phone & WA</h3>
-                <p class="text-muted" style="font-size: var(--fs-xs); line-height: 1.4;">
-                  Call: <a href="tel:9503834888" style="color:var(--clr-gold); font-weight:700;">9503834888</a><br>
-                  WA: <a href="https://wa.me/919370813366" target="_blank" style="color:#25D366; font-weight:700;">+91 9370813366</a>
-                </p>
-              </div>
-
-              <div class="card" data-animate style="padding: var(--space-md);">
-                <div class="card__icon" style="width: 40px; height: 40px; font-size: 1.2rem; margin-bottom: 8px;">📩</div>
-                <h3 style="font-size: var(--fs-body); margin-bottom: 4px;">Email Desk</h3>
-                <p class="text-muted" style="font-size: var(--fs-xs); line-height: 1.4;">
-                  <a href="mailto:mkbfitness17@gmail.com" style="color:var(--clr-gold); font-weight:700;">mkbfitness17@gmail.com</a>
-                </p>
-              </div>
-
-              <div class="card" data-animate style="padding: var(--space-md);">
-                <div class="card__icon" style="width: 40px; height: 40px; font-size: 1.2rem; margin-bottom: 8px;">⏰</div>
-                <h3 style="font-size: var(--fs-body); margin-bottom: 4px;">Timings</h3>
-                <p class="text-muted" style="font-size: var(--fs-xs); line-height: 1.4;">
-                  6AM–12PM | 4PM–10PM<br>
-                  <span style="color:var(--clr-gold); font-weight:700;">Open All 7 Days</span>
-                </p>
+            <!-- Address Card -->
+            <div class="contact-card" data-animate>
+              <div class="contact-card__icon contact-card__icon--gold">📍</div>
+              <div class="contact-card__details">
+                <div class="contact-card__title">Academy Location</div>
+                <div class="contact-card__text">Sector 29, Aditya Malhar Road, Ravet, Pune - 412101</div>
+                <a href="https://maps.google.com/?q=MKB+Fitness+Academy+and+Swimming+Ravet+Pune" target="_blank" rel="noopener" class="contact-card__action-btn">
+                  🗺️ Get Directions
+                </a>
               </div>
             </div>
 
-            <!-- Compact Map -->
-            <div class="map-container" data-animate style="height: 200px;">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.304651938037!2d73.74804257519482!3d18.650320182468594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9f3be9dad67%3A0xe10cb2b2d018b9bd!2sMKB%20Fitness%20Academy%20and%20Swimming!5e0!3m2!1sen!2sin!4v1785564922667!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Phone Card -->
+            <div class="contact-card" data-animate>
+              <div class="contact-card__icon contact-card__icon--green">📞</div>
+              <div class="contact-card__details">
+                <div class="contact-card__title">Phone & WhatsApp</div>
+                <div class="contact-card__text">
+                  Call Desk: <strong style="color: var(--contact-navy);">9503834888</strong><br>
+                  WhatsApp: <strong style="color: #25D366;">+91 9370813366</strong>
+                </div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <a href="tel:9503834888" class="contact-card__action-btn">📞 Call Now</a>
+                  <button class="contact-card__action-btn" data-copy="9503834888">📋 Copy Number</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card" data-animate>
+              <div class="contact-card__icon">📩</div>
+              <div class="contact-card__details">
+                <div class="contact-card__title">Official Email Desk</div>
+                <div class="contact-card__text"><strong style="color: var(--contact-navy);">mkbfitness17@gmail.com</strong></div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <a href="mailto:mkbfitness17@gmail.com" class="contact-card__action-btn">✉️ Write Mail</a>
+                  <button class="contact-card__action-btn" data-copy="mkbfitness17@gmail.com">📋 Copy Email</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Working Hours Card -->
+            <div class="contact-card" data-animate>
+              <div class="contact-card__icon contact-card__icon--gold">⏰</div>
+              <div class="contact-card__details">
+                <div class="contact-card__title">
+                  Working Hours
+                  <span id="live-status-badge" class="status-badge status-badge--open">
+                    <span class="status-dot"></span> Open Now
+                  </span>
+                </div>
+                <div class="contact-card__text">
+                  🌅 Morning: <strong>6:00 AM – 12:00 PM</strong><br>
+                  🌆 Evening: <strong>4:00 PM – 10:00 PM</strong><br>
+                  📅 <span style="color: var(--contact-gold); font-weight: 700;">Open All 7 Days (Mon - Sun)</span>
+                </div>
+              </div>
             </div>
 
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. GOOGLE MAP INTEGRATION SECTION -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="map-section-wrapper" data-animate>
+          <div class="map-header-bar">
+            <div class="map-header-title">
+              <span>📍 MKB Fitness Academy Location Map</span>
+              <span style="font-size: var(--fs-xs); color: var(--contact-muted); font-weight: 400;">Sector 29, Aditya Malhar Road, Ravet, Pune</span>
+            </div>
+            <a href="https://maps.google.com/?q=MKB+Fitness+Academy+and+Swimming+Ravet+Pune" target="_blank" rel="noopener" class="btn-home-blue" style="padding: 8px 16px; font-size: 0.85rem;">
+              🗺️ Open in Google Maps
+            </a>
+          </div>
+          <div class="map-frame-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.304651938037!2d73.74804257519482!3d18.650320182468594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9f3be9dad67%3A0xe10cb2b2d018b9bd!2sMKB%20Fitness%20Academy%20and%20Swimming!5e0!3m2!1sen!2sin!4v1785564922667!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="MKB Fitness Academy Location Google Map"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-header" data-animate>
+          <span class="premium-kicker">Got Questions?</span>
+          <h2>FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="text-muted">Find quick answers to common questions regarding visiting, memberships, and swimming pool routines.</p>
+        </div>
+
+        <div class="faq-grid">
+          
+          <div class="faq-item faq-item--active" data-animate>
+            <button class="faq-trigger" aria-expanded="true">
+              <span>What are the exact operating timings of MKB Fitness Academy?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              We operate in two convenient daily slots, 7 days a week:<br>
+              <strong>Morning Shift:</strong> 6:00 AM – 12:00 PM<br>
+              <strong>Evening Shift:</strong> 4:00 PM – 10:00 PM<br>
+              Both our Gym floor and Swimming Pool are active during these hours.
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I visit the academy for a facility walkthrough or free trial?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              Yes! You are welcome to visit our Ravet campus anytime during operational hours for a complete walkthrough of our strength gym, cardio floor, and swimming pool. You can also request a free 1-day pass by submitting the inquiry form above.
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How quickly will someone contact me after I submit the inquiry form?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              Your inquiry is saved instantly in our Google Sheet database. Our front desk manager will contact you via Phone or WhatsApp within <strong>15 to 30 minutes</strong> during working hours.
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What swimming pool batches and age groups do you accommodate?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              We offer certified swimming coaching for kids (ages 3+) as well as adult beginner, intermediate, and lap-swimming batches. Ladies-only swimming slots are also available with female safety coaches.
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Are certified personal trainers available on-site?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              Yes, we have certified male and female personal trainers available for customized 1-on-1 weight loss, muscle gain, transformation, and sports conditioning programs.
+            </div>
+          </div>
+
+          <div class="faq-item" data-animate>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Where exactly is MKB Fitness Academy located in Ravet?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              We are conveniently located at <strong>Sector 29, Aditya Malhar Road, Ravet, Pune - 412101</strong>, easily accessible from Akurdi, Pradhikaran, Nigdi, and Kiwale. Ample parking is available for two-wheelers and four-wheelers.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SOCIAL MEDIA CONNECT SECTION -->
+    <section class="social-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 36px;" data-animate>
+          <span class="contact-kicker" style="color: var(--contact-blue);">Connect With Us</span>
+          <h3 style="font-size: var(--fs-h3); font-family: var(--ff-heading); color: var(--contact-navy); margin-bottom: 6px;">OFFICIAL SOCIAL CHANNELS</h3>
+          <p class="text-muted" style="font-size: var(--fs-small);">Follow our official channels for daily workouts, swimming tips, and academy highlights.</p>
+        </div>
+
+        <div class="social-grid">
+          
+          <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="social-card" data-animate>
+            <div class="social-card__icon-box social-card__icon-box--ig">📸</div>
+            <div>
+              <div class="social-card__title">Instagram</div>
+              <div class="social-card__sub">@mkb_fitness_academy_</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" rel="noopener" class="social-card" data-animate>
+            <div class="social-card__icon-box social-card__icon-box--wa">💬</div>
+            <div>
+              <div class="social-card__title">WhatsApp Direct</div>
+              <div class="social-card__sub">+91 9370813366</div>
+            </div>
+          </a>
+
+          <a href="https://maps.google.com/?q=MKB+Fitness+Academy+and+Swimming+Ravet+Pune" target="_blank" rel="noopener" class="social-card" data-animate>
+            <div class="social-card__icon-box social-card__icon-box--maps">⭐</div>
+            <div>
+              <div class="social-card__title">Google Rating</div>
+              <div class="social-card__sub">4.9 ★ (43+ Reviews)</div>
+            </div>
+          </a>
+
+          <a href="tel:9503834888" class="social-card" data-animate>
+            <div class="social-card__icon-box social-card__icon-box--phone">📞</div>
+            <div>
+              <div class="social-card__title">Direct Call Desk</div>
+              <div class="social-card__sub">9503834888</div>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -237,15 +438,15 @@
         <div>
           <h4 class="footer__heading">Contact Us</h4>
           <p class="footer__link">📍 Sector 29, Aditya Malhar Road, Ravet, Pune-412101</p>
-          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--clr-gold);">9503834888</a></p>
+          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--contact-gold);">9503834888</a></p>
           <p class="footer__link">📱 <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" style="color:#25D366;">+91 9370813366</a></p>
-          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--clr-gold);">mkbfitness17@gmail.com</a></p>
+          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--contact-gold);">mkbfitness17@gmail.com</a></p>
         </div>
         <div>
           <h4 class="footer__heading">Gym Timings</h4>
           <p class="footer__link">🌅 Morning: 6:00 AM – 12:00 PM</p>
           <p class="footer__link"><ctrl42> Evening: 4:00 PM – 10:00 PM</p>
-          <p class="footer__link" style="color:var(--clr-gold); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
+          <p class="footer__link" style="color:var(--contact-gold); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
         </div>
       </div>
       <div class="footer__bottom">
@@ -255,7 +456,10 @@
     </div>
   </footer>
 
-  <!-- Floating Buttons -->
+  <!-- Floating Toast Notification -->
+  <div id="toast-copy" class="toast-copy"></div>
+
+  <!-- Floating WhatsApp & Back to Top Buttons -->
   <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     <span class="whatsapp-float__tooltip">Chat with us!</span>

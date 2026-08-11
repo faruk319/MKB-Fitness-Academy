@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/gym.css" />
 
   <script type="application/ld+json">
   {
@@ -57,7 +58,7 @@
   }
   </script>
 </head>
-<body>
+<body class="page-gym">
 
   <!-- Header -->
   <nav class="navbar" id="navbar">
@@ -79,7 +80,7 @@
             <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
             <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
             <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="personal-trainer.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
+            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
             <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
           </div>
         </div>
@@ -97,199 +98,414 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero hero--page" style="background-image: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), url('images/hero-gym.jpg');">
-    <div class="hero__content" data-animate>
-      <span class="hero__badge">🏋️ PREMIUM GYM FACILITY</span>
-      <h1 class="hero__title">STATE-OF-THE-ART GYM IN RAVET, PUNE</h1>
-      <p class="hero__subtitle">Train with world-class strength & cardio equipment, certified personal trainers, and customized fitness plans at MKB Fitness Academy.</p>
-      <div class="hero__buttons">
-        <a href="pricing.html" class="btn btn--primary">Join Gym Now</a>
-        <a href="#facilities" class="btn btn--secondary">Explore Facilities</a>
-      </div>
-    </div>
-  </header>
-
   <main>
-    <!-- Facilities Section -->
-    <section id="facilities" class="section section--dark">
-      <div class="container">
-        <div class="section-header" data-animate>
-          <span class="section-header__label">World-Class Equipment</span>
-          <h2 class="section-header__title">Our Gym Facilities & Zones</h2>
+    <!-- 1. Hero Section -->
+    <header class="gym-hero">
+      <div class="gym-hero__bg"></div>
+      <div class="gym-hero__overlay"></div>
+      <div class="gym-hero__stripes"></div>
+      
+      <div class="gym-hero__container">
+        <div class="gym-hero__content" data-animate>
+          <span class="gym-hero__kicker">PREMIUM GYM FACILITY • RAVET, PUNE</span>
+          <h1 class="gym-hero__title">UNLEASH YOUR STRENGTH</h1>
+          <p class="gym-hero__subtitle">Transform your body and mind in Pune's most elite fitness environment. World-class equipment, certified coaches, and an atmosphere built for champions.</p>
+          <div class="gym-hero__actions">
+            <a href="#pricing" class="btn btn--gold">Join Now</a>
+            <a href="#overview" class="btn btn--glass">Explore Facility</a>
+          </div>
         </div>
-        
-        <div class="feature-grid">
-          <div class="feature-item" data-animate>
-            <div class="feature-item__icon">🏋️</div>
-            <h3 class="feature-item__title">Strength Training Zone</h3>
-            <p class="feature-item__text">Free weights, Olympic barbells, heavy dumbbells, cable crossovers, and specialized strength machines.</p>
+
+        <div class="gym-hero__panel glass-panel" data-animate>
+          <div class="gym-hero__panel-title">Today's Operating Hours</div>
+          <div class="gym-hero__timing">
+            <div class="gym-hero__timing-icon">☀️</div>
+            <div class="gym-hero__timing-text">
+              <p>6:00 AM – 12:00 PM</p>
+              <span>Morning Session</span>
+            </div>
           </div>
-          
-          <div class="feature-item" data-animate>
-            <div class="feature-item__icon">🫀</div>
-            <h3 class="feature-item__title">Cardio Zone</h3>
-            <p class="feature-item__text">High-performance motorized treadmills, cross trainers, spin bikes, and rowing machines for endurance building.</p>
+          <div class="gym-hero__timing">
+            <div class="gym-hero__timing-icon">🌙</div>
+            <div class="gym-hero__timing-text">
+              <p>4:00 PM – 10:00 PM</p>
+              <span>Evening Session</span>
+            </div>
           </div>
-          
-          <div class="feature-item" data-animate>
-            <div class="feature-item__icon">🤸</div>
-            <h3 class="feature-item__title">Functional Fitness Area</h3>
-            <p class="feature-item__text">Kettlebells, battle ropes, TRX suspension trainers, plyometric jump boxes, and agility equipment.</p>
+        </div>
+      </div>
+
+      <div class="gym-hero__badges" data-animate>
+        <div class="gym-hero__badges-grid">
+          <div class="gym-badge glass-panel">
+            <span class="gym-badge__num">500+</span>
+            <span class="gym-badge__text">Active<br>Members</span>
           </div>
-          
-          <div class="feature-item" data-animate>
-            <div class="feature-item__icon">🧘</div>
-            <h3 class="feature-item__title">Yoga & Stretching Studio</h3>
-            <p class="feature-item__text">A dedicated peaceful area equipped with mats and blocks for warm-up, flexibility, and mind-body wellness sessions.</p>
+          <div class="gym-badge glass-panel">
+            <span class="gym-badge__num">10+</span>
+            <span class="gym-badge__text">Certified<br>Coaches</span>
           </div>
-          
-          <div class="feature-item" data-animate>
-            <div class="feature-item__icon">💃</div>
-            <h3 class="feature-item__title">Zumba & Dance Fitness</h3>
-            <p class="feature-item__text">High-energy group dance workouts led by expert instructors for maximum calorie burning & fun.</p>
+          <div class="gym-badge glass-panel">
+            <span class="gym-badge__num">6</span>
+            <span class="gym-badge__text">Workout<br>Zones</span>
           </div>
-          
-          <div class="feature-item" data-animate>
-            <div class="feature-item__icon">🏃</div>
-            <h3 class="feature-item__title">Weight Management Programs</h3>
-            <p class="feature-item__text">Customized weight loss, muscle gain & fat transformation plans guided by expert fitness consultants.</p>
+          <div class="gym-badge glass-panel">
+            <span class="gym-badge__num">7</span>
+            <span class="gym-badge__text">Days A<br>Week</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Gym Overview Section -->
+    <section id="overview" class="section gym-overview">
+      <div class="container">
+        <div class="gym-overview__grid">
+          <div class="gym-overview__img-wrapper" data-animate>
+            <img src="images/hero-gym.jpg" alt="MKB Gym Overview" class="gym-overview__img">
+          </div>
+          <div class="gym-overview__content" data-animate>
+            <span class="section-header__kicker">About Our Facility</span>
+            <h2 class="section-header__title">Elevate Your Fitness Experience</h2>
+            <p>At MKB Fitness Academy, we provide a spacious, well-ventilated, and meticulously maintained environment. Whether you are a beginner or a seasoned athlete, our premium setup is designed to help you achieve your peak physical condition.</p>
+            
+            <div class="gym-overview__features">
+              <div class="gym-overview__feature">
+                <span class="gym-overview__num">01</span>
+                <div class="gym-overview__feature-text">
+                  <h3>World-Class Equipment</h3>
+                  <p>Train with industry-leading biometric machines, free weights, and cardio equipment that ensures optimal performance and safety.</p>
+                </div>
+              </div>
+              <div class="gym-overview__feature">
+                <span class="gym-overview__num">02</span>
+                <div class="gym-overview__feature-text">
+                  <h3>Expert Guidance</h3>
+                  <p>Our certified trainers provide continuous support, form correction, and motivation to keep you on track towards your goals.</p>
+                </div>
+              </div>
+              <div class="gym-overview__feature">
+                <span class="gym-overview__num">03</span>
+                <div class="gym-overview__feature-text">
+                  <h3>Results-Driven Programs</h3>
+                  <p>We don't just offer equipment; we offer a complete roadmap to transformation with personalized workout and nutrition plans.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="section">
+    <!-- 3. Equipment & Zones Gallery -->
+    <section class="section gym-zones section--dark">
       <div class="container">
         <div class="section-header" data-animate>
-          <span class="section-header__label">Monsoon Offer — Flat 20% OFF</span>
-          <h2 class="section-header__title">Gym Membership Pricing Plans</h2>
+          <span class="section-header__kicker">Specialized Areas</span>
+          <h2 class="section-header__title">Explore Our 6 Training Zones</h2>
+          <p>A comprehensively designed space for every type of workout</p>
         </div>
         
-        <div class="pricing-grid">
-          <!-- Plan 1 -->
-          <div class="pricing-card" data-animate>
-            <h3 class="pricing-card__title">1 Month</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__old-price">₹1,999</span>
-              <span class="pricing-card__new-price">₹1,199<span>/mo</span></span>
+        <div class="gym-zones__grid">
+          <div class="gym-zone-card glass-panel" data-animate>
+            <div class="gym-zone-card__icon">🏋️</div>
+            <h3>Strength Training Zone</h3>
+            <p>Equipped with Olympic barbells, heavy dumbbells, cable crossovers, and specialized strength machines for raw power.</p>
+          </div>
+          <div class="gym-zone-card glass-panel" data-animate>
+            <div class="gym-zone-card__icon">🫀</div>
+            <h3>Cardio Zone</h3>
+            <p>High-performance motorized treadmills, cross trainers, spin bikes, and rowing machines for endurance building.</p>
+          </div>
+          <div class="gym-zone-card glass-panel" data-animate>
+            <div class="gym-zone-card__icon">🤸</div>
+            <h3>Functional Fitness Area</h3>
+            <p>Kettlebells, battle ropes, TRX suspension trainers, plyometric jump boxes, and agility equipment.</p>
+          </div>
+          <div class="gym-zone-card glass-panel" data-animate>
+            <div class="gym-zone-card__icon">🧘</div>
+            <h3>Yoga & Stretching Studio</h3>
+            <p>A dedicated peaceful area equipped with mats and blocks for warm-up, flexibility, and mind-body wellness sessions.</p>
+          </div>
+          <div class="gym-zone-card glass-panel" data-animate>
+            <div class="gym-zone-card__icon">💃</div>
+            <h3>Zumba & Dance Fitness</h3>
+            <p>High-energy group dance workouts led by expert instructors for maximum calorie burning and fun.</p>
+          </div>
+          <div class="gym-zone-card glass-panel" data-animate>
+            <div class="gym-zone-card__icon">🏃</div>
+            <h3>Weight Management</h3>
+            <p>Customized weight loss, muscle gain and fat transformation plans guided by expert fitness consultants.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Training Programs -->
+    <section class="section gym-programs">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-header__kicker">Achieve Your Goals</span>
+          <h2 class="section-header__title">Our Training Programs</h2>
+        </div>
+        
+        <div class="gym-programs__grid">
+          <div class="gym-program-card" data-animate>
+            <div class="gym-program-card__icon">💪</div>
+            <h3>Strength Training</h3>
+            <p>Build raw power and muscle mass with heavy compound movements.</p>
+          </div>
+          <div class="gym-program-card" data-animate>
+            <div class="gym-program-card__icon">🔥</div>
+            <h3>Weight Loss</h3>
+            <p>Burn fat with structured HIIT and high-intensity cardio circuits.</p>
+          </div>
+          <div class="gym-program-card" data-animate>
+            <div class="gym-program-card__icon">🏗️</div>
+            <h3>Muscle Building</h3>
+            <p>Hypertrophy-focused progressive overload to sculpt your physique.</p>
+          </div>
+          <div class="gym-program-card" data-animate>
+            <div class="gym-program-card__icon">⚡</div>
+            <h3>CrossFit</h3>
+            <p>Functional high-intensity varied workouts for overall athleticism.</p>
+          </div>
+          <div class="gym-program-card" data-animate>
+            <div class="gym-program-card__icon">🫀</div>
+            <h3>HIIT</h3>
+            <p>Maximum calorie burn in minimum time with intense intervals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Benefits Section -->
+    <section class="section gym-benefits">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-header__kicker">Why Choose Us</span>
+          <h2 class="section-header__title">The MKB Advantage</h2>
+        </div>
+        
+        <div class="gym-benefits__grid">
+          <div class="gym-benefit-item" data-animate>
+            <div class="gym-benefit-item__icon">✓</div>
+            <div class="gym-benefit-item__content">
+              <h3>Certified Trainers</h3>
+              <p>Our team holds 5+ years of professional fitness coaching experience.</p>
             </div>
-            <ul class="pricing-card__features">
-              <li>✓ Full gym access</li>
-              <li>✓ Cardio + Strength equipment</li>
-              <li>✓ Locker facility</li>
-              <li>✓ All equipment usage</li>
-              <li>✓ Free fitness assessment</li>
+          </div>
+          <div class="gym-benefit-item" data-animate>
+            <div class="gym-benefit-item__icon">✓</div>
+            <div class="gym-benefit-item__content">
+              <h3>Premium Hygiene</h3>
+              <p>A clean, spacious, and well-ventilated gym ensuring a safe workout environment.</p>
+            </div>
+          </div>
+          <div class="gym-benefit-item" data-animate>
+            <div class="gym-benefit-item__icon">✓</div>
+            <div class="gym-benefit-item__content">
+              <h3>Zoned Layout</h3>
+              <p>Separate, dedicated zones for cardio, strength, and functional training.</p>
+            </div>
+          </div>
+          <div class="gym-benefit-item" data-animate>
+            <div class="gym-benefit-item__icon">✓</div>
+            <div class="gym-benefit-item__content">
+              <h3>Free Body Analysis</h3>
+              <p>Complimentary body composition analysis for all new members.</p>
+            </div>
+          </div>
+          <div class="gym-benefit-item" data-animate>
+            <div class="gym-benefit-item__icon">✓</div>
+            <div class="gym-benefit-item__content">
+              <h3>Customized Plans</h3>
+              <p>Personalized workout routines based on your unique body and goals.</p>
+            </div>
+          </div>
+          <div class="gym-benefit-item" data-animate>
+            <div class="gym-benefit-item__icon">✓</div>
+            <div class="gym-benefit-item__content">
+              <h3>Flexible Timings</h3>
+              <p>Open 7 days a week with convenient morning and evening shifts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Animated Statistics -->
+    <section class="section gym-stats section--dark">
+      <div class="container">
+        <div class="gym-stats__grid">
+          <div class="gym-stat-box glass-panel" data-animate>
+            <span class="gym-stat-box__num">500+</span>
+            <span class="gym-stat-box__text">Active Members</span>
+          </div>
+          <div class="gym-stat-box glass-panel" data-animate>
+            <span class="gym-stat-box__num">50+</span>
+            <span class="gym-stat-box__text">Equipment Pieces</span>
+          </div>
+          <div class="gym-stat-box glass-panel" data-animate>
+            <span class="gym-stat-box__num">10+</span>
+            <span class="gym-stat-box__text">Certified Coaches</span>
+          </div>
+          <div class="gym-stat-box glass-panel" data-animate>
+            <span class="gym-stat-box__num">6+</span>
+            <span class="gym-stat-box__text">Years Experience</span>
+          </div>
+          <div class="gym-stat-box glass-panel" data-animate>
+            <span class="gym-stat-box__num">4.9★</span>
+            <span class="gym-stat-box__text">Google Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Membership Pricing -->
+    <section id="pricing" class="section gym-pricing section--dark">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-header__kicker">Monsoon Offer — Flat 20% OFF</span>
+          <h2 class="section-header__title">Gym Membership Plans</h2>
+        </div>
+        
+        <div class="gym-pricing__grid">
+          <!-- Plan 1 -->
+          <div class="gym-price-card glass-panel" data-animate>
+            <h3>1 Month</h3>
+            <div class="gym-price-card__amount">
+              <span class="gym-price-card__old">₹1,999</span>
+              <span class="gym-price-card__new">₹1,199</span>
+            </div>
+            <ul class="gym-price-card__features">
+              <li>Full gym access</li>
+              <li>Cardio + Strength equipment</li>
+              <li>Locker facility</li>
+              <li>All equipment usage</li>
+              <li>Free fitness assessment</li>
             </ul>
-            <p class="pricing-card__note"><em>ℹ️ Personal trainer charge separate</em></p>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%201%20Month%20Gym%20Membership%20(₹1199)." target="_blank" rel="noopener noreferrer" class="btn btn--outline">Enquire Now</a>
+            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
+            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%201%20Month%20Gym%20Membership%20(₹1199)." target="_blank" rel="noopener noreferrer" class="btn btn--glass">Enquire Now</a>
           </div>
 
           <!-- Plan 2 -->
-          <div class="pricing-card" data-animate>
-            <div class="pricing-card__badge">SAVE ₹2,200</div>
-            <h3 class="pricing-card__title">3 Months</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__old-price">₹4,999</span>
-              <span class="pricing-card__new-price">₹2,799</span>
+          <div class="gym-price-card glass-panel" data-animate>
+            <div class="gym-price-card__badge">SAVE ₹2,200</div>
+            <h3>3 Months</h3>
+            <div class="gym-price-card__amount">
+              <span class="gym-price-card__old">₹4,999</span>
+              <span class="gym-price-card__new">₹2,799</span>
             </div>
-            <ul class="pricing-card__features">
-              <li>✓ Full gym access</li>
-              <li>✓ Cardio + Strength equipment</li>
-              <li>✓ Locker facility</li>
-              <li>✓ All equipment usage</li>
-              <li>✓ Free fitness assessment</li>
+            <ul class="gym-price-card__features">
+              <li>Full gym access</li>
+              <li>Cardio + Strength equipment</li>
+              <li>Locker facility</li>
+              <li>All equipment usage</li>
+              <li>Free fitness assessment</li>
             </ul>
-            <p class="pricing-card__note"><em>ℹ️ Personal trainer charge separate</em></p>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%203%20Months%20Gym%20Membership%20(₹2799)." target="_blank" rel="noopener noreferrer" class="btn btn--outline">Enquire Now</a>
+            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
+            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%203%20Months%20Gym%20Membership%20(₹2799)." target="_blank" rel="noopener noreferrer" class="btn btn--glass">Enquire Now</a>
           </div>
 
           <!-- Plan 3 -->
-          <div class="pricing-card pricing-card--popular" data-animate>
-            <div class="pricing-card__badge">MOST POPULAR — SAVE ₹5,200</div>
-            <h3 class="pricing-card__title">6 Months</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__old-price">₹9,999</span>
-              <span class="pricing-card__new-price">₹4,799</span>
+          <div class="gym-price-card gym-price-card--popular glass-panel" data-animate>
+            <div class="gym-price-card__badge">MOST POPULAR — SAVE ₹5,200</div>
+            <h3>6 Months</h3>
+            <div class="gym-price-card__amount">
+              <span class="gym-price-card__old">₹9,999</span>
+              <span class="gym-price-card__new">₹4,799</span>
             </div>
-            <ul class="pricing-card__features">
-              <li>✓ Full gym access</li>
-              <li>✓ Cardio + Strength equipment</li>
-              <li>✓ Locker facility</li>
-              <li>✓ All equipment usage</li>
-              <li>✓ Free fitness assessment</li>
+            <ul class="gym-price-card__features">
+              <li>Full gym access</li>
+              <li>Cardio + Strength equipment</li>
+              <li>Locker facility</li>
+              <li>All equipment usage</li>
+              <li>Free fitness assessment</li>
             </ul>
-            <p class="pricing-card__note"><em>ℹ️ Personal trainer charge separate</em></p>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%206%20Months%20Gym%20Membership%20(₹4799)." target="_blank" rel="noopener noreferrer" class="btn btn--primary">Get Started</a>
+            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
+            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%206%20Months%20Gym%20Membership%20(₹4799)." target="_blank" rel="noopener noreferrer" class="btn btn--gold">Get Started</a>
           </div>
 
           <!-- Plan 4 -->
-          <div class="pricing-card" data-animate>
-            <div class="pricing-card__badge">BEST VALUE — SAVE ₹11,280</div>
-            <h3 class="pricing-card__title">12 Months</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__old-price">₹19,999</span>
-              <span class="pricing-card__new-price">₹8,719</span>
+          <div class="gym-price-card glass-panel" data-animate>
+            <div class="gym-price-card__badge">BEST VALUE — SAVE ₹11,280</div>
+            <h3>12 Months</h3>
+            <div class="gym-price-card__amount">
+              <span class="gym-price-card__old">₹19,999</span>
+              <span class="gym-price-card__new">₹8,719</span>
             </div>
-            <ul class="pricing-card__features">
-              <li>✓ Full gym access</li>
-              <li>✓ Cardio + Strength equipment</li>
-              <li>✓ Locker facility</li>
-              <li>✓ All equipment usage</li>
-              <li>✓ Free fitness assessment</li>
+            <ul class="gym-price-card__features">
+              <li>Full gym access</li>
+              <li>Cardio + Strength equipment</li>
+              <li>Locker facility</li>
+              <li>All equipment usage</li>
+              <li>Free fitness assessment</li>
             </ul>
-            <p class="pricing-card__note"><em>ℹ️ Personal trainer charge separate</em></p>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%2012%20Months%20Gym%20Membership%20(₹8719)." target="_blank" rel="noopener noreferrer" class="btn btn--outline">Enquire Now</a>
+            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
+            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%2012%20Months%20Gym%20Membership%20(₹8719)." target="_blank" rel="noopener noreferrer" class="btn btn--glass">Enquire Now</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PT Banner -->
-    <section class="section section--dark">
+    <!-- 8. Personal Trainer Banner -->
+    <section class="section gym-pt-banner">
       <div class="container">
-        <div class="offer-banner" data-animate>
-          <div class="offer-banner__content">
-            <h2 class="offer-banner__title">Need A Personal Trainer?</h2>
-            <p class="offer-banner__text">Accelerate your transformation with 1-on-1 dedicated coaching, form correction, and personalized diet plans. Personal trainer charges are separate from general membership.</p>
+        <div class="gym-pt-wrapper" data-animate>
+          <div class="gym-pt-content">
+            <h2>Need A Personal Trainer?</h2>
+            <p>Accelerate your transformation with 1-on-1 dedicated coaching, strict form correction, and personalized diet plans tailored just for you. Note: Personal trainer charges are separate from the general membership.</p>
           </div>
-          <div class="offer-banner__action">
-            <a href="personal-trainer.html" class="btn btn--primary">Explore Personal Training</a>
+          <div class="gym-pt-action">
+            <a href="trainers.html" class="btn btn--gold">Explore Personal Training</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Timings Section -->
-    <section class="section">
+    <!-- 9. Gym Timings -->
+    <section class="section gym-timing-section">
       <div class="container">
         <div class="section-header" data-animate>
-          <span class="section-header__label">Operating Hours</span>
-          <h2 class="section-header__title">Gym Timings</h2>
+          <span class="section-header__kicker">Operating Hours</span>
+          <h2 class="section-header__title">When To Visit Us</h2>
         </div>
         
-        <div class="timings" data-animate>
-          <div class="timings__item">
-            <div class="timings__icon">☀️</div>
-            <h3 class="timings__title">Morning Session</h3>
-            <p class="timings__time">6:00 AM – 12:00 PM</p>
+        <div class="gym-timings__grid">
+          <div class="gym-timing-card" data-animate>
+            <div class="gym-timing-card__icon">☀️</div>
+            <h3>Morning Session</h3>
+            <p>6:00 AM – 12:00 PM</p>
           </div>
           
-          <div class="timings__item">
-            <div class="timings__icon">🌙</div>
-            <h3 class="timings__title">Evening Session</h3>
-            <p class="timings__time">4:00 PM – 10:00 PM</p>
+          <div class="gym-timing-card" data-animate>
+            <div class="gym-timing-card__icon">🌙</div>
+            <h3>Evening Session</h3>
+            <p>4:00 PM – 10:00 PM</p>
           </div>
           
-          <div class="timings__item">
-            <div class="timings__icon">📅</div>
-            <h3 class="timings__title">Open Days</h3>
-            <p class="timings__time">Monday to Sunday<br><small>(Open 7 Days a week)</small></p>
+          <div class="gym-timing-card" data-animate>
+            <div class="gym-timing-card__icon">📅</div>
+            <h3>Open Days</h3>
+            <p>Monday to Sunday<small>(Open 7 Days a week)</small></p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- 10. CTA Banner -->
+    <section class="section gym-cta">
+      <div class="container" data-animate>
+        <h2>Start Your Fitness Journey Today</h2>
+        <p>Join MKB Fitness Academy and take the first step towards a stronger, healthier version of yourself.</p>
+        <div class="gym-cta__actions">
+          <a href="#pricing" class="btn btn--gold">View Pricing</a>
+          <a href="contact.html" class="btn btn--glass">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -317,7 +533,7 @@
           <a href="gym.html" class="footer__link">Gym Facility</a>
           <a href="swimming.html" class="footer__link">Swimming Pool</a>
           <a href="kids.html" class="footer__link">Kids Activities</a>
-          <a href="personal-trainer.html" class="footer__link">Personal Trainer</a>
+          <a href="trainers.html" class="footer__link">Personal Trainer</a>
           <a href="wellness.html" class="footer__link">Wellness Therapy</a>
           <a href="pricing.html" class="footer__link">Pricing Plans</a>
           <a href="trainers.html" class="footer__link">Our Trainers</a>

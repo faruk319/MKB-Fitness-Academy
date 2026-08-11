@@ -141,25 +141,151 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ---------- 6. PRICING TABS ---------- */
+  /* ---------- 6. PRICING TABS & HASH DEEP LINKING ---------- */
   const pricingTabs = document.querySelectorAll('.pricing-tab');
   const pricingPanels = document.querySelectorAll('.pricing-panel');
 
   if (pricingTabs.length > 0 && pricingPanels.length > 0) {
+    const activateTab = (targetId) => {
+      const activeTab = Array.from(pricingTabs).find(t => t.dataset.tab === targetId);
+      if (!activeTab) return;
+
+      pricingTabs.forEach(t => t.classList.remove('pricing-tab--active'));
+      activeTab.classList.add('pricing-tab--active');
+
+      pricingPanels.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.classList.add('pricing-panel--active');
+        } else {
+          panel.classList.remove('pricing-panel--active');
+        }
+      });
+    };
+
     pricingTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.dataset.tab;
+        activateTab(target);
+        if (history.pushState) {
+          history.pushState(null, null, '#' + target);
+        } else {
+          location.hash = target;
+        }
+      });
+    });
 
-        // Update tabs
-        pricingTabs.forEach(t => t.classList.remove('pricing-tab--active'));
-        tab.classList.add('pricing-tab--active');
+    // Check URL hash on page load
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      activateTab(hash);
+    }
+  }
 
-        // Update panels
-        pricingPanels.forEach(panel => {
-          panel.classList.remove('pricing-panel--active');
-          if (panel.id === target) {
-            panel.classList.add('pricing-panel--active');
+
+  /* ---------- 6.2. PRICING CARDS SLIDER CONTROL ---------- */
+  const sliderContainers = document.querySelectorAll('.pricing-slider-container');
+  sliderContainers.forEach(container => {
+    const track = container.querySelector('.pricing-slider-track');
+    const prevBtn = container.querySelector('.slider-btn--prev');
+    const nextBtn = container.querySelector('.slider-btn--next');
+
+    if (track) {
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          const card = track.querySelector('.pricing-card');
+          const cardWidth = card ? card.offsetWidth + 28 : 320;
+          track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const card = track.querySelector('.pricing-card');
+          const cardWidth = card ? card.offsetWidth + 28 : 320;
+          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+      }
+    }
+  });
+
+
+  /* ---------- 6.5. FAQ ACCORDION INTERACTIVITY ---------- */
+  const faqTriggers = document.querySelectorAll('.faq-trigger, .faq-question');
+  if (faqTriggers.length > 0) {
+    faqTriggers.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const faqItem = btn.closest('.faq-item');
+        if (!faqItem) return;
+
+        const isCurrentlyActive = faqItem.classList.contains('faq-item--active');
+
+        // Close all other FAQ items for a clean single-open accordion feel
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('faq-item--active');
+          const itemBtn = item.querySelector('.faq-trigger, .faq-question');
+          if (itemBtn) itemBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (!isCurrentlyActive) {
+          faqItem.classList.add('faq-item--active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
+
+
+  /* ---------- 6.6. LIVE BUSINESS HOURS CALCULATOR ---------- */
+  const statusBadge = document.getElementById('live-status-badge');
+  if (statusBadge) {
+    const updateBusinessStatus = () => {
+      // Get current IST time
+      const now = new Date();
+      const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: 'numeric', minute: 'numeric' };
+      const istString = now.toLocaleTimeString('en-US', options);
+      const parts = istString.split(':');
+      const hour = parseInt(parts[0], 10);
+      const minute = parseInt(parts[1], 10);
+      const timeInMinutes = hour * 60 + minute;
+
+      // Morning slot: 6:00 AM (360 min) to 12:00 PM (720 min)
+      // Evening slot: 4:00 PM (960 min) to 10:00 PM (1320 min)
+      const isMorningSlot = timeInMinutes >= 360 && timeInMinutes < 720;
+      const isEveningSlot = timeInMinutes >= 960 && timeInMinutes < 1320;
+
+      if (isMorningSlot || isEveningSlot) {
+        statusBadge.className = 'status-badge status-badge--open';
+        statusBadge.innerHTML = '<span class="status-dot"></span> Open Now';
+      } else {
+        statusBadge.className = 'status-badge status-badge--closed';
+        statusBadge.innerHTML = '<span class="status-dot"></span> Closed Now';
+      }
+    };
+    updateBusinessStatus();
+  }
+
+
+  /* ---------- 6.7. COPY TO CLIPBOARD TOAST HELPER ---------- */
+  const copyBtns = document.querySelectorAll('[data-copy]');
+  const toast = document.getElementById('toast-copy');
+  
+  if (copyBtns.length > 0) {
+    copyBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const textToCopy = btn.dataset.copy;
+        if (!textToCopy) return;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          if (toast) {
+            toast.textContent = `📋 Copied: ${textToCopy}`;
+            toast.classList.add('toast-copy--show');
+            setTimeout(() => {
+              toast.classList.remove('toast-copy--show');
+            }, 3000);
           }
+        }).catch(err => {
+          console.warn('Failed to copy text: ', err);
         });
       });
     });

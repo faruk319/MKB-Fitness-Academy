@@ -1,0 +1,897 @@
+/* GYM PAGE STYLES */
+/* Scope everything under .page-gym to avoid leaking */
+
+.page-gym {
+  --pg-navy: #071A33;
+  --pg-gold: #C9A24A;
+  --pg-gold-soft: #F2DFAD;
+  --pg-ink: #10233D;
+  --pg-muted: #65758B;
+  --pg-white: #FFFFFF;
+  --pg-platinum: #F7FAFC;
+  --pg-pool: #DDF3FF;
+  --pg-blue: #0B74D1;
+  --pg-line: rgba(7,26,51,0.1);
+  --pg-shadow: 0 24px 70px rgba(7,26,51,0.13);
+
+  background-color: var(--pg-platinum);
+  color: var(--pg-ink);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.page-gym h1, 
+.page-gym h2, 
+.page-gym h3, 
+.page-gym h4, 
+.page-gym h5, 
+.page-gym h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.page-gym p {
+  color: var(--pg-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.page-gym a {
+  text-decoration: none;
+}
+
+.page-gym .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Base Utilities */
+.page-gym .section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.page-gym .section--dark {
+  background-color: var(--pg-navy);
+  color: var(--pg-white);
+}
+
+.page-gym .section--dark p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.page-gym .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-gym .section-header__kicker {
+  display: inline-flex;
+  align-items: center;
+  color: var(--pg-gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.page-gym .section-header__kicker::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--pg-gold);
+  margin-right: 12px;
+}
+
+.page-gym .section-header__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--pg-navy);
+  line-height: 1.2;
+}
+
+.page-gym .section--dark .section-header__title {
+  color: var(--pg-white);
+}
+
+/* Glassmorphism Common */
+.page-gym .glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* Buttons */
+.page-gym .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.page-gym .btn:hover {
+  transform: translateY(-3px);
+}
+
+.page-gym .btn--gold {
+  background-color: var(--pg-gold);
+  color: var(--pg-navy);
+  border: none;
+  box-shadow: 0 10px 20px rgba(201, 162, 74, 0.2);
+}
+
+.page-gym .btn--gold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+
+.page-gym .btn--gold:hover::after {
+  left: 200%;
+}
+
+.page-gym .btn--glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--pg-white);
+}
+
+.page-gym .btn--glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Section 1: Hero --- */
+.page-gym .gym-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px;
+  background-color: var(--pg-navy);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.page-gym .gym-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/hero-gym.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.page-gym .gym-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(7,26,51,0.9) 0%, rgba(7,26,51,0.7) 100%);
+  z-index: -1;
+}
+
+.page-gym .gym-hero__stripes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.03) 40px,
+    rgba(255,255,255,0.03) 80px
+  );
+  z-index: -1;
+}
+
+.page-gym .gym-hero__container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.page-gym .gym-hero__content {
+  max-width: 700px;
+}
+
+.page-gym .gym-hero__kicker {
+  display: inline-block;
+  color: var(--pg-gold-soft);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.page-gym .gym-hero__title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--pg-white);
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.page-gym .gym-hero__subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.page-gym .gym-hero__actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.page-gym .gym-hero__panel {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.page-gym .gym-hero__panel-title {
+  color: var(--pg-gold);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
+}
+
+.page-gym .gym-hero__timing {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-gym .gym-hero__timing-icon {
+  font-size: 1.5rem;
+}
+
+.page-gym .gym-hero__timing-text p {
+  margin: 0;
+  color: var(--pg-white);
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+
+.page-gym .gym-hero__timing-text span {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+}
+
+.page-gym .gym-hero__badges {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(to top, var(--pg-navy), transparent);
+}
+
+.page-gym .gym-hero__badges-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-gym .gym-badge {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-gym .gym-badge__num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--pg-gold);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.page-gym .gym-badge__text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.2;
+}
+
+/* --- Section 2: Gym Overview --- */
+.page-gym .gym-overview {
+  background-color: var(--pg-white);
+}
+
+.page-gym .gym-overview__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.page-gym .gym-overview__img-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--pg-shadow);
+}
+
+.page-gym .gym-overview__img-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid rgba(255,255,255,0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-gym .gym-overview__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-gym .gym-overview__features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.page-gym .gym-overview__feature {
+  display: flex;
+  gap: 20px;
+}
+
+.page-gym .gym-overview__num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(7,26,51,0.1);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.page-gym .gym-overview__feature-text h3 {
+  color: var(--pg-navy);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+/* --- Section 3: Equipment & Zones --- */
+.page-gym .gym-zones {
+  background-color: var(--pg-navy);
+  color: var(--pg-white);
+}
+
+.page-gym .gym-zones__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.page-gym .gym-zone-card {
+  padding: 40px 30px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-gym .gym-zone-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.page-gym .gym-zone-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(201,162,74,0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.page-gym .gym-zone-card:hover::after {
+  opacity: 1;
+}
+
+.page-gym .gym-zone-card__icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.page-gym .gym-zone-card h3 {
+  color: var(--pg-gold-soft);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.page-gym .gym-zone-card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* --- Section 4: Training Programs --- */
+.page-gym .gym-programs {
+  background-color: var(--pg-platinum);
+}
+
+.page-gym .gym-programs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.page-gym .gym-program-card {
+  background: var(--pg-white);
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  border: 1px solid var(--pg-line);
+  box-shadow: 0 10px 30px rgba(7,26,51,0.05);
+  transition: all 0.3s ease;
+}
+
+.page-gym .gym-program-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pg-gold);
+  box-shadow: 0 15px 35px rgba(201,162,74,0.15);
+}
+
+.page-gym .gym-program-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.page-gym .gym-program-card h3 {
+  color: var(--pg-navy);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.page-gym .gym-program-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* --- Section 5: Benefits --- */
+.page-gym .gym-benefits {
+  background-color: var(--pg-white);
+}
+
+.page-gym .gym-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.page-gym .gym-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.page-gym .gym-benefit-item__icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--pg-pool);
+  color: var(--pg-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.page-gym .gym-benefit-item__content h3 {
+  font-size: 1.1rem;
+  color: var(--pg-navy);
+  margin-bottom: 8px;
+}
+
+.page-gym .gym-benefit-item__content p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* --- Section 6: Animated Statistics --- */
+.page-gym .gym-stats {
+  background-image: linear-gradient(rgba(7,26,51,0.9), rgba(7,26,51,0.95)), url('../images/hero-gym.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.page-gym .gym-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.page-gym .gym-stat-box {
+  padding: 40px 20px;
+}
+
+.page-gym .gym-stat-box__num {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--pg-gold);
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.page-gym .gym-stat-box__text {
+  color: var(--pg-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Section 7: Membership Pricing --- */
+.page-gym .gym-pricing {
+  background-color: var(--pg-navy);
+  padding: 100px 0;
+}
+
+.page-gym .gym-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.page-gym .gym-price-card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-gym .gym-price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.page-gym .gym-price-card--popular {
+  background: linear-gradient(180deg, rgba(201,162,74,0.15) 0%, rgba(255,255,255,0.05) 100%);
+  border: 1px solid rgba(201,162,74,0.4);
+}
+
+.page-gym .gym-price-card__badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--pg-gold);
+  color: var(--pg-navy);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  font-family: 'Outfit', sans-serif;
+}
+
+.page-gym .gym-price-card h3 {
+  font-size: 1.6rem;
+  color: var(--pg-white);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.page-gym .gym-price-card__amount {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-gym .gym-price-card__old {
+  display: block;
+  color: rgba(255,255,255,0.5);
+  text-decoration: line-through;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.page-gym .gym-price-card__new {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--pg-gold-soft);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.page-gym .gym-price-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  flex-grow: 1;
+}
+
+.page-gym .gym-price-card__features li {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.page-gym .gym-price-card__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--pg-gold);
+  font-weight: bold;
+}
+
+.page-gym .gym-price-card__note {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.page-gym .gym-price-card .btn {
+  width: 100%;
+}
+
+/* --- Section 8: Personal Trainer Banner --- */
+.page-gym .gym-pt-banner {
+  padding: 80px 0;
+  background: var(--pg-white);
+}
+
+.page-gym .gym-pt-wrapper {
+  background: linear-gradient(135deg, var(--pg-navy) 0%, var(--pg-ink) 100%);
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-shadow: var(--pg-shadow);
+  color: var(--pg-white);
+}
+
+.page-gym .gym-pt-content {
+  max-width: 600px;
+}
+
+.page-gym .gym-pt-content h2 {
+  font-size: 2.5rem;
+  color: var(--pg-gold-soft);
+  margin-bottom: 15px;
+}
+
+.page-gym .gym-pt-content p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* --- Section 9: Gym Timings --- */
+.page-gym .gym-timing-section {
+  background-color: var(--pg-platinum);
+  padding: 80px 0;
+}
+
+.page-gym .gym-timings__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.page-gym .gym-timing-card {
+  background: var(--pg-white);
+  border: 1px solid var(--pg-line);
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.page-gym .gym-timing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--pg-shadow);
+}
+
+.page-gym .gym-timing-card__icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.page-gym .gym-timing-card h3 {
+  color: var(--pg-navy);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.page-gym .gym-timing-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--pg-ink);
+  margin: 0;
+}
+
+.page-gym .gym-timing-card p small {
+  display: block;
+  font-weight: 400;
+  color: var(--pg-muted);
+  margin-top: 5px;
+}
+
+/* --- Section 10: CTA Banner --- */
+.page-gym .gym-cta {
+  background: linear-gradient(rgba(7,26,51,0.85), rgba(7,26,51,0.95)), url('../images/hero-gym.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.page-gym .gym-cta h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--pg-white);
+  margin-bottom: 20px;
+}
+
+.page-gym .gym-cta p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-gym .gym-cta__actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .page-gym .gym-zone-card:hover,
+  .page-gym .gym-price-card:hover,
+  .page-gym .btn:hover {
+    transform: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .page-gym .gym-pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .page-gym .gym-hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .page-gym .gym-hero__actions {
+    justify-content: center;
+  }
+  
+  .page-gym .gym-hero__panel {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 780px) {
+  .page-gym .gym-overview__grid,
+  .page-gym .gym-pt-wrapper {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .page-gym .gym-pt-wrapper {
+    padding: 40px 20px;
+  }
+  
+  .page-gym .gym-timings__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-gym .gym-hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .page-gym .gym-badges-grid {
+    gap: 10px;
+  }
+  
+  .page-gym .gym-badge {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-gym .gym-pricing__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-gym .gym-hero__badges {
+    position: static;
+    background: var(--pg-navy);
+  }
+  
+  .page-gym .gym-cta__actions {
+    flex-direction: column;
+  }
+}

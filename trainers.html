@@ -3,43 +3,69 @@
 <head>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="apple-touch-icon" href="./favicon.svg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet the expert trainers at MKB Fitness Academy. Dedicated professionals to help you reach your fitness goals in Ravet, Pune.">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
-    <title>Our Trainers - MKB FITNESS ACADEMY</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HealthAndBeautyBusiness",
-      "name": "MKB Fitness Academy",
-      "image": "https://mkbfitnessacademy.com/images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Sector 29, Aditya Malhar Road, Ravet",
-        "addressLocality": "Pimprichinchwad, Pune",
-        "postalCode": "412101",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "IN"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Coaches & 1-on-1 Personal Training | MKB Fitness Academy, Ravet</title>
+  <meta name="description" content="Transform your physique with 1-on-1 personal training, 3D body scans, custom nutrition plans, injury rehab, swim coaching, and master trainers at MKB Fitness Academy, Ravet, Pune.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:;">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/trainers.css">
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "MKB Fitness Academy - Master Coaches & Personal Training",
+    "image": "https://mkbfitnessacademy.com/images/hero-gym.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sector 29, Aditya Malhar Road, Ravet",
+      "addressLocality": "Pimprichinchwad, Pune",
+      "postalCode": "412101",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919503834888",
+    "url": "https://mkbfitnessacademy.com/trainers.html",
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Mayur K. Bhandari",
+        "jobTitle": "Founder & Head Master Coach"
       },
-      "telephone": "+919503834888",
-      "url": "https://mkbfitnessacademy.com"
-    }
-    </script>
+      {
+        "@type": "Person",
+        "name": "Ananya Sharma",
+        "jobTitle": "Aquatic Performance & Swimming Head Coach"
+      },
+      {
+        "@type": "Person",
+        "name": "Vikram Shinde",
+        "jobTitle": "Senior Strength & Hypertrophy Specialist"
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Sneha Kulkarni",
+        "jobTitle": "Posture & Functional Rehabilitation Specialist"
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-    <!-- Navbar -->
+<body class="page-trainers">
+
+  <!-- ============================================================
+     1. NAVIGATION BAR
+     ============================================================ -->
   <nav class="navbar" id="navbar">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">
@@ -54,18 +80,18 @@
         <a href="about.html" class="navbar__link">About</a>
         
         <div class="navbar__dropdown">
-          <span class="navbar__link navbar__dropdown-btn">Programs ▾</span>
+          <span class="navbar__link navbar__dropdown-btn navbar__link--active">Programs ▾</span>
           <div class="navbar__dropdown-menu">
             <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
             <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
             <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="personal-trainer.html" class="navbar__dropdown-item">🏋️♂️ Personal Trainer</a>
+            <a href="trainers.html" class="navbar__dropdown-item navbar__dropdown-item--active">🏋️‍♂️ Personal Trainer & Coaches</a>
             <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
           </div>
         </div>
 
         <a href="pricing.html" class="navbar__link">Pricing</a>
-        <a href="trainers.html" class="navbar__link">Trainers</a>
+        <a href="trainers.html" class="navbar__link navbar__link--active">Trainers</a>
         <a href="contact.html" class="navbar__link">Contact</a>
       </div>
 
@@ -77,105 +103,595 @@
     </div>
   </nav>
 
-    <!-- Page Header -->
-    <header class="hero hero--page">
-        <div class="hero__bg">
-            <img src="./images/hero-gym.jpg" alt="Gym Hero">
-        </div>
-        <div class="hero__overlay"></div>
-        <div class="hero__content" data-animate>
-            <div class="hero__badge">👥 OUR TEAM</div>
-            <h1 class="hero__title">MEET OUR EXPERT TRAINERS</h1>
-            <p class="hero__subtitle">Guided by the best. Driven by your success.</p>
-        </div>
-    </header>
+  <!-- ============================================================
+     2. HERO SECTION
+     ============================================================ -->
+  <header class="tr-hero">
+    <div class="tr-hero__bg-image" aria-hidden="true"></div>
+    <div class="container">
+      <div class="tr-hero__copy" data-animate="fade-up">
+        <span class="tr-kicker">1-ON-1 PERSONAL TRAINING & MASTER COACHES</span>
+        <h1>ELEVATE YOUR BODY WITH <br><span class="text-gold">PUNE'S TOP 1% COACHES</span></h1>
+        <p>
+          World-class 1-on-1 personal coaching, 3D body scans, custom nutrition plans, posture rehabilitation, and elite swimming instruction at MKB Fitness Academy, Ravet.
+        </p>
 
-    <!-- Trainers Grid Section -->
-    <section class="section">
-        <div class="container">
-            <div class="trainers-grid">
-                <!-- Trainer 1 -->
-                <div class="trainer-card" data-animate>
-                    <div class="trainer-card__image">
-                        <img src="./images/trainer-placeholder.jpg" alt="John Doe" loading="lazy">
-                    </div>
-                    <div class="trainer-card__info">
-                        <h3 class="trainer-card__name">John Doe</h3>
-                        <p class="trainer-card__role">Strength & Conditioning</p>
-                        <p class="trainer-card__exp">8+ Years Experience</p>
-                    </div>
-                </div>
-                <!-- Trainer 2 -->
-                <div class="trainer-card" data-animate>
-                    <div class="trainer-card__image">
-                        <img src="./images/trainer-placeholder.jpg" alt="Jane Smith" loading="lazy">
-                    </div>
-                    <div class="trainer-card__info">
-                        <h3 class="trainer-card__name">Jane Smith</h3>
-                        <p class="trainer-card__role">Functional Training</p>
-                        <p class="trainer-card__exp">5+ Years Experience</p>
-                    </div>
-                </div>
-                <!-- Trainer 3 -->
-                <div class="trainer-card" data-animate>
-                    <div class="trainer-card__image">
-                        <img src="./images/trainer-placeholder.jpg" alt="Alex Johnson" loading="lazy">
-                    </div>
-                    <div class="trainer-card__info">
-                        <h3 class="trainer-card__name">Alex Johnson</h3>
-                        <p class="trainer-card__role">Weight Loss Specialist</p>
-                        <p class="trainer-card__exp">6+ Years Experience</p>
-                    </div>
-                </div>
-                <!-- Trainer 4 -->
-                <div class="trainer-card" data-animate>
-                    <div class="trainer-card__image">
-                        <img src="./images/trainer-placeholder.jpg" alt="Sarah Williams" loading="lazy">
-                    </div>
-                    <div class="trainer-card__info">
-                        <h3 class="trainer-card__name">Sarah Williams</h3>
-                        <p class="trainer-card__role">Yoga & Flexibility</p>
-                        <p class="trainer-card__exp">10+ Years Experience</p>
-                    </div>
-                </div>
-                <!-- Trainer 5 -->
-                <div class="trainer-card" data-animate>
-                    <div class="trainer-card__image">
-                        <img src="./images/trainer-placeholder.jpg" alt="Mike Davis" loading="lazy">
-                    </div>
-                    <div class="trainer-card__info">
-                        <h3 class="trainer-card__name">Mike Davis</h3>
-                        <p class="trainer-card__role">Powerlifting</p>
-                        <p class="trainer-card__exp">7+ Years Experience</p>
-                    </div>
-                </div>
-                <!-- Trainer 6 -->
-                <div class="trainer-card" data-animate>
-                    <div class="trainer-card__image">
-                        <img src="./images/trainer-placeholder.jpg" alt="Emma Brown" loading="lazy">
-                    </div>
-                    <div class="trainer-card__info">
-                        <h3 class="trainer-card__name">Emma Brown</h3>
-                        <p class="trainer-card__role">HIIT & Endurance</p>
-                        <p class="trainer-card__exp">4+ Years Experience</p>
-                    </div>
-                </div>
-            </div>
+        <div class="tr-hero__actions">
+          <a href="#trainers-grid" class="tr-btn tr-btn--gold">Explore Master Coaches ↓</a>
+          <a href="#programs" class="tr-btn tr-btn--blue">Explore Programs</a>
+          <button class="tr-btn tr-btn--outline-light btn-book-trainer" data-trainer="Any Trainer">Book Free 1-on-1 Session 💬</button>
         </div>
+
+        <!-- Stat Row -->
+        <div class="tr-hero__stats" aria-label="Academy coaching statistics">
+          <div class="tr-stat" data-animate="fade-up">
+            <strong data-counter="15" data-suffix="+">15+</strong>
+            <span>Master Coaches</span>
+          </div>
+          <div class="tr-stat" data-animate="fade-up" data-delay="100">
+            <strong data-counter="5000" data-suffix="+">5,000+</strong>
+            <span>Transformations</span>
+          </div>
+          <div class="tr-stat" data-animate="fade-up" data-delay="200">
+            <strong data-counter="50" data-suffix="+ Yrs">50+ Yrs</strong>
+            <span>Combined Exp.</span>
+          </div>
+          <div class="tr-stat" data-animate="fade-up" data-delay="300">
+            <strong data-counter="99.4" data-suffix="%">99.4%</strong>
+            <span>Goal Success Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+       3. PERSONAL TRAINING PROGRAMS & OFFERINGS
+       ============================================================ -->
+    <section class="tr-section tr-section--alt" id="programs">
+      <div class="container">
+        <div class="tr-section-header" data-animate="fade-up">
+          <span class="tr-badge">PERSONAL TRAINING OFFERINGS</span>
+          <h2>CUSTOMIZED 1-ON-1 COACHING PROGRAMS</h2>
+          <p>Every program is tailored around your unique biometric data, physical baseline, and schedule for maximum efficiency.</p>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Program 1 -->
+          <div class="program-card" data-animate="fade-up">
+            <div class="program-card__icon">🏋️‍♂️</div>
+            <h3>1-on-1 VIP Body Transformation</h3>
+            <p>Personalized progressive resistance training, 1-on-1 form correction, and dedicated accountability for rapid fat loss and lean muscle gain.</p>
+            <ul class="program-card__features">
+              <li>Dedicated 1-on-1 Master Trainer</li>
+              <li>Custom Workout Split & Progression</li>
+              <li>Weekly Biometric Progress Checks</li>
+            </ul>
+            <button class="tr-btn tr-btn--blue tr-btn--full btn-book-trainer" data-trainer="Mayur K. Bhandari">Book Transformation Trial</button>
+          </div>
+
+          <!-- Program 2 -->
+          <div class="program-card" data-animate="fade-up" data-delay="100">
+            <div class="program-card__icon">📊</div>
+            <h3>3D Body Scan & Nutrition Strategy</h3>
+            <p>Comprehensive body composition analysis paired with custom macro nutrition splits, flexible meal guides, and digestive health optimization.</p>
+            <ul class="program-card__features">
+              <li>InBody 3D Scan & Muscle Assessment</li>
+              <li>Calculated Macro & Calorie Breakdown</li>
+              <li>Weekly Meal Plan Adjustments</li>
+            </ul>
+            <button class="tr-btn tr-btn--blue tr-btn--full btn-book-trainer" data-trainer="Rajesh Patil">Book Scan & Nutrition Consultation</button>
+          </div>
+
+          <!-- Program 3 -->
+          <div class="program-card" data-animate="fade-up" data-delay="200">
+            <div class="program-card__icon">🩺</div>
+            <h3>Posture & Post-Injury Rehabilitation</h3>
+            <p>Physiotherapist-guided corrective exercise protocol to align spinal posture, eliminate chronic lower back/knee pain, and rebuild joint mobility.</p>
+            <ul class="program-card__features">
+              <li>Functional Movement Screen (FMS)</li>
+              <li>Joint Mobility & Decompression</li>
+              <li>Safe Return-to-Lifting Roadmap</li>
+            </ul>
+            <button class="tr-btn tr-btn--blue tr-btn--full btn-book-trainer" data-trainer="Dr. Sneha Kulkarni">Book Rehab Evaluation</button>
+          </div>
+
+          <!-- Program 4 -->
+          <div class="program-card" data-animate="fade-up" data-delay="300">
+            <div class="program-card__icon">🏊‍♀️</div>
+            <h3>Private Swim Masterclass & Hydro-Fitness</h3>
+            <p>Private lane coaching for children and adults. Eradicate water phobia, master freestyle/breaststroke techniques, or train for competitive aquatic events.</p>
+            <ul class="program-card__features">
+              <li>Semi-Covered Semi-Olympic Pool</li>
+              <li>ASCA Level 3 Certified Coaching</li>
+              <li>Stroke Efficiency Video Review</li>
+            </ul>
+            <button class="tr-btn tr-btn--blue tr-btn--full btn-book-trainer" data-trainer="Ananya Sharma">Book Private Swim Session</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Personal Trainer Callout -->
-    <section class="section section--alt">
-        <div class="container">
-            <div class="offer-banner" data-animate>
-                <div class="offer-banner__badge">1-ON-1 TRAINING</div>
-                <h2 class="offer-banner__title">Looking For A Dedicated Personal Trainer?</h2>
-                <p class="offer-banner__text">Get a customized plan, dedicated attention, and faster results with our elite personal training programs.</p>
-                <a href="personal-trainer.html" class="btn btn--primary">Explore Personal Training</a>
-            </div>
+
+    <!-- ============================================================
+       4. INTERACTIVE TRAINERS GRID (FILTERABLE)
+       ============================================================ -->
+    <section class="tr-section" id="trainers-grid">
+      <div class="container">
+        <div class="tr-section-header" data-animate="fade-up">
+          <span class="tr-badge tr-badge--gold">OUR EXPERT TEAM</span>
+          <h2>MEET OUR MASTER COACHES</h2>
+          <p>Filter by specialization to find the ideal coach for your specific fitness, aquatic, or rehabilitation goals.</p>
         </div>
+
+        <!-- Filter Pills Bar -->
+        <div class="trainer-filter-bar" role="toolbar" aria-label="Filter Trainers">
+          <button class="tr-filter-btn active" data-filter="all" aria-pressed="true">
+            <span>🔥 All Coaches</span>
+            <span class="filter-count" id="visible-trainer-count">6</span>
+          </button>
+          <button class="tr-filter-btn" data-filter="gym" aria-pressed="false">
+            <span>🏋️ Gym & Strength</span>
+          </button>
+          <button class="tr-filter-btn" data-filter="swim" aria-pressed="false">
+            <span>🏊 Swimming & Aquatic</span>
+          </button>
+          <button class="tr-filter-btn" data-filter="rehab" aria-pressed="false">
+            <span>🧘 Posture & Rehab</span>
+          </button>
+          <button class="tr-filter-btn" data-filter="fatloss" aria-pressed="false">
+            <span>⚡ Fat Loss & HIIT</span>
+          </button>
+          <button class="tr-filter-btn" data-filter="yoga" aria-pressed="false">
+            <span>✨ Yoga & Mobility</span>
+          </button>
+        </div>
+
+        <!-- Trainers Grid -->
+        <div class="trainers-grid">
+
+          <!-- TRAINER 1: Mayur K. Bhandari -->
+          <article class="trainer-card" data-category="gym" data-animate="fade-up">
+            <div class="trainer-card__img-wrap">
+              <img src="./images/pt_hero_luxury.jpg" alt="Mayur K. Bhandari - Founder & Head Master Coach" class="trainer-card__img" loading="lazy">
+              <div class="trainer-card__badges">
+                <span class="badge-tag badge-tag--navy">FOUNDER & HEAD COACH</span>
+                <span class="badge-tag badge-tag--gold">12+ Yrs Exp</span>
+              </div>
+            </div>
+
+            <div class="trainer-card__body">
+              <h3 class="trainer-card__name">Mayur K. Bhandari</h3>
+              <p class="trainer-card__role">Master Strength & Transformation Architect</p>
+
+              <div class="trainer-card__pills">
+                <span class="tr-pill tr-pill--gold">📜 ACE Master</span>
+                <span class="tr-pill tr-pill--gold">📜 K11 Master</span>
+                <span class="tr-pill">🎯 Strength Engineering</span>
+                <span class="tr-pill">🎯 Physique Transformation</span>
+              </div>
+
+              <div class="trainer-card__stats-row">
+                <span>Transformations: <strong>1,500+</strong></span>
+                <span>Rating: <strong>4.9 ★ (340+)</strong></span>
+              </div>
+
+              <div class="trainer-card__quote">
+                "Mayur Sir completely redesigned my lifting technique and diet. I dropped 18 kg in 6 months!" — <strong>Rahul S.</strong>
+              </div>
+
+              <div class="trainer-card__socials">
+                <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="tr-social-icon" aria-label="Mayur Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20book%20a%20session%20with%20Coach%20Mayur%20Bhandari." target="_blank" rel="noopener" class="tr-social-icon" aria-label="Mayur WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+              </div>
+
+              <div class="trainer-card__actions">
+                <button class="tr-btn tr-btn--gold btn-book-trainer" data-trainer="Mayur K. Bhandari">Book 1-on-1 Session</button>
+                <button class="tr-btn tr-btn--outline-light btn-open-trainer-modal" data-trainer="mayur-bhandari" style="color:var(--tr-ink); border-color:var(--tr-line);">View Bio</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- TRAINER 2: Ananya Sharma -->
+          <article class="trainer-card" data-category="swim" data-animate="fade-up" data-delay="100">
+            <div class="trainer-card__img-wrap">
+              <img src="./images/swimming-coach.jpg" alt="Ananya Sharma - Swimming Head Coach" class="trainer-card__img" loading="lazy">
+              <div class="trainer-card__badges">
+                <span class="badge-tag badge-tag--navy">AQUATIC HEAD COACH</span>
+                <span class="badge-tag badge-tag--gold">8+ Yrs Exp</span>
+              </div>
+            </div>
+
+            <div class="trainer-card__body">
+              <h3 class="trainer-card__name">Ananya Sharma</h3>
+              <p class="trainer-card__role">Aquatic Performance & Swim Master</p>
+
+              <div class="trainer-card__pills">
+                <span class="tr-pill tr-pill--gold">📜 ASCA Level 3</span>
+                <span class="tr-pill tr-pill--gold">📜 Red Cross Lifeguard</span>
+                <span class="tr-pill">🎯 Stroke Technique</span>
+                <span class="tr-pill">🎯 Water Phobia Fix</span>
+              </div>
+
+              <div class="trainer-card__stats-row">
+                <span>Swimmers Trained: <strong>1,200+</strong></span>
+                <span>Rating: <strong>5.0 ★ (210+)</strong></span>
+              </div>
+
+              <div class="trainer-card__quote">
+                "Coach Ananya's step-by-step method had me swimming laps in deep water within 3 weeks!" — <strong>Priya M.</strong>
+              </div>
+
+              <div class="trainer-card__socials">
+                <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="tr-social-icon" aria-label="Ananya Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20book%20a%20swim%20coaching%20session%20with%20Coach%20Ananya." target="_blank" rel="noopener" class="tr-social-icon" aria-label="Ananya WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+              </div>
+
+              <div class="trainer-card__actions">
+                <button class="tr-btn tr-btn--gold btn-book-trainer" data-trainer="Ananya Sharma">Book Swim Coaching</button>
+                <button class="tr-btn tr-btn--outline-light btn-open-trainer-modal" data-trainer="ananya-sharma" style="color:var(--tr-ink); border-color:var(--tr-line);">View Bio</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- TRAINER 3: Vikram Shinde -->
+          <article class="trainer-card" data-category="gym" data-animate="fade-up" data-delay="200">
+            <div class="trainer-card__img-wrap">
+              <img src="./images/pt_trainer_2.jpg" alt="Vikram Shinde - Strength & Hypertrophy Specialist" class="trainer-card__img" loading="lazy">
+              <div class="trainer-card__badges">
+                <span class="badge-tag badge-tag--navy">STRENGTH SPECIALIST</span>
+                <span class="badge-tag badge-tag--gold">7+ Yrs Exp</span>
+              </div>
+            </div>
+
+            <div class="trainer-card__body">
+              <h3 class="trainer-card__name">Vikram Shinde</h3>
+              <p class="trainer-card__role">Senior Hypertrophy & Muscle Coach</p>
+
+              <div class="trainer-card__pills">
+                <span class="tr-pill tr-pill--gold">📜 K11 Senior</span>
+                <span class="tr-pill tr-pill--gold">📜 ISSA Nutrition</span>
+                <span class="tr-pill">🎯 Hypertrophy</span>
+                <span class="tr-pill">🎯 Powerlifting</span>
+              </div>
+
+              <div class="trainer-card__stats-row">
+                <span>Clients Transformed: <strong>800+</strong></span>
+                <span>Rating: <strong>4.9 ★ (180+)</strong></span>
+              </div>
+
+              <div class="trainer-card__quote">
+                "Vikram fixed my squat and bench form. Gained 7 kg of solid muscle mass safely!" — <strong>Amit K.</strong>
+              </div>
+
+              <div class="trainer-card__socials">
+                <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="tr-social-icon" aria-label="Vikram Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20book%20a%20strength%20session%20with%20Coach%20Vikram." target="_blank" rel="noopener" class="tr-social-icon" aria-label="Vikram WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+              </div>
+
+              <div class="trainer-card__actions">
+                <button class="tr-btn tr-btn--gold btn-book-trainer" data-trainer="Vikram Shinde">Book Strength Session</button>
+                <button class="tr-btn tr-btn--outline-light btn-open-trainer-modal" data-trainer="vikram-shinde" style="color:var(--tr-ink); border-color:var(--tr-line);">View Bio</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- TRAINER 4: Dr. Sneha Kulkarni -->
+          <article class="trainer-card" data-category="rehab" data-animate="fade-up">
+            <div class="trainer-card__img-wrap">
+              <img src="./images/pt_trainer_3.jpg" alt="Dr. Sneha Kulkarni - Posture & Rehabilitation Specialist" class="trainer-card__img" loading="lazy">
+              <div class="trainer-card__badges">
+                <span class="badge-tag badge-tag--navy">REHAB & PHYSIO</span>
+                <span class="badge-tag badge-tag--gold">9+ Yrs Exp</span>
+              </div>
+            </div>
+
+            <div class="trainer-card__body">
+              <h3 class="trainer-card__name">Dr. Sneha Kulkarni</h3>
+              <p class="trainer-card__role">Physiotherapist & Posture Specialist</p>
+
+              <div class="trainer-card__pills">
+                <span class="tr-pill tr-pill--gold">📜 B.P.T Physio</span>
+                <span class="tr-pill tr-pill--gold">📜 FMS Level 2</span>
+                <span class="tr-pill">🎯 Posture Repair</span>
+                <span class="tr-pill">🎯 Joint Rehab</span>
+              </div>
+
+              <div class="trainer-card__stats-row">
+                <span>Rehab Patients: <strong>600+</strong></span>
+                <span>Rating: <strong>5.0 ★ (150+)</strong></span>
+              </div>
+
+              <div class="trainer-card__quote">
+                "Sneha ma'am eliminated my lower back stiffness in 4 weeks. Can deadlift pain-free!" — <strong>Sunita R.</strong>
+              </div>
+
+              <div class="trainer-card__socials">
+                <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="tr-social-icon" aria-label="Sneha Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20book%20a%20rehab%20session%20with%20Dr.%20Sneha." target="_blank" rel="noopener" class="tr-social-icon" aria-label="Sneha WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+              </div>
+
+              <div class="trainer-card__actions">
+                <button class="tr-btn tr-btn--gold btn-book-trainer" data-trainer="Dr. Sneha Kulkarni">Book Rehab Session</button>
+                <button class="tr-btn tr-btn--outline-light btn-open-trainer-modal" data-trainer="sneha-kulkarni" style="color:var(--tr-ink); border-color:var(--tr-line);">View Bio</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- TRAINER 5: Rajesh Patil -->
+          <article class="trainer-card" data-category="fatloss" data-animate="fade-up" data-delay="100">
+            <div class="trainer-card__img-wrap">
+              <img src="./images/pt_assessment.jpg" alt="Rajesh Patil - Fat Loss & Metabolic Coach" class="trainer-card__img" loading="lazy">
+              <div class="trainer-card__badges">
+                <span class="badge-tag badge-tag--navy">FAT LOSS & HIIT</span>
+                <span class="badge-tag badge-tag--gold">6+ Yrs Exp</span>
+              </div>
+            </div>
+
+            <div class="trainer-card__body">
+              <h3 class="trainer-card__name">Rajesh Patil</h3>
+              <p class="trainer-card__role">Metabolic Conditioning & Weight Loss Coach</p>
+
+              <div class="trainer-card__pills">
+                <span class="tr-pill tr-pill--gold">📜 ACE CPT</span>
+                <span class="tr-pill tr-pill--gold">📜 TRX Master</span>
+                <span class="tr-pill">🎯 Rapid Fat Burn</span>
+                <span class="tr-pill">🎯 HIIT Conditioning</span>
+              </div>
+
+              <div class="trainer-card__stats-row">
+                <span>Fat Loss Clients: <strong>900+</strong></span>
+                <span>Rating: <strong>4.9 ★ (240+)</strong></span>
+              </div>
+
+              <div class="trainer-card__quote">
+                "Dropped 22 kg in 5 months! Rajesh's high-energy coaching kept me on track every day." — <strong>Vikram P.</strong>
+              </div>
+
+              <div class="trainer-card__socials">
+                <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="tr-social-icon" aria-label="Rajesh Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20book%20a%20fat%20loss%20session%20with%20Coach%20Rajesh." target="_blank" rel="noopener" class="tr-social-icon" aria-label="Rajesh WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+              </div>
+
+              <div class="trainer-card__actions">
+                <button class="tr-btn tr-btn--gold btn-book-trainer" data-trainer="Rajesh Patil">Book Fat Loss Session</button>
+                <button class="tr-btn tr-btn--outline-light btn-open-trainer-modal" data-trainer="rajesh-patil" style="color:var(--tr-ink); border-color:var(--tr-line);">View Bio</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- TRAINER 6: Pooja Verma -->
+          <article class="trainer-card" data-category="yoga" data-animate="fade-up" data-delay="200">
+            <div class="trainer-card__img-wrap">
+              <img src="./images/pt_nutrition.jpg" alt="Pooja Verma - Yoga & Mobility Coach" class="trainer-card__img" loading="lazy">
+              <div class="trainer-card__badges">
+                <span class="badge-tag badge-tag--navy">YOGA & MOBILITY</span>
+                <span class="badge-tag badge-tag--gold">10+ Yrs Exp</span>
+              </div>
+            </div>
+
+            <div class="trainer-card__body">
+              <h3 class="trainer-card__name">Pooja Verma</h3>
+              <p class="trainer-card__role">International Yoga & Flexibility Master</p>
+
+              <div class="trainer-card__pills">
+                <span class="tr-pill tr-pill--gold">📜 RYT-500 Yoga</span>
+                <span class="tr-pill tr-pill--gold">📜 Breathwork</span>
+                <span class="tr-pill">🎯 Vinyasa Flow</span>
+                <span class="tr-pill">🎯 Stress Reduction</span>
+              </div>
+
+              <div class="trainer-card__stats-row">
+                <span>Yoga Students: <strong>1,000+</strong></span>
+                <span>Rating: <strong>5.0 ★ (190+)</strong></span>
+              </div>
+
+              <div class="trainer-card__quote">
+                "Pooja's mobility flows unlocked my hip tightness and improved my recovery speed drastically!" — <strong>Neha G.</strong>
+              </div>
+
+              <div class="trainer-card__socials">
+                <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="tr-social-icon" aria-label="Pooja Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20book%20a%20yoga/mobility%20session%20with%20Coach%20Pooja." target="_blank" rel="noopener" class="tr-social-icon" aria-label="Pooja WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+              </div>
+
+              <div class="trainer-card__actions">
+                <button class="tr-btn tr-btn--gold btn-book-trainer" data-trainer="Pooja Verma">Book Mobility Session</button>
+                <button class="tr-btn tr-btn--outline-light btn-open-trainer-modal" data-trainer="pooja-verma" style="color:var(--tr-ink); border-color:var(--tr-line);">View Bio</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </section>
 
+
+    <!-- ============================================================
+       5. PERSONAL TRAINING PACKAGES
+       ============================================================ -->
+    <section class="tr-section tr-section--alt" id="pricing">
+      <div class="container">
+        <div class="tr-section-header" data-animate="fade-up">
+          <span class="tr-badge">TRANSPARENT PACKAGES</span>
+          <h2>PERSONAL TRAINING PACKAGES</h2>
+          <p>Choose the level of 1-on-1 coaching support that matches your transformation timeline.</p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1 -->
+          <div class="pkg-card" data-animate="fade-up">
+            <h3>Monthly Kickstart</h3>
+            <p>Ideal for beginners needing structured form instruction & habit building.</p>
+            <div class="pkg-card__price">12 Sessions <span>/ Month</span></div>
+            <ul class="pkg-card__list">
+              <li>12 Dedicated 1-on-1 Sessions</li>
+              <li>Initial InBody 3D Scan</li>
+              <li>Basic Macro Nutrition Guide</li>
+              <li>Gym Floor Priority Access</li>
+            </ul>
+            <button class="tr-btn tr-btn--blue tr-btn--full btn-book-trainer" data-trainer="Monthly Package">Choose Monthly Plan</button>
+          </div>
+
+          <!-- Package 2 (Featured) -->
+          <div class="pkg-card pkg-card--featured" data-animate="fade-up" data-delay="100">
+            <span class="pkg-badge">MOST POPULAR</span>
+            <h3>3-Month Transformation</h3>
+            <p>Our flagship program designed for complete body recomposition & fat loss.</p>
+            <div class="pkg-card__price">36 Sessions <span>/ 3 Months</span></div>
+            <ul class="pkg-card__list">
+              <li>36 Dedicated 1-on-1 Sessions</li>
+              <li>Bi-Weekly InBody 3D Scans</li>
+              <li>Full Customized Nutrition & Meal Plan</li>
+              <li>Post-Injury Rehabilitation Checks</li>
+              <li>Dedicated WhatsApp Coach Access</li>
+            </ul>
+            <button class="tr-btn tr-btn--gold tr-btn--full btn-book-trainer" data-trainer="3-Month Package">Choose 3-Month Plan</button>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="pkg-card" data-animate="fade-up" data-delay="200">
+            <h3>6-Month Masterclass</h3>
+            <p>Long-term athletic transformation, powerlifting, or contest prep.</p>
+            <div class="pkg-card__price">72 Sessions <span>/ 6 Months</span></div>
+            <ul class="pkg-card__list">
+              <li>72 Dedicated 1-on-1 Sessions</li>
+              <li>Unlimited InBody 3D Scans</li>
+              <li>Advanced Competition & Macro Prep</li>
+              <li>Swim Coaching Session Included</li>
+              <li>VIP Locker & Towel Service</li>
+            </ul>
+            <button class="tr-btn tr-btn--blue tr-btn--full btn-book-trainer" data-trainer="6-Month Package">Choose 6-Month Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+       6. GLOBAL CERTIFICATIONS & ACCREDITATIONS
+       ============================================================ -->
+    <section class="tr-section" id="certifications">
+      <div class="container">
+        <div class="tr-section-header" data-animate="fade-up">
+          <span class="tr-badge">ACCREDITED EXCELLENCE</span>
+          <h2>WORLD-CLASS CREDENTIALS</h2>
+          <p>Our master coaches hold accredited certifications from leading global fitness and sports institutions.</p>
+        </div>
+
+        <div class="accred-grid">
+          <div class="accred-box" data-animate="fade-up">
+            <div class="accred-box__icon">🏆</div>
+            <h4>ACE Fitness</h4>
+            <p>American Council on Exercise</p>
+          </div>
+          <div class="accred-box" data-animate="fade-up" data-delay="50">
+            <div class="accred-box__icon">💪</div>
+            <h4>K11 Academy</h4>
+            <p>School of Fitness Sciences</p>
+          </div>
+          <div class="accred-box" data-animate="fade-up" data-delay="100">
+            <div class="accred-box__icon">🏊</div>
+            <h4>ASCA Level 3</h4>
+            <p>Swim Coaches Association</p>
+          </div>
+          <div class="accred-box" data-animate="fade-up" data-delay="150">
+            <div class="accred-box__icon">🩺</div>
+            <h4>FMS Level 2</h4>
+            <p>Functional Movement Screen</p>
+          </div>
+          <div class="accred-box" data-animate="fade-up" data-delay="200">
+            <div class="accred-box__icon">📜</div>
+            <h4>ISSA Certified</h4>
+            <p>Sports Nutrition & Fitness</p>
+          </div>
+          <div class="accred-box" data-animate="fade-up" data-delay="250">
+            <div class="accred-box__icon">🧘</div>
+            <h4>RYT-500</h4>
+            <p>Registered Yoga Alliance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+       7. CLIENT TESTIMONIALS (NAVY THEMED)
+       ============================================================ -->
+    <section class="tr-section tr-section--navy">
+      <div class="container">
+        <div class="tr-section-header" data-animate="fade-up">
+          <span class="tr-badge tr-badge--gold">REAL SUCCESS STORIES</span>
+          <h2>MEMBER TRANSFORMATIONS</h2>
+          <p>Hear from Ravet members who achieved life-changing physique and health breakthroughs with our coaches.</p>
+        </div>
+
+        <div class="testi-grid">
+          <div class="testi-card" data-animate="fade-up">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__text">
+              "Joining Coach Mayur's 1-on-1 transformation program was the best decision I ever made. Lost 18kg of fat in 20 weeks while building real strength!"
+            </p>
+            <div class="testi-card__author">Rahul Sonawane</div>
+            <div class="testi-card__meta">Coached by Mayur Bhandari • Lost 18kg</div>
+          </div>
+
+          <div class="testi-card" data-animate="fade-up" data-delay="100">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__text">
+              "Ananya ma'am is an incredible swim coach. She helped me overcome deep water anxiety in less than a month. I now swim 1km non-stop!"
+            </p>
+            <div class="testi-card__author">Priya K. Kulkarni</div>
+            <div class="testi-card__meta">Coached by Ananya Sharma • Swim Masterclass</div>
+          </div>
+
+          <div class="testi-card" data-animate="fade-up" data-delay="200">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__text">
+              "After a bad knee strain, Dr. Sneha and Coach Vikram created a rehab split that fixed my movement mechanics. I'm lifting pain-free now!"
+            </p>
+            <div class="testi-card__author">Amit Kulkarni</div>
+            <div class="testi-card__meta">Coached by Dr. Sneha & Vikram • Posture & Strength</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ============================================================
+     8. FOOTER (HOME PAGE STYLED - 100% VISIBLE)
+     ============================================================ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -183,7 +699,7 @@
           <a href="index.html" class="footer__logo">
             <span class="footer__logo-text">MKB FITNESS ACADEMY</span>
           </a>
-          <p class="footer__tagline">Premier Gym, Swimming Pool, Kids Activities & Wellness Therapy at Ravet, Pune.</p>
+          <p class="footer__tagline">Premier Gym, Swimming Pool, Kids Activities & Personal Training at Ravet, Pune.</p>
           <div class="footer__social">
             <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--ig" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -193,6 +709,7 @@
             </a>
           </div>
         </div>
+
         <div>
           <h4 class="footer__heading">Quick Links</h4>
           <a href="index.html" class="footer__link">Home</a>
@@ -200,26 +717,27 @@
           <a href="gym.html" class="footer__link">Gym Facility</a>
           <a href="swimming.html" class="footer__link">Swimming Pool</a>
           <a href="kids.html" class="footer__link">Kids Activities</a>
-          <a href="personal-trainer.html" class="footer__link">Personal Trainer</a>
-          <a href="wellness.html" class="footer__link">Wellness Therapy</a>
+          <a href="trainers.html" class="footer__link">Personal Trainer & Coaches</a>
           <a href="pricing.html" class="footer__link">Pricing Plans</a>
-          <a href="trainers.html" class="footer__link">Our Trainers</a>
           <a href="contact.html" class="footer__link">Contact Us</a>
         </div>
+
         <div>
           <h4 class="footer__heading">Contact Us</h4>
           <p class="footer__link">📍 Sector 29, Aditya Malhar Road, Ravet, Pune-412101</p>
-          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--clr-gold);">9503834888</a></p>
+          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--tr-gold-soft);">9503834888</a></p>
           <p class="footer__link">📱 <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" style="color:#25D366;">+91 9370813366</a></p>
-          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--clr-gold);">mkbfitness17@gmail.com</a></p>
+          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--tr-gold-soft);">mkbfitness17@gmail.com</a></p>
         </div>
+
         <div>
           <h4 class="footer__heading">Gym Timings</h4>
           <p class="footer__link">🌅 Morning: 6:00 AM – 12:00 PM</p>
           <p class="footer__link">🌆 Evening: 4:00 PM – 10:00 PM</p>
-          <p class="footer__link" style="color:var(--clr-gold); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
+          <p class="footer__link" style="color:var(--tr-gold-soft); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
         </div>
       </div>
+
       <div class="footer__bottom">
         <p class="footer__copyright">© 2025 MKB Fitness Academy. All rights reserved.</p>
         <p class="footer__credits">Designed for MKB Fitness Academy, Ravet, Pune</p>
@@ -227,12 +745,127 @@
     </div>
   </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919370813366" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-    </a>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness,%20I'd%20like%20to%20inquire%20about%20personal%20trainers." class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+  </a>
 
-    <!-- Main Script -->
-    <script src="./js/main.js" defer></script>
+
+  <!-- ============================================================
+     9. DIALOG MODALS (TRAINER BIO & BOOKING)
+     ============================================================ -->
+  <!-- TRAINER DETAIL MODAL -->
+  <dialog class="tr-modal-dialog" id="trainer-detail-modal" aria-labelledby="modal-trainer-name">
+    <button class="tr-modal-close close-detail-modal" aria-label="Close dialog">✕</button>
+    <div class="tr-modal-header">
+      <img src="./images/pt_hero_luxury.jpg" alt="Coach Profile" class="tr-modal-header__img" id="modal-trainer-img">
+      <div>
+        <h3 id="modal-trainer-name" style="font-family:var(--ff-heading); font-size:1.5rem; color:#fff; font-weight:800; margin-bottom:4px;">Mayur K. Bhandari</h3>
+        <p id="modal-trainer-role" style="color:var(--tr-gold-soft); font-size:0.92rem; font-weight:600;">Founder & Head Master Coach</p>
+        <span id="modal-trainer-exp" class="tr-pill tr-pill--gold" style="margin-top:6px; display:inline-block;">12+ Years Experience</span>
+      </div>
+    </div>
+    <div class="tr-modal-body">
+      <div class="tr-modal-title">COACH BIOGRAPHY & PHILOSOPHY</div>
+      <p id="modal-trainer-bio">Coach Biography loading...</p>
+
+      <div class="trainer-card__quote" id="modal-trainer-quote" style="margin-bottom:20px;">
+        "Fitness is an architectural rebuild of your body and mindset."
+      </div>
+
+      <div class="tr-modal-title">CERTIFICATIONS & ACCREDITATIONS</div>
+      <div id="modal-trainer-certs" class="trainer-card__pills" style="margin-bottom:20px;">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <div class="tr-modal-title">PRIMARY SPECIALITIES</div>
+      <div id="modal-trainer-specs" class="trainer-card__pills" style="margin-bottom:20px;">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <div class="tr-modal-title">CAREER MILESTONES & ACHIEVEMENTS</div>
+      <ul id="modal-trainer-achieve" style="list-style:none; padding:0; line-height:1.7; color:var(--tr-ink);">
+        <!-- Dynamically rendered -->
+      </ul>
+    </div>
+    <div class="tr-modal-footer">
+      <button class="tr-btn tr-btn--outline-light close-detail-modal" style="color:var(--tr-ink); border-color:var(--tr-line);">Close</button>
+      <button class="tr-btn tr-btn--gold" id="modal-trainer-book-btn" data-trainer="Mayur K. Bhandari">Book Session with Coach 💬</button>
+    </div>
+  </dialog>
+
+
+  <!-- TRAINER BOOKING MODAL -->
+  <dialog class="tr-modal-dialog" id="trainer-booking-modal" aria-labelledby="booking-modal-title">
+    <button class="tr-modal-close close-booking-modal" aria-label="Close dialog">✕</button>
+    <div class="tr-modal-header">
+      <div>
+        <h3 id="booking-modal-title" style="font-family:var(--ff-heading); font-size:1.5rem; color:#fff; font-weight:800; margin-bottom:4px;">BOOK 1-ON-1 VIP SESSION</h3>
+        <p style="color:rgba(255,255,255,0.8); font-size:0.88rem; margin:0;">Select your preferred coach and goal. We will confirm your time slot on WhatsApp instantly.</p>
+      </div>
+    </div>
+
+    <div class="tr-modal-body">
+      <form id="trainer-booking-form" class="booking-form">
+        <div class="form-group">
+          <label for="booking-name">Your Full Name *</label>
+          <input type="text" id="booking-name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-phone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="booking-phone" class="form-control" placeholder="e.g. +91 9876543210" required>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-trainer-select">Select Master Coach *</label>
+          <select id="booking-trainer-select" class="form-control" required>
+            <option value="Mayur K. Bhandari">Mayur K. Bhandari (Head Master Coach)</option>
+            <option value="Ananya Sharma">Ananya Sharma (Aquatic & Swim Coach)</option>
+            <option value="Vikram Shinde">Vikram Shinde (Strength & Muscle)</option>
+            <option value="Dr. Sneha Kulkarni">Dr. Sneha Kulkarni (Posture & Rehab)</option>
+            <option value="Rajesh Patil">Rajesh Patil (Fat Loss & HIIT)</option>
+            <option value="Pooja Verma">Pooja Verma (Yoga & Mobility)</option>
+            <option value="Any Trainer">Any Available Expert Coach</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-goal-select">Primary Fitness Goal *</label>
+          <select id="booking-goal-select" class="form-control" required>
+            <option value="Body Transformation / Fat Loss">Body Transformation & Fat Loss</option>
+            <option value="Muscle Building / Strength">Muscle Building & Hypertrophy</option>
+            <option value="Swimming Masterclass">Swimming Masterclass & Water Phobia</option>
+            <option value="Injury Rehab / Posture">Posture Repair & Injury Rehab</option>
+            <option value="Yoga & Flexibility">Yoga, Flexibility & Core Strength</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group--full">
+          <label for="booking-time-select">Preferred Training Time Slot *</label>
+          <select id="booking-time-select" class="form-control" required>
+            <option value="Morning (6:00 AM - 9:00 AM)">Morning (6:00 AM - 9:00 AM)</option>
+            <option value="Late Morning (9:00 AM - 12:00 PM)">Late Morning (9:00 AM - 12:00 PM)</option>
+            <option value="Evening (4:00 PM - 7:00 PM)">Evening (4:00 PM - 7:00 PM)</option>
+            <option value="Night (7:00 PM - 10:00 PM)">Night (7:00 PM - 10:00 PM)</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group--full">
+          <label for="booking-notes">Special Requests / Medical History (Optional)</label>
+          <textarea id="booking-notes" class="form-control" rows="3" placeholder="Tell us about any previous injuries, fitness level, or specific requirements..."></textarea>
+        </div>
+
+        <div class="form-group form-group--full" style="margin-top:10px;">
+          <button type="submit" class="tr-btn tr-btn--gold tr-btn--full">Confirm Booking & Chat on WhatsApp 💬</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+
+  <!-- Scripts -->
+  <script src="./js/main.js" defer></script>
+  <script src="./js/trainers.js" defer></script>
 </body>
 </html>

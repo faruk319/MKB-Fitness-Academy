@@ -1,0 +1,818 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES - MKB FITNESS ACADEMY
+   ========================================================================== */
+
+.page-about {
+  --pg-navy: #071A33;
+  --pg-gold: #C9A24A;
+  --pg-gold-soft: #F2DFAD;
+  --pg-ink: #10233D;
+  --pg-muted: #65758B;
+  --pg-white: #FFFFFF;
+  --pg-platinum: #F7FAFC;
+  --pg-pool: #DDF3FF;
+  --pg-blue: #0B74D1;
+  --pg-line: rgba(7,26,51,0.1);
+  --pg-shadow: 0 24px 70px rgba(7,26,51,0.13);
+  
+  color: var(--pg-ink);
+  background: var(--pg-white);
+  overflow-x: hidden;
+}
+
+.page-about h1,
+.page-about h2,
+.page-about h3,
+.page-about h4 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0;
+}
+
+.page-about p {
+  font-family: 'Inter', sans-serif;
+  color: var(--pg-muted);
+  line-height: 1.7;
+}
+
+/* Base structural elements */
+.page-about .section-padding {
+  padding: clamp(70px, 8vw, 120px) 0;
+}
+
+.page-about .section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto clamp(40px, 6vw, 60px);
+}
+
+.page-about .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--pg-blue);
+  letter-spacing: 1px;
+}
+
+.page-about .kicker::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: currentColor;
+}
+
+.page-about .kicker--light {
+  color: var(--pg-gold-soft);
+}
+
+.page-about .section-header h2 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: var(--pg-navy);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.page-about .section-header--light h2 {
+  color: var(--pg-white);
+}
+
+.page-about .section-header p {
+  font-size: 1.1rem;
+}
+
+.page-about .section-header--light p {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Animations */
+[data-animate] {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+[data-animate="fade-up"] { transform: translateY(40px); }
+[data-animate="fade-left"] { transform: translateX(40px); }
+[data-animate="fade-right"] { transform: translateX(-40px); }
+[data-animate="scale"] { transform: scale(0.9); }
+[data-animate].animated { opacity: 1; transform: translate(0) scale(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Overrides */
+.page-about .navbar { background: rgba(7,26,51,0.78); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.page-about .navbar--scrolled { background: rgba(7,26,51,0.96); }
+.page-about .navbar__cta { 
+  background: linear-gradient(135deg, var(--pg-gold), var(--pg-gold-soft)); 
+  color: var(--pg-navy); 
+  box-shadow: 0 12px 28px rgba(201,162,74,0.25); 
+}
+
+.page-about .footer { background: linear-gradient(135deg, rgba(11,116,209,0.14), transparent 35%), var(--pg-navy); }
+.page-about .footer__link a, .page-about .footer__link--accent { color: var(--pg-gold-soft); }
+.page-about .footer__social-icon { background: rgba(255,255,255,0.08); }
+
+/* Buttons */
+.page-about .btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid transparent;
+}
+
+.page-about .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(110deg, transparent 0 35%, rgba(255,255,255,0.4) 48%, transparent 62% 100%);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.page-about .btn:hover {
+  transform: translateY(-4px);
+}
+.page-about .btn:hover::after {
+  transform: translateX(120%);
+}
+
+.page-about .btn--gold {
+  background: linear-gradient(135deg, var(--pg-gold), var(--pg-gold-soft));
+  color: var(--pg-navy);
+  box-shadow: 0 12px 30px rgba(201,162,74,0.3);
+}
+
+.page-about .btn--light {
+  background: rgba(255,255,255,0.1);
+  color: var(--pg-white);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.page-about .btn--light:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* 1. Hero Banner */
+.page-about .about-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 160px 0 80px;
+  background: var(--pg-navy);
+  color: var(--pg-white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.page-about .about-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/hero-gym.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.page-about .about-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(7,26,51,0.95) 0%, rgba(7,26,51,0.8) 50%, rgba(7,26,51,0.4) 100%);
+  z-index: -1;
+}
+
+.page-about .about-hero__lanes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(90deg, transparent 0 12%, rgba(201,162,74,0.15) 12.1% 12.3%, transparent 12.4% 27%, rgba(255,255,255,0.1) 27.1% 27.3%, transparent 27.4% 47%, rgba(201,162,74,0.1) 47.1% 47.3%, transparent 47.4%);
+  transform: skewY(-4deg);
+  transform-origin: bottom right;
+  z-index: -1;
+}
+
+.page-about .about-hero__content {
+  max-width: 700px;
+}
+
+.page-about .about-hero__title {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.page-about .about-hero__subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 40px;
+}
+
+.page-about .about-hero__stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.page-about .hero-badge {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-about .hero-badge span:first-child {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--pg-gold-soft);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.page-about .hero-badge span:last-child {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* 2. Our Story */
+.page-about .story-section {
+  background: var(--pg-white);
+}
+
+.page-about .story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 8vw, 80px);
+  align-items: center;
+}
+
+.page-about .story-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--pg-shadow);
+}
+
+.page-about .story-image::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.page-about .story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+
+.page-about .story-content h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--pg-navy);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.page-about .story-content > p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.page-about .story-features {
+  display: grid;
+  gap: 24px;
+}
+
+.page-about .story-feature {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.page-about .story-feature__num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--pg-gold);
+  line-height: 1;
+}
+
+.page-about .story-feature__text h4 {
+  font-size: 1.2rem;
+  color: var(--pg-navy);
+  margin-bottom: 8px;
+}
+
+.page-about .story-feature__text p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* 3. Mission & Vision */
+.page-about .mission-section {
+  background: var(--pg-navy);
+  position: relative;
+}
+
+.page-about .mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.page-about .mission-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 50px;
+  border-radius: 16px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.page-about .mission-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201,162,74,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.page-about .mission-card__icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--pg-gold), var(--pg-gold-soft));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(201,162,74,0.2);
+}
+
+.page-about .mission-card h3 {
+  font-size: 2rem;
+  color: var(--pg-white);
+  margin-bottom: 20px;
+}
+
+.page-about .mission-card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+}
+
+/* 4. Core Values */
+.page-about .values-section {
+  background: var(--pg-platinum);
+}
+
+.page-about .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.page-about .value-card {
+  background: var(--pg-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid var(--pg-line);
+  box-shadow: 0 10px 30px rgba(7,26,51,0.03);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.page-about .value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--pg-shadow);
+  border-color: rgba(201,162,74,0.3);
+}
+
+.page-about .value-card__icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.page-about .value-card h3 {
+  font-size: 1.5rem;
+  color: var(--pg-navy);
+  margin-bottom: 16px;
+}
+
+.page-about .value-card p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 5. Why We Started */
+.page-about .why-section {
+  background: var(--pg-white);
+}
+
+.page-about .why-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-about .why-content p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.page-about .why-quote {
+  margin: 40px 0;
+  padding: 40px;
+  background: var(--pg-platinum);
+  border-left: 4px solid var(--pg-gold);
+  border-radius: 0 12px 12px 0;
+}
+
+.page-about .why-quote p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--pg-navy);
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.page-about .why-quote footer {
+  font-weight: 700;
+  color: var(--pg-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+/* 6. Milestones Timeline */
+.page-about .timeline-section {
+  background: var(--pg-platinum);
+}
+
+.page-about .timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-about .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--pg-line);
+}
+
+.page-about .timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  width: 50%;
+}
+
+.page-about .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.page-about .timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 50px;
+  text-align: right;
+}
+
+.page-about .timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 50px;
+}
+
+.page-about .timeline-dot {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--pg-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(201,162,74,0.2);
+}
+
+.page-about .timeline-item:nth-child(odd) .timeline-dot {
+  right: -10px;
+}
+
+.page-about .timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+.page-about .timeline-content {
+  background: var(--pg-white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(7,26,51,0.05);
+  border: 1px solid var(--pg-line);
+  transition: transform 0.3s ease;
+}
+
+.page-about .timeline-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201,162,74,0.3);
+}
+
+.page-about .timeline-year {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--pg-blue);
+  margin-bottom: 12px;
+}
+
+.page-about .timeline-content h3 {
+  font-size: 1.3rem;
+  color: var(--pg-navy);
+  margin-bottom: 10px;
+}
+
+.page-about .timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* 7. Our Facility */
+.page-about .facility-section {
+  background: var(--pg-white);
+}
+
+.page-about .facility-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+}
+
+.page-about .facility-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.page-about .facility-item:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.page-about .facility-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.page-about .facility-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(7,26,51,0.8));
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.page-about .facility-item:hover img {
+  transform: scale(1.05);
+}
+
+.page-about .facility-item:hover::after {
+  opacity: 1;
+}
+
+.page-about .facility-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 2;
+}
+
+.page-about .facility-caption h3 {
+  color: var(--pg-white);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.page-about .facility-item:nth-child(1) .facility-caption h3 {
+  font-size: 2.5rem;
+}
+
+/* 8. Achievements */
+.page-about .achievements-section {
+  background: var(--pg-navy);
+  position: relative;
+}
+
+.page-about .achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.page-about .achievement-box {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 40px 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.page-about .achievement-num {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--pg-gold-soft);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.page-about .achievement-label {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* 9. CTA Banner */
+.page-about .cta-section {
+  position: relative;
+  padding: 100px 0;
+  background: var(--pg-navy);
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-about .cta-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/hero-wellness.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+.page-about .cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-about .cta-content h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--pg-white);
+  margin-bottom: 40px;
+}
+
+.page-about .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 10. Map Section */
+.page-about .map-section {
+  padding: 0;
+  background: var(--pg-platinum);
+}
+
+.page-about .map-wrapper {
+  height: 500px;
+  width: 100%;
+}
+
+.page-about .map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .page-about .facility-gallery {
+    grid-template-rows: repeat(2, 250px);
+  }
+}
+
+@media (max-width: 780px) {
+  .page-about .story-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-about .story-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .page-about .mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-about .timeline::before {
+    left: 30px;
+  }
+  
+  .page-about .timeline-item {
+    width: 100%;
+    padding-left: 80px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .page-about .timeline-item:nth-child(odd),
+  .page-about .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  
+  .page-about .timeline-item:nth-child(odd) .timeline-dot,
+  .page-about .timeline-item:nth-child(even) .timeline-dot {
+    left: 20px;
+    right: auto;
+  }
+  
+  .page-about .facility-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .page-about .facility-item {
+    height: 300px;
+  }
+  
+  .page-about .facility-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-about .about-hero__stats {
+    flex-direction: column;
+  }
+  
+  .page-about .timeline-item {
+    padding-left: 60px !important;
+  }
+  
+  .page-about .timeline-item:nth-child(odd) .timeline-dot,
+  .page-about .timeline-item:nth-child(even) .timeline-dot {
+    left: 20px;
+  }
+  
+  .page-about .timeline::before {
+    left: 30px;
+  }
+  
+  .page-about .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .page-about .btn {
+    width: 100%;
+  }
+}

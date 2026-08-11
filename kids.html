@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>Kids Swimming & Fitness Programs | MKB Health & Fitness Academy</title>
-  <meta name="description" content="Fun, active, and safe fitness programs for kids at MKB Fitness Academy, Ravet. Building confidence, discipline, and healthy habits early!">
-  <meta name="keywords" content="Kids Swimming, Kids Fitness, Ravet, Pune, MKB Fitness, Kids Activities">
+  <title>Fun Kids Activities & Swimming Classes in Ravet | MKB Fitness Academy</title>
+  <meta name="description" content="Discover vibrant Kids Swimming, Dance, Fitness, Animal Yoga, and 10-Day Routine classes at MKB Fitness Academy, Ravet, Pune. Certified coaches, shallow pool, 100% safe!">
+  <meta name="keywords" content="Kids Swimming Ravet, Kids Fitness Classes, Kids Dance Zumba, Animal Yoga Kids, Kids Activities Pune, MKB Fitness Academy">
   
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Kids Swimming & Fitness Programs | MKB Fitness Academy">
-  <meta property="og:description" content="Fun, active, and safe fitness programs for kids at MKB Fitness Academy, Ravet.">
-  <meta property="og:image" content="https://mkbfitnessacademy.com/images/hero-swimming.jpg">
+  <meta property="og:title" content="Fun Kids Activities & Swimming | MKB Fitness Academy">
+  <meta property="og:description" content="Fun, bright, and safe fitness & swimming programs for kids at MKB Fitness Academy, Ravet, Pune.">
+  <meta property="og:image" content="https://mkbfitnessacademy.com/images/swimming-kids.jpg">
   <meta property="og:url" content="https://mkbfitnessacademy.com/kids.html">
   <meta property="og:type" content="website">
   
@@ -25,20 +25,21 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/kids.css">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "MKB Health & Fitness Academy",
-    "image": "https://mkbfitnessacademy.com/images/hero-swimming.jpg",
-    "@id": "https://mkbfitnessacademy.com",
-    "url": "https://mkbfitnessacademy.com",
+    "@type": "SportsActivityLocation",
+    "name": "MKB Fitness Academy Kids Club",
+    "image": "https://mkbfitnessacademy.com/images/swimming-kids.jpg",
+    "@id": "https://mkbfitnessacademy.com/kids.html",
+    "url": "https://mkbfitnessacademy.com/kids.html",
     "telephone": "+919503834888",
     "address": {
       "@type": "PostalAddress",
@@ -48,34 +49,15 @@
       "postalCode": "412101",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 18.6473,
-      "longitude": 73.7441
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "06:00",
-        "closes": "12:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "16:00",
-        "closes": "22:00"
-      }
-    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "43"
+      "reviewCount": "48"
     }
   }
   </script>
 </head>
-<body>
+<body class="page-kids">
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
@@ -96,8 +78,8 @@
           <div class="navbar__dropdown-menu">
             <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
             <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
-            <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="personal-trainer.html" class="navbar__dropdown-item">🏋️♂️ Personal Trainer</a>
+            <a href="kids.html" class="navbar__dropdown-item active" style="color: var(--k-sunshine); font-weight:700;">👶 Kids Activities</a>
+            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
             <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
           </div>
         </div>
@@ -107,7 +89,7 @@
         <a href="contact.html" class="navbar__link">Contact</a>
       </div>
 
-      <a href="pricing.html" class="navbar__cta">Join Now</a>
+      <button class="navbar__cta open-trial-modal">Book Free Trial</button>
 
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle Navigation">
         <span></span><span></span><span></span>
@@ -116,159 +98,727 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <header class="hero hero--page">
-    <div class="hero__bg">
-      <img src="images/hero-swimming.jpg" alt="MKB Fitness Kids Programs" loading="eager">
+  <header class="kids-hero">
+    <div class="kids-hero__bg">
+      <img src="images/swimming-kids.jpg" alt="Kids Swimming & Fun Fitness Activities at MKB Fitness Academy" loading="eager">
     </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content" data-animate="fade-up">
-      <div class="hero__badge">👶 FOR KIDS AGES 3+</div>
-      <h1 class="hero__title">KIDS SWIMMING & FITNESS PROGRAMS</h1>
-      <p class="hero__subtitle">Fun, active, and safe fitness programs for kids at MKB Fitness Academy, Ravet. Building confidence, discipline, and healthy habits early!</p>
-      <div class="hero__actions">
-        <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20Kids%20Swimming%20%26%20Activities." class="btn btn--primary" target="_blank" rel="noopener noreferrer">Enquire for Kids Classes</a>
-        <a href="#routine" class="btn btn--outline">Explore 10-Day Challenge</a>
+    <div class="kids-hero__overlay"></div>
+
+    <!-- Floating Doodle Blobs -->
+    <div class="kids-hero__blob kids-hero__blob--1"></div>
+    <div class="kids-hero__blob kids-hero__blob--2"></div>
+    <div class="kids-hero__blob kids-hero__blob--3"></div>
+
+    <div class="kids-hero__content">
+      <div class="kids-hero__badge">
+        <span>🌟 AGES 3 TO 14</span>
+        <span>•</span>
+        <span>RAVET, PUNE</span>
+      </div>
+
+      <h1 class="kids-hero__title">
+        Where Fun Meets <span>Fitness & Confidence!</span>
+      </h1>
+
+      <p class="kids-hero__subtitle">
+        Join Pune's most active and friendly kids academy! From shallow-pool swimming and energetic dance to animal yoga and 50+ posture exercise routines, we build early healthy habits through joyful play.
+      </p>
+
+      <div class="kids-hero__actions">
+        <button class="btn-kids-primary open-trial-modal">
+          🎉 Book Free Trial Batch
+        </button>
+        <a href="#activities" class="btn-kids-secondary">
+          🎈 Explore Activities
+        </a>
+      </div>
+
+      <div class="kids-hero__stats">
+        <div class="kids-hero__stat-card">
+          <div class="kids-hero__stat-val">🏊 Safe Pool</div>
+          <div class="kids-hero__stat-lbl">Shallow & Temperature Managed</div>
+        </div>
+        <div class="kids-hero__stat-card">
+          <div class="kids-hero__stat-val">🧘 50+ Poses</div>
+          <div class="kids-hero__stat-lbl">Animal Exercises & Routine</div>
+        </div>
+        <div class="kids-hero__stat-card">
+          <div class="kids-hero__stat-val">👩‍🏫 1:5 Ratio</div>
+          <div class="kids-hero__stat-lbl">Female & Certified Coaches</div>
+        </div>
+        <div class="kids-hero__stat-card">
+          <div class="kids-hero__stat-val">⭐ 4.9 Rating</div>
+          <div class="kids-hero__stat-lbl">Loved by 100+ Ravet Parents</div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- KIDS SWIMMING SECTION -->
-  <section class="section">
+  <!-- ACTIVITIES SHOWCASE (TABS) -->
+  <section id="activities" class="kids-activities-section">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-header__label">Swimming for Kids</span>
-        <h2 class="section-header__title">Kids Swimming (3+ Years)</h2>
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag">🌈 What We Offer</span>
+        <h2 class="kids-section-header__title">Fun Activities Every Kid Loves</h2>
+        <p class="kids-section-header__subtitle">Explore our structured, playful sessions designed to improve strength, agility, water safety, and social connection.</p>
       </div>
 
-      <div class="services-grid">
-        <div class="card card--blue" data-animate="fade-up">
-          <div class="card__icon card__icon--blue">🏊</div>
-          <h3 class="card__title">Safe & Shallow Pool</h3>
-          <p class="card__text">Temperature controlled, shallow safety pool designed for kids 3 years and above.</p>
+      <!-- Tab Buttons -->
+      <div class="kids-tabs-nav">
+        <button class="kids-tab-btn active" data-tab="swimming">🏊 Swimming</button>
+        <button class="kids-tab-btn" data-tab="dance">💃 Dance & Rhythm</button>
+        <button class="kids-tab-btn" data-tab="fitness">🤸 Kids Fitness</button>
+        <button class="kids-tab-btn" data-tab="games">🎮 Fun Games</button>
+        <button class="kids-tab-btn" data-tab="yoga">🧘 Animal Yoga</button>
+      </div>
+
+      <!-- Tab 1: Swimming -->
+      <div class="kids-tab-pane active" id="tab-swimming">
+        <div class="kids-activity-card">
+          <div class="kids-activity-card__img">
+            <img src="images/swimming-kids.jpg" alt="Kids Swimming Lessons">
+          </div>
+          <div class="kids-activity-card__body">
+            <span class="kids-activity-card__badge badge-swimming">Water Safety & Strokes</span>
+            <h3 class="kids-activity-card__title">Kids Swimming Coaching</h3>
+            <p>Our safe, shallow pool and gentle coaches help kids overcome water fear and master swimming technique step-by-step. With floaters, fun water games, and stroke correction, your child becomes a confident swimmer!</p>
+
+            <ul class="kids-activity-card__features">
+              <li><span>🛡️</span> Shallow 3ft Safety Pool</li>
+              <li><span>👩‍🏫</span> Certified Female & Male Coaches</li>
+              <li><span>🏊‍♂️</span> Freestyle, Backstroke & Breaststroke</li>
+              <li><span>📹</span> CCTV Monitored Parent View</li>
+            </ul>
+
+            <button class="btn-kids-primary open-trial-modal" style="align-self: flex-start;">Enrol for Swim Batch</button>
+          </div>
         </div>
-        
-        <div class="card card--blue" data-animate="fade-up">
-          <div class="card__icon card__icon--blue">👩‍🏫</div>
-          <h3 class="card__title">Certified Coaching</h3>
-          <p class="card__text">Certified patient coaches with female coaches available. Lifeguard & CCTV monitoring.</p>
+      </div>
+
+      <!-- Tab 2: Dance -->
+      <div class="kids-tab-pane" id="tab-dance">
+        <div class="kids-activity-card">
+          <div class="kids-activity-card__img">
+            <img src="poster/kids-exercise/img/47freedance.png" alt="Kids Dance and Zumba">
+          </div>
+          <div class="kids-activity-card__body">
+            <span class="kids-activity-card__badge badge-dance">Rhythm & Joy</span>
+            <h3 class="kids-activity-card__title">Kids Dance & Zumba Express</h3>
+            <p>Turn workout time into a dance party! Our kids dance & rhythm sessions boost cardiovascular health, memory, motor coordination, and self-expression with upbeat music and friendly choreography.</p>
+
+            <ul class="kids-activity-card__features">
+              <li><span>🎶</span> High-Energy Upbeat Music</li>
+              <li><span>🕺</span> Body Rhythm & Balance</li>
+              <li><span>⭐</span> Stage Confidence Boost</li>
+              <li><span>🎉</span> Party Moves & Freestyle</li>
+            </ul>
+
+            <button class="btn-kids-primary open-trial-modal" style="align-self: flex-start;">Join Dance Session</button>
+          </div>
         </div>
-        
-        <div class="card card--blue" data-animate="fade-up">
-          <div class="card__icon card__icon--blue">🕒</div>
-          <h3 class="card__title">Flexible Batches</h3>
-          <p class="card__text">Weekend & Regular batches available to suit your child's schedule.</p>
+      </div>
+
+      <!-- Tab 3: Fitness -->
+      <div class="kids-tab-pane" id="tab-fitness">
+        <div class="kids-activity-card">
+          <div class="kids-activity-card__img">
+            <img src="poster/kids-exercise/img/06running.png" alt="Kids Agility and Fitness">
+          </div>
+          <div class="kids-activity-card__body">
+            <span class="kids-activity-card__badge badge-fitness">Agility & Strength</span>
+            <h3 class="kids-activity-card__title">Kids Functional Fitness</h3>
+            <p>Designed around natural movement patterns, agility ladders, skipping, obstacle courses, and animal walks to build core stability, leg power, and healthy posture early in life.</p>
+
+            <ul class="kids-activity-card__features">
+              <li><span>🏃</span> Agility & Speed Ladder</li>
+              <li><span>💪</span> Core Stability & Planks</li>
+              <li><span>🪜</span> Obstacle Challenge Course</li>
+              <li><span>📜</span> 10-Day Fitness Certificate</li>
+            </ul>
+
+            <button class="btn-kids-primary open-trial-modal" style="align-self: flex-start;">Start Fitness Routine</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Games -->
+      <div class="kids-tab-pane" id="tab-games">
+        <div class="kids-activity-card">
+          <div class="kids-activity-card__img">
+            <img src="poster/kids-exercise/img/46hoop.png" alt="Kids Interactive Games">
+          </div>
+          <div class="kids-activity-card__body">
+            <span class="kids-activity-card__badge badge-games">Teamwork & Play</span>
+            <h3 class="kids-activity-card__title">Interactive Team Games</h3>
+            <p>Games make exercise natural! Through hula hoop challenges, relay races, tag games, and balance beams, kids learn team collaboration, sportsmanship, and quick decision-making while having a blast.</p>
+
+            <ul class="kids-activity-card__features">
+              <li><span>⭕</span> Hula Hoop & Jump Rope</li>
+              <li><span>🤝</span> Teamwork & Relays</li>
+              <li><span>🎯</span> Balance & Eye-Hand Coordination</li>
+              <li><span>😊</span> Screen-Free Happiness</li>
+            </ul>
+
+            <button class="btn-kids-primary open-trial-modal" style="align-self: flex-start;">Play & Move</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Yoga -->
+      <div class="kids-tab-pane" id="tab-yoga">
+        <div class="kids-activity-card">
+          <div class="kids-activity-card__img">
+            <img src="poster/kids-exercise/img/33frogpose.png" alt="Kids Animal Yoga">
+          </div>
+          <div class="kids-activity-card__body">
+            <span class="kids-activity-card__badge badge-yoga">Mindfulness & Posture</span>
+            <h3 class="kids-activity-card__title">Animal Yoga & Stretch Poses</h3>
+            <p>From Frog Pose and Lion Roars to Butterfly and Snake poses! Kids learn spine flexibility, deep breathing technique, and calmness through fun animal stories and gentle guided stretches.</p>
+
+            <ul class="kids-activity-card__features">
+              <li><span>🐸</span> Frog, Lion & Butterfly Poses</li>
+              <li><span>🧘</span> Gentle Deep Breathing</li>
+              <li><span>🦴</span> Spine Alignment & Flexibility</li>
+              <li><span>😌</span> Emotional Calmness</li>
+            </ul>
+
+            <button class="btn-kids-primary open-trial-modal" style="align-self: flex-start;">Try Animal Poses</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10-DAY FITNESS ROUTINE POSTER SHOWCASE -->
+  <section class="kids-routine-section">
+    <div class="container">
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag">🌟 Daily Exercise Guide</span>
+        <h2 class="kids-section-header__title">10-Day Kids Fitness Routine</h2>
+        <p class="kids-section-header__subtitle">Explore our structured poster routine exercises designed to build posture, stamina, and agility step-by-step!</p>
+      </div>
+
+      <div class="kids-routine-grid">
+
+        <!-- Day 1 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/01plank.png" data-caption="Day 1: Plank & Core Balance">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 1</span>
+            <span class="kids-poster-card__category">Core & Balance</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/01plank.png" alt="Day 1 Plank" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Basic Plank & Core</h3>
+          <p class="kids-poster-card__desc">Strengthens tummy muscles, shoulder stability, and body balance for growing kids.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 20-30 Seconds</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/06running.png" data-caption="Day 2: Cardio Running & Stamina">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 2</span>
+            <span class="kids-poster-card__category">Cardio Boost</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/06running.png" alt="Day 2 Running" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Spot Running & Agility</h3>
+          <p class="kids-poster-card__desc">Enhances heart health, lung capacity, leg power, and overall body stamina.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 1-2 Minutes</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/11skipping.png" data-caption="Day 3: Rope Skipping & Coordination">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 3</span>
+            <span class="kids-poster-card__category">Rhythm & Hops</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/11skipping.png" alt="Day 3 Skipping" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Rope Skipping Fun</h3>
+          <p class="kids-poster-card__desc">Improves hand-eye coordination, calf strength, and bone density through light jumps.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 20 Hops x 3 Sets</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/18fromjumps.png" data-caption="Day 4: Frog Jumps & Leg Power">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 4</span>
+            <span class="kids-poster-card__category">Leg Explosiveness</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/18fromjumps.png" alt="Day 4 Frog Jumps" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Frog Jumps</h3>
+          <p class="kids-poster-card__desc">Fun deep squat jumps that build strong hips, thighs, and lower body flexibility.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 10 Reps</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/22bearwalk.png" data-caption="Day 5: Bear Walk & Crab Walk">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 5</span>
+            <span class="kids-poster-card__category">Animal Walks</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/22bearwalk.png" alt="Day 5 Bear Walk" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Bear Walk & Crawls</h3>
+          <p class="kids-poster-card__desc">Full-body quad crawling exercise for shoulder strength, wrist health, and spine posture.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 10 Metres Crawl</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/26bunnyhops.png" data-caption="Day 6: Bunny Hops & Starfish Stretch">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 6</span>
+            <span class="kids-poster-card__category">Agility & Stretch</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/26bunnyhops.png" alt="Day 6 Bunny Hops" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Bunny Hops</h3>
+          <p class="kids-poster-card__desc">Light quick jumps on toes to strengthen ankles and improve balance agility.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 15 Hops</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/34butterflypose.png" data-caption="Day 7: Butterfly Yoga Pose">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 7</span>
+            <span class="kids-poster-card__category">Flexibility & Calm</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/34butterflypose.png" alt="Day 7 Butterfly Pose" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Butterfly Pose</h3>
+          <p class="kids-poster-card__desc">Relieves groin stiffness, aids digestion, and promotes calm mindful breathing.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ Hold 30 Seconds</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/36lionpose.png" data-caption="Day 8: Lion & Snake Poses">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 8</span>
+            <span class="kids-poster-card__category">Wild Animal Poses</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/36lionpose.png" alt="Day 8 Lion Pose" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Lion Pose (Simhasana)</h3>
+          <p class="kids-poster-card__desc">Relieves facial & throat tension, builds confidence, and encourages joy in kids.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 5 Lion Roars</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/40flamingopose.png" data-caption="Day 9: Flamingo Single Leg Balance">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 9</span>
+            <span class="kids-poster-card__category">Single Leg Balance</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/40flamingopose.png" alt="Day 9 Flamingo Pose" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Flamingo Pose</h3>
+          <p class="kids-poster-card__desc">Single leg balancing pose to strengthen knees, foot arches, and focus power.</p>
+          <div class="kids-poster-card__footer">
+            <span>⏱️ 20 Secs Per Leg</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="kids-poster-card trigger-lightbox" data-img="poster/kids-exercise/img/50celebration.png" data-caption="Day 10: Celebration & Free Dance Graduation">
+          <div class="kids-poster-card__header">
+            <span class="kids-poster-card__day">DAY 10</span>
+            <span class="kids-poster-card__category">Graduation Party</span>
+          </div>
+          <div class="kids-poster-card__img-wrap">
+            <img src="poster/kids-exercise/img/50celebration.png" alt="Day 10 Celebration" loading="lazy">
+          </div>
+          <h3 class="kids-poster-card__title">Celebration & Reward!</h3>
+          <p class="kids-poster-card__desc">Completion celebration with free dance party, certificate award, and high fives!</p>
+          <div class="kids-poster-card__footer">
+            <span>🎉 Certificate Award</span>
+            <span>🔍 Click to View Poster</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS FOR GROWING KIDS -->
+  <section class="kids-benefits-section">
+    <div class="container">
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag">💡 Why Active Kids Win</span>
+        <h2 class="kids-section-header__title">Benefits for Growing Children</h2>
+        <p class="kids-section-header__subtitle">Structured physical activity helps your child thrive physically, mentally, and socially.</p>
+      </div>
+
+      <div class="kids-benefits-grid">
+        <div class="kids-benefit-card kids-benefit-card--1">
+          <span class="kids-benefit-card__icon">📱❌</span>
+          <h3 class="kids-benefit-card__title">Screen-Free Healthy Fun</h3>
+          <p>Replaces sedentary phone & TV screen time with joyful physical movement, fresh air, and real-world play.</p>
+        </div>
+
+        <div class="kids-benefit-card kids-benefit-card--2">
+          <span class="kids-benefit-card__icon">💪</span>
+          <h3 class="kids-benefit-card__title">Strong Bones & Muscles</h3>
+          <p>Promotes healthy growth, joint flexibility, and cardiovascular stamina during key growth years.</p>
+        </div>
+
+        <div class="kids-benefit-card kids-benefit-card--3">
+          <span class="kids-benefit-card__icon">⭐</span>
+          <h3 class="kids-benefit-card__title">Confidence & Courage</h3>
+          <p>Conquering water fear and mastering new exercise skills builds self-esteem and courage.</p>
+        </div>
+
+        <div class="kids-benefit-card kids-benefit-card--4">
+          <span class="kids-benefit-card__icon">🧘</span>
+          <h3 class="kids-benefit-card__title">Better Posture & Alignment</h3>
+          <p>Corrects heavy school bag slouching with spine stretching, core activation, and shoulder retractions.</p>
+        </div>
+
+        <div class="kids-benefit-card kids-benefit-card--5">
+          <span class="kids-benefit-card__icon">🎯</span>
+          <h3 class="kids-benefit-card__title">Enhanced Focus & Study</h3>
+          <p>Physical movement releases feel-good endorphins that improve classroom concentration and sleep quality.</p>
+        </div>
+
+        <div class="kids-benefit-card kids-benefit-card--6">
+          <span class="kids-benefit-card__icon">👥</span>
+          <h3 class="kids-benefit-card__title">Social Connection</h3>
+          <p>Kids build friendships, practice teamwork, share laughter, and develop positive sportsmanship.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 10-DAY KIDS FITNESS CHALLENGE -->
-  <section id="routine" class="section section--alt">
+  <!-- AGE GROUPS SECTION -->
+  <section class="kids-age-section">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-header__label">10-DAY KIDS FITNESS ROUTINE</span>
-        <h2 class="section-header__title">10-DAY KIDS FITNESS CHALLENGE</h2>
-        <p class="section-header__subtitle">Structured daily physical exercises designed for growing kids to improve posture, agility, strength, and stamina.</p>
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag">🎈 Age Categories</span>
+        <h2 class="kids-section-header__title">Tailored Batches by Age Group</h2>
+        <p class="kids-section-header__subtitle">Every developmental stage gets tailored exercises, appropriate group ratios, and age-suited coaching.</p>
       </div>
 
-      <div class="kids-routine-grid">
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 1</div>
-          <h3 class="kids-day-card__title">Dynamic Warm-Up & Stretching</h3>
-          <p class="kids-day-card__desc">Full body mobility & posture check</p>
+      <div class="kids-age-grid">
+
+        <!-- Toddlers -->
+        <div class="kids-age-card kids-age-card--toddler">
+          <div class="kids-age-card__header">
+            <span class="kids-age-card__range">AGES 3 TO 5</span>
+            <h3 class="kids-age-card__name">Little Champs</h3>
+          </div>
+          <div class="kids-age-card__body">
+            <ul class="kids-age-card__list">
+              <li><span>🌊</span> Water Acclimatization & Floating</li>
+              <li><span>🐻</span> Animal Posture Walks & Crawls</li>
+              <li><span>🎈</span> Sensory Motor Coordination</li>
+              <li><span>👩‍🏫</span> 1:3 Coach to Kid Ratio</li>
+            </ul>
+            <button class="btn-kids-primary open-trial-modal" style="margin-top:auto; width:100%;">Book Little Champs Trial</button>
+          </div>
         </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 2</div>
-          <h3 class="kids-day-card__title">Core & Balance Fundamentals</h3>
-          <p class="kids-day-card__desc">Planks, balance beam, stability</p>
+
+        <!-- Juniors -->
+        <div class="kids-age-card kids-age-card--junior">
+          <div class="kids-age-card__header">
+            <span class="kids-age-card__range">AGES 6 TO 9</span>
+            <h3 class="kids-age-card__name">Junior Stars</h3>
+          </div>
+          <div class="kids-age-card__body">
+            <ul class="kids-age-card__list">
+              <li><span>🏊</span> Freestyle & Backstroke Kicking</li>
+              <li><span>🏃</span> Agility Ladders & Obstacle Hops</li>
+              <li><span>💃</span> Kids Zumba & Rhythm Dance</li>
+              <li><span>🏆</span> 10-Day Routine Completion</li>
+            </ul>
+            <button class="btn-kids-primary open-trial-modal" style="margin-top:auto; width:100%;">Book Junior Stars Trial</button>
+          </div>
         </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 3</div>
-          <h3 class="kids-day-card__title">Agility & Footwork Fun</h3>
-          <p class="kids-day-card__desc">Ladder drills, cone hops, quick feet</p>
+
+        <!-- Pro Kids -->
+        <div class="kids-age-card kids-age-card--pro">
+          <div class="kids-age-card__header">
+            <span class="kids-age-card__range">AGES 10 TO 14</span>
+            <h3 class="kids-age-card__name">Pro Champions</h3>
+          </div>
+          <div class="kids-age-card__body">
+            <ul class="kids-age-card__list">
+              <li><span>🏊‍♂️</span> All 4 Swim Strokes Mastery</li>
+              <li><span>💪</span> Core Strength & Functional Conditioning</li>
+              <li><span>🧘</span> Advanced Animal Poses & Breathwork</li>
+              <li><span>🏅</span> Sports Fitness Readiness</li>
+            </ul>
+            <button class="btn-kids-primary open-trial-modal" style="margin-top:auto; width:100%;">Book Pro Champions Trial</button>
+          </div>
         </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 4</div>
-          <h3 class="kids-day-card__title">Upper Body Strength</h3>
-          <p class="kids-day-card__desc">Bear crawls, push-up basics, resistance fun</p>
-        </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 5</div>
-          <h3 class="kids-day-card__title">Cardio & Stamina Boost</h3>
-          <p class="kids-day-card__desc">Jumping jacks, relay sprints, games</p>
-        </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 6</div>
-          <h3 class="kids-day-card__title">Posture Correction Exercises</h3>
-          <p class="kids-day-card__desc">Spine alignment, shoulder retractions</p>
-        </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 7</div>
-          <h3 class="kids-day-card__title">Active Recovery & Swimming Drills</h3>
-          <p class="kids-day-card__desc">Water floating, kicking, breathing</p>
-        </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 8</div>
-          <h3 class="kids-day-card__title">Lower Body Power</h3>
-          <p class="kids-day-card__desc">Squat jumps, lunges, leg strength</p>
-        </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 9</div>
-          <h3 class="kids-day-card__title">Coordination & Obstacle Course</h3>
-          <p class="kids-day-card__desc">Fun challenge course</p>
-        </div>
-        <div class="kids-day-card" data-animate="fade-up">
-          <div class="kids-day-card__number">Day 10</div>
-          <h3 class="kids-day-card__title">Fitness Assessment & Graduation</h3>
-          <p class="kids-day-card__desc">Certificate & performance reward</p>
-        </div>
+
       </div>
     </div>
   </section>
 
   <!-- SAFETY & HYGIENE SECTION -->
-  <section class="section">
+  <section class="kids-safety-section">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-header__label">Our Commitment</span>
-        <h2 class="section-header__title">Safety & Hygiene Standards</h2>
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag" style="background: rgba(255,255,255,0.15); color: var(--k-sunshine);">🛡️ Safety Guarantee</span>
+        <h2 class="kids-section-header__title">100% Parent Peace of Mind</h2>
+        <p style="color: rgba(255,255,255,0.8);">Your child’s security and hygiene are our absolute top priorities at MKB Fitness Academy.</p>
       </div>
 
-      <div class="services-grid">
-        <div class="card card--green" data-animate="fade-up">
-          <div class="card__icon card__icon--green">🛡️</div>
-          <h3 class="card__title">100% Safe Environment</h3>
-          <p class="card__text">CCTV monitored premises with secure access for peace of mind.</p>
+      <div class="kids-safety-grid">
+        <div class="kids-safety-card">
+          <div class="kids-safety-card__icon">🏊</div>
+          <h3 class="kids-safety-card__title">Shallow Safety Pool</h3>
+          <p>Designated low-depth pool section designed specifically for children to stand comfortably and learn securely.</p>
         </div>
-        
-        <div class="card card--green" data-animate="fade-up">
-          <div class="card__icon card__icon--green">💧</div>
-          <h3 class="card__title">Clean Pool</h3>
-          <p class="card__text">Daily chlorinated & filtered pool maintaining highest hygiene standards.</p>
+
+        <div class="kids-safety-card">
+          <div class="kids-safety-card__icon">👩‍🏫</div>
+          <h3 class="kids-safety-card__title">Female & Male Coaches</h3>
+          <p>Patient, certified trainers with female coaches available for young children and girls.</p>
         </div>
-        
-        <div class="card card--green" data-animate="fade-up">
-          <div class="card__icon card__icon--green">⚕️</div>
-          <h3 class="card__title">First Aid Certified Staff</h3>
-          <p class="card__text">Our coaches are trained and certified in first aid and emergency response.</p>
+
+        <div class="kids-safety-card">
+          <div class="kids-safety-card__icon">📹</div>
+          <h3 class="kids-safety-card__title">24/7 CCTV & Parent Lounge</h3>
+          <p>Watch your child practice comfortably from our air-conditioned parent viewing seating gallery.</p>
+        </div>
+
+        <div class="kids-safety-card">
+          <div class="kids-safety-card__icon">⚕️</div>
+          <h3 class="kids-safety-card__title">First Aid & CPR Certified</h3>
+          <p>Lifeguard on deck during all sessions with immediate first-aid trained response personnel.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="section section--alt" data-animate="fade-up">
+  <!-- PHOTO & POSTER GALLERY -->
+  <section class="kids-gallery-section">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-header__title">Give Your Child The Gift Of Health & Confidence</h2>
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag">📸 Photo Gallery</span>
+        <h2 class="kids-section-header__title">Kids In Action</h2>
+        <p class="kids-section-header__subtitle">Take a peek at our cheerful sessions, exercise posters, pool splashes, and happy moments!</p>
       </div>
-      <div class="hero__actions">
-        <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20book%20a%20trial%20session%20for%20my%20child." class="btn btn--primary" target="_blank" rel="noopener noreferrer">Book Kids Trial Batch on WhatsApp</a>
+
+      <div class="kids-gallery-filters">
+        <button class="kids-gal-btn active" data-filter="all">All Photos</button>
+        <button class="kids-gal-btn" data-filter="swimming">Swimming</button>
+        <button class="kids-gal-btn" data-filter="posters">Exercise Posters</button>
+        <button class="kids-gal-btn" data-filter="dance">Dance & Fun</button>
+      </div>
+
+      <div class="kids-gallery-grid">
+        <!-- Item 1 -->
+        <div class="kids-gal-item trigger-lightbox" data-category="swimming" data-img="images/swimming-kids.jpg" data-caption="Shallow Pool Swimming Coaching">
+          <img src="images/swimming-kids.jpg" alt="Kids Swimming Pool">
+          <div class="kids-gal-item__overlay">
+            <span class="kids-gal-item__caption">🏊 Kids Swim Batch</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="kids-gal-item trigger-lightbox" data-category="posters" data-img="poster/kids-exercise/img/18fromjumps.png" data-caption="Frog Jumps Agility Exercise Poster">
+          <img src="poster/kids-exercise/img/18fromjumps.png" alt="Frog Jumps Poster">
+          <div class="kids-gal-item__overlay">
+            <span class="kids-gal-item__caption">🐸 Frog Jumps Poster</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="kids-gal-item trigger-lightbox" data-category="dance" data-img="poster/kids-exercise/img/47freedance.png" data-caption="Freestyle Dance & Party Moves">
+          <img src="poster/kids-exercise/img/47freedance.png" alt="Kids Free Dance">
+          <div class="kids-gal-item__overlay">
+            <span class="kids-gal-item__caption">💃 Dance & Zumba Fun</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="kids-gal-item trigger-lightbox" data-category="posters" data-img="poster/kids-exercise/img/33frogpose.png" data-caption="Frog Pose Yoga Stretches">
+          <img src="poster/kids-exercise/img/33frogpose.png" alt="Frog Pose Poster">
+          <div class="kids-gal-item__overlay">
+            <span class="kids-gal-item__caption">🧘 Animal Yoga Stretches</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="kids-gal-item trigger-lightbox" data-category="swimming" data-img="images/swimming-coach.jpg" data-caption="Certified Swimming Coach Guidance">
+          <img src="images/swimming-coach.jpg" alt="Swimming Coach with Kid">
+          <div class="kids-gal-item__overlay">
+            <span class="kids-gal-item__caption">👩‍🏫 Patient Coach Support</span>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="kids-gal-item trigger-lightbox" data-category="posters" data-img="poster/kids-exercise/img/50celebration.png" data-caption="10-Day Routine Graduation Celebration">
+          <img src="poster/kids-exercise/img/50celebration.png" alt="Graduation Poster">
+          <div class="kids-gal-item__overlay">
+            <span class="kids-gal-item__caption">🎉 Graduation Celebration</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- PARENTS REVIEWS -->
+  <section class="kids-reviews-section">
+    <div class="container">
+      <div class="kids-section-header">
+        <span class="kids-section-header__tag">💬 Parent Feedback</span>
+        <h2 class="kids-section-header__title">What Parents Say</h2>
+        <p class="kids-section-header__subtitle">Read real reviews from parents in Ravet whose children have gained confidence and active habits at MKB.</p>
+      </div>
+
+      <div class="kids-reviews-grid">
+
+        <div class="kids-review-card">
+          <div class="kids-review-stars">★★★★★</div>
+          <p class="kids-review-quote">"My 6-year-old son was terrified of water before joining MKB. The female swimming coach was so gentle! In just 2 weeks he started floating happily on his own. Best decision!"</p>
+          <div class="kids-review-author">
+            <div class="kids-review-avatar">PS</div>
+            <div>
+              <div class="kids-review-name">Pooja Sharma</div>
+              <div class="kids-review-child">Mother of Aarav (Age 6) • Ravet</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kids-review-card">
+          <div class="kids-review-stars">★★★★★</div>
+          <p class="kids-review-quote">"The 10-day exercise routine poster challenge is brilliant! My daughter loved doing animal walks and butterfly poses every day. Her posture has noticeably improved!"</p>
+          <div class="kids-review-author">
+            <div class="kids-review-avatar">RK</div>
+            <div>
+              <div class="kids-review-name">Rajesh Kulkarni</div>
+              <div class="kids-review-child">Father of Ananya (Age 8) • Ravet</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kids-review-card">
+          <div class="kids-review-stars">★★★★★</div>
+          <p class="kids-review-quote">"Clean shallow pool, CCTV monitoring in parent waiting area, and super supportive coaches. It has completely reduced my son's phone addiction. Highly recommended!"</p>
+          <div class="kids-review-author">
+            <div class="kids-review-avatar">AP</div>
+            <div>
+              <div class="kids-review-name">Amit Patil</div>
+              <div class="kids-review-child">Father of Vihaan (Age 10) • Ravet</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLLMENT CTA BANNER -->
+  <section class="container">
+    <div class="kids-cta-banner">
+      <h2>Give Your Child The Gift Of Health & Confidence!</h2>
+      <p>Book a free trial batch today and let your child experience swimming, dance, and animal yoga fitness in a safe, cheerful environment.</p>
+
+      <div class="kids-cta-actions">
+        <button class="btn-kids-primary open-trial-modal" style="background: #FFFFFF; color: var(--k-primary) !important;">
+          🎉 Book Free Trial Batch
+        </button>
+        <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20Kids%20Classes." class="btn-kids-secondary" target="_blank" rel="noopener">
+          📱 Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX PREVIEW MODAL -->
+  <div class="kids-lightbox" id="kids-lightbox">
+    <div class="kids-lightbox__content">
+      <button class="kids-lightbox__close" id="lightbox-close" aria-label="Close Preview">✕</button>
+      <img src="" alt="Preview" class="kids-lightbox__img" id="lightbox-img">
+      <div class="kids-lightbox__caption" id="lightbox-caption">Exercise Poster Preview</div>
+    </div>
+  </div>
+
+  <!-- TRIAL BOOKING MODAL -->
+  <div class="kids-modal" id="trial-modal">
+    <div class="kids-modal-card">
+      <button class="kids-modal-close" id="modal-close" aria-label="Close Modal">✕</button>
+      <h3 style="font-size: 1.8rem; margin-bottom: 8px; color: var(--k-navy);">🎉 Book Free Kids Trial</h3>
+      <p style="margin-bottom: 24px; font-size: 0.95rem;">Select your preferred program and we’ll reserve your child's spot!</p>
+
+      <form id="trial-form">
+        <div class="kids-form-group">
+          <label for="form-parent-name">Parent Name</label>
+          <input type="text" id="form-parent-name" class="kids-form-input" placeholder="e.g. Priya Sharma" required>
+        </div>
+
+        <div class="kids-form-group">
+          <label for="form-phone">Mobile / WhatsApp Number</label>
+          <input type="tel" id="form-phone" class="kids-form-input" placeholder="e.g. 9876543210" required>
+        </div>
+
+        <div class="kids-form-group">
+          <label for="form-child-age">Child's Age</label>
+          <select id="form-child-age" class="kids-form-select" required>
+            <option value="">Select Age Group</option>
+            <option value="3-5 Years (Little Champs)">3-5 Years (Little Champs)</option>
+            <option value="6-9 Years (Junior Stars)">6-9 Years (Junior Stars)</option>
+            <option value="10-14 Years (Pro Champions)">10-14 Years (Pro Champions)</option>
+          </select>
+        </div>
+
+        <div class="kids-form-group">
+          <label for="form-activity">Preferred Activity</label>
+          <select id="form-activity" class="kids-form-select" required>
+            <option value="Kids Swimming">Kids Swimming</option>
+            <option value="Kids Dance & Zumba">Kids Dance & Zumba</option>
+            <option value="Functional Fitness & Agility">Functional Fitness & Agility</option>
+            <option value="Animal Yoga & Stretches">Animal Yoga & Stretches</option>
+            <option value="All-in-One Kids Combo">All-in-One Kids Combo</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-kids-primary" style="width: 100%; margin-top: 10px;">
+          🚀 Reserve Trial Spot on WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -302,15 +852,15 @@
         <div>
           <h4 class="footer__heading">Contact Us</h4>
           <p class="footer__link">📍 Sector 29, Aditya Malhar Road, Ravet, Pune-412101</p>
-          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--clr-gold);">9503834888</a></p>
+          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--k-sunshine);">9503834888</a></p>
           <p class="footer__link">📱 <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" style="color:#25D366;">+91 9370813366</a></p>
-          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--clr-gold);">mkbfitness17@gmail.com</a></p>
+          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--k-sunshine);">mkbfitness17@gmail.com</a></p>
         </div>
         <div>
-          <h4 class="footer__heading">Gym Timings</h4>
+          <h4 class="footer__heading">Academy Timings</h4>
           <p class="footer__link">🌅 Morning: 6:00 AM – 12:00 PM</p>
           <p class="footer__link">🌆 Evening: 4:00 PM – 10:00 PM</p>
-          <p class="footer__link" style="color:var(--clr-gold); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
+          <p class="footer__link" style="color:var(--k-sunshine); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
         </div>
       </div>
       <div class="footer__bottom">
@@ -333,5 +883,6 @@
 
   <!-- SCRIPTS -->
   <script src="./js/main.js" defer></script>
+  <script src="./js/kids.js" defer></script>
 </body>
 </html>

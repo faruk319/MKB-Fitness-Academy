@@ -1,0 +1,1157 @@
+/* ============================================================
+   PAGE: KIDS ACTIVITIES — HOME PAGE HARMONIZED DESIGN
+   MKB Fitness Academy Design System
+   Matches homepage.css colors, typography, animations & shadows
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Scoped Design Tokens (.page-kids)
+   ------------------------------------------------------------ */
+.page-kids {
+  /* Brand Palette (Identical to homepage.css) */
+  --k-navy: #071A33;
+  --k-blue: #0B74D1;
+  --k-blue-deep: #063F78;
+  --k-pool: #DDF3FF;
+  --k-white: #FFFFFF;
+  --k-platinum: #F7FAFC;
+  --k-gold: #C9A24A;
+  --k-gold-soft: #F2DFAD;
+  --k-ink: #10233D;
+  --k-muted: #65758B;
+  --k-line: rgba(7, 26, 51, 0.1);
+  --k-shadow: 0 24px 70px rgba(7, 26, 51, 0.13);
+
+  /* Aliases for inline styles in kids.html */
+  --k-sunshine: #C9A24A;
+  --k-primary: #0B74D1;
+
+  color: var(--k-ink);
+  background: var(--k-white);
+  overflow-x: hidden;
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.page-kids h1,
+.page-kids h2,
+.page-kids h3,
+.page-kids h4,
+.page-kids h5,
+.page-kids h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0;
+}
+
+.page-kids p {
+  color: rgba(7, 26, 51, 0.72);
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------------------
+   2. Navbar Overrides
+   ------------------------------------------------------------ */
+.page-kids .navbar {
+  background: rgba(7, 26, 51, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-kids .navbar--scrolled {
+  background: rgba(7, 26, 51, 0.96);
+}
+
+.page-kids .navbar__cta {
+  background: linear-gradient(135deg, var(--k-gold), var(--k-gold-soft));
+  color: var(--k-navy);
+  font-weight: 800;
+  box-shadow: 0 12px 28px rgba(201, 162, 74, 0.25);
+  border-radius: 8px;
+}
+
+/* ------------------------------------------------------------
+   3. Hero Section
+   ------------------------------------------------------------ */
+.page-kids .kids-hero {
+  position: relative;
+  min-height: 88vh;
+  min-height: 88dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(var(--nav-height, 72px) + 64px) 0 54px;
+  color: var(--k-white);
+  background: var(--k-navy);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page-kids .kids-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+}
+
+.page-kids .kids-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.04);
+}
+
+.page-kids .kids-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(7, 26, 51, 0.92) 0%, rgba(7, 26, 51, 0.78) 50%, rgba(7, 26, 51, 0.4) 100%),
+    linear-gradient(180deg, rgba(7, 26, 51, 0.2) 0%, var(--k-navy) 100%);
+}
+
+.page-kids .kids-hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.page-kids .kids-hero__blob--1 {
+  top: 10%;
+  right: 15%;
+  width: 320px;
+  height: 320px;
+  background: var(--k-gold);
+  animation: floatAnim 8s ease-in-out infinite alternate;
+}
+
+.page-kids .kids-hero__blob--2 {
+  bottom: 20%;
+  left: 5%;
+  width: 280px;
+  height: 280px;
+  background: var(--k-blue);
+  animation: floatAnim 10s ease-in-out infinite alternate-reverse;
+}
+
+.page-kids .kids-hero__blob--3 {
+  top: 40%;
+  right: 35%;
+  width: 220px;
+  height: 220px;
+  background: var(--k-gold-soft);
+  animation: floatAnim 6s ease-in-out infinite alternate;
+}
+
+.page-kids .kids-hero__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.page-kids .kids-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--k-gold-soft);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.page-kids .kids-hero__title {
+  max-width: 820px;
+  margin: 0 0 20px;
+  color: var(--k-white);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.page-kids .kids-hero__title span {
+  color: var(--k-gold-soft);
+}
+
+.page-kids .kids-hero__subtitle {
+  max-width: 680px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1.02rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.page-kids .kids-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+/* Hero Stats Grid */
+.page-kids .kids-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1000px;
+}
+
+.page-kids .kids-hero__stat-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.3s ease;
+}
+
+.page-kids .kids-hero__stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 74, 0.4);
+}
+
+.page-kids .kids-hero__stat-val {
+  color: var(--k-gold-soft);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.page-kids .kids-hero__stat-lbl {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+}
+
+/* ------------------------------------------------------------
+   4. Buttons (Matching Home Page premium-btn)
+   ------------------------------------------------------------ */
+.page-kids .btn-kids-primary,
+.page-kids .btn-kids-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 26px;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.page-kids .btn-kids-primary::after,
+.page-kids .btn-kids-secondary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0 35%, rgba(255, 255, 255, 0.42) 48%, transparent 62% 100%);
+  transform: translateX(-120%);
+  transition: transform 0.65s ease;
+}
+
+.page-kids .btn-kids-primary:hover,
+.page-kids .btn-kids-secondary:hover {
+  transform: translateY(-3px);
+}
+
+.page-kids .btn-kids-primary:hover::after,
+.page-kids .btn-kids-secondary:hover::after {
+  transform: translateX(120%);
+}
+
+.page-kids .btn-kids-primary {
+  background: linear-gradient(135deg, var(--k-gold), var(--k-gold-soft));
+  color: var(--k-navy);
+  border: none;
+  box-shadow: 0 16px 36px rgba(201, 162, 74, 0.24);
+}
+
+.page-kids .btn-kids-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  color: var(--k-white);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+/* ------------------------------------------------------------
+   5. Section Header Common Component
+   ------------------------------------------------------------ */
+.page-kids .kids-section-header {
+  max-width: 760px;
+  margin: 0 auto clamp(34px, 5vw, 58px);
+  text-align: center;
+}
+
+.page-kids .kids-section-header__tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--k-blue);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-kids .kids-section-header__title {
+  margin: 0;
+  color: var(--k-navy);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.page-kids .kids-section-header__subtitle {
+  max-width: 640px;
+  margin: 16px auto 0;
+  color: rgba(7, 26, 51, 0.72);
+  font-size: 1.05rem;
+}
+
+/* Dark mode section header overrides */
+.page-kids .kids-safety-section .kids-section-header__title {
+  color: var(--k-white);
+}
+
+/* ------------------------------------------------------------
+   6. Activities Section & Tabs
+   ------------------------------------------------------------ */
+.page-kids .kids-activities-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background: var(--k-white);
+}
+
+.page-kids .kids-tabs-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.page-kids .kids-tab-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--k-line);
+  background: var(--k-platinum);
+  color: var(--k-navy);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-kids .kids-tab-btn:hover {
+  border-color: rgba(201, 162, 74, 0.5);
+  background: var(--k-white);
+  transform: translateY(-2px);
+}
+
+.page-kids .kids-tab-btn.active {
+  background: var(--k-navy);
+  color: var(--k-gold-soft);
+  border-color: var(--k-navy);
+  box-shadow: 0 10px 24px rgba(7, 26, 51, 0.18);
+}
+
+.page-kids .kids-tab-pane {
+  display: none;
+}
+
+.page-kids .kids-tab-pane.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-kids .kids-activity-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 36px;
+  border: 1px solid var(--k-line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--k-white), #FBFDFF);
+  box-shadow: 0 18px 50px rgba(7, 26, 51, 0.06);
+}
+
+.page-kids .kids-activity-card__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+}
+
+.page-kids .kids-activity-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.page-kids .kids-activity-card:hover .kids-activity-card__img img {
+  transform: scale(1.05);
+}
+
+.page-kids .kids-activity-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-kids .kids-activity-card__badge {
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  background: var(--k-pool);
+  color: var(--k-blue-deep);
+}
+
+.page-kids .kids-activity-card__title {
+  margin: 0 0 14px;
+  color: var(--k-navy);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+}
+
+.page-kids .kids-activity-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.page-kids .kids-activity-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--k-navy);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------
+   7. 10-Day Routine Section
+   ------------------------------------------------------------ */
+.page-kids .kids-routine-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background: var(--k-platinum);
+}
+
+.page-kids .kids-routine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.page-kids .kids-poster-card {
+  position: relative;
+  border: 1px solid var(--k-line);
+  border-radius: 8px;
+  background: var(--k-white);
+  padding: 24px;
+  box-shadow: 0 14px 40px rgba(7, 26, 51, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-kids .kids-poster-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 162, 74, 0.45);
+  box-shadow: var(--k-shadow);
+}
+
+.page-kids .kids-poster-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.page-kids .kids-poster-card__day {
+  background: var(--k-navy);
+  color: var(--k-gold-soft);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.page-kids .kids-poster-card__category {
+  color: var(--k-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.page-kids .kids-poster-card__img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--k-platinum);
+  margin-bottom: 16px;
+}
+
+.page-kids .kids-poster-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.page-kids .kids-poster-card:hover .kids-poster-card__img-wrap img {
+  transform: scale(1.06);
+}
+
+.page-kids .kids-poster-card__title {
+  margin: 0 0 8px;
+  color: var(--k-navy);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.page-kids .kids-poster-card__desc {
+  font-size: 0.92rem;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.page-kids .kids-poster-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--k-line);
+  font-size: 0.82rem;
+  color: var(--k-muted);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------
+   8. Benefits Grid Section
+   ------------------------------------------------------------ */
+.page-kids .kids-benefits-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background: var(--k-white);
+}
+
+.page-kids .kids-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.page-kids .kids-benefit-card {
+  padding: 30px;
+  border: 1px solid var(--k-line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--k-white), #FBFDFF);
+  box-shadow: 0 14px 36px rgba(7, 26, 51, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.page-kids .kids-benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 162, 74, 0.45);
+  box-shadow: var(--k-shadow);
+}
+
+.page-kids .kids-benefit-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: var(--k-navy);
+  color: var(--k-gold-soft);
+  font-size: 1.5rem;
+}
+
+.page-kids .kids-benefit-card__title {
+  margin: 0 0 10px;
+  color: var(--k-navy);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* ------------------------------------------------------------
+   9. Age Groups Section
+   ------------------------------------------------------------ */
+.page-kids .kids-age-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background: var(--k-platinum);
+}
+
+.page-kids .kids-age-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.page-kids .kids-age-card {
+  border: 1px solid var(--k-line);
+  border-radius: 8px;
+  background: var(--k-white);
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(7, 26, 51, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.page-kids .kids-age-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 162, 74, 0.45);
+  box-shadow: var(--k-shadow);
+}
+
+.page-kids .kids-age-card__header {
+  padding: 28px;
+  background: var(--k-navy);
+  color: var(--k-white);
+}
+
+.page-kids .kids-age-card__range {
+  display: inline-block;
+  color: var(--k-gold-soft);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.page-kids .kids-age-card__name {
+  margin: 0;
+  color: var(--k-white);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.page-kids .kids-age-card__body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.page-kids .kids-age-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  gap: 12px;
+}
+
+.page-kids .kids-age-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--k-navy);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------
+   10. Safety Section (Dark Navy Background)
+   ------------------------------------------------------------ */
+.page-kids .kids-safety-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background:
+    linear-gradient(125deg, rgba(11, 116, 209, 0.22), transparent 42%),
+    var(--k-navy);
+  color: var(--k-white);
+}
+
+.page-kids .kids-safety-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.page-kids .kids-safety-card {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.page-kids .kids-safety-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 162, 74, 0.45);
+}
+
+.page-kids .kids-safety-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.page-kids .kids-safety-card__title {
+  margin: 0 0 10px;
+  color: var(--k-white);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.page-kids .kids-safety-card p {
+  color: rgba(255, 255, 255, 0.76);
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+/* ------------------------------------------------------------
+   11. Photo Gallery Section
+   ------------------------------------------------------------ */
+.page-kids .kids-gallery-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background: var(--k-white);
+}
+
+.page-kids .kids-gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.page-kids .kids-gal-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--k-line);
+  background: var(--k-platinum);
+  color: var(--k-navy);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-kids .kids-gal-btn.active,
+.page-kids .kids-gal-btn:hover {
+  background: var(--k-navy);
+  color: var(--k-gold-soft);
+  border-color: var(--k-navy);
+}
+
+.page-kids .kids-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.page-kids .kids-gal-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--k-navy);
+  cursor: pointer;
+}
+
+.page-kids .kids-gal-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.page-kids .kids-gal-item:hover img {
+  transform: scale(1.08);
+}
+
+.page-kids .kids-gal-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(7, 26, 51, 0.85));
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.page-kids .kids-gal-item__caption {
+  color: var(--k-white);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------------
+   12. Reviews / Parent Feedback Section
+   ------------------------------------------------------------ */
+.page-kids .kids-reviews-section {
+  padding: clamp(74px, 9vw, 120px) 0;
+  background: var(--k-pool);
+}
+
+.page-kids .kids-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.page-kids .kids-review-card {
+  padding: 30px;
+  border: 1px solid rgba(7, 26, 51, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 36px rgba(7, 26, 51, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.page-kids .kids-review-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 162, 74, 0.45);
+  box-shadow: var(--k-shadow);
+}
+
+.page-kids .kids-review-stars {
+  color: var(--k-gold);
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.page-kids .kids-review-quote {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--k-ink);
+  margin: 0 0 20px;
+  flex-grow: 1;
+
+  font-style: italic;
+}
+
+.page-kids .kids-review-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.page-kids .kids-review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--k-navy);
+  color: var(--k-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.page-kids .kids-review-name {
+  color: var(--k-navy);
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+
+.page-kids .kids-review-child {
+  color: var(--k-muted);
+  font-size: 0.82rem;
+}
+
+/* ------------------------------------------------------------
+   13. CTA Banner Section
+   ------------------------------------------------------------ */
+.page-kids .kids-cta-banner {
+  margin: clamp(40px, 6vw, 70px) auto;
+  padding: clamp(48px, 6vw, 72px) 40px;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(7, 26, 51, 0.94), rgba(7, 26, 51, 0.82)),
+    url("../images/hero-swimming.jpg") center/cover;
+  color: var(--k-white);
+  text-align: center;
+  box-shadow: var(--k-shadow);
+}
+
+.page-kids .kids-cta-banner h2 {
+  color: var(--k-white);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 900;
+  margin: 0 0 16px;
+}
+
+.page-kids .kids-cta-banner p {
+  color: rgba(255, 255, 255, 0.84);
+  max-width: 620px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+}
+
+.page-kids .kids-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------------
+   14. Lightbox & Trial Modal
+   ------------------------------------------------------------ */
+.page-kids .kids-lightbox,
+.page-kids .kids-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(7, 26, 51, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.page-kids .kids-lightbox.active,
+.page-kids .kids-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page-kids .kids-lightbox__content {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  background: var(--k-navy);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+}
+
+.page-kids .kids-lightbox__close,
+.page-kids .kids-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--k-white);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.page-kids .kids-lightbox__close:hover,
+.page-kids .kids-modal-close:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.page-kids .kids-lightbox__img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.page-kids .kids-lightbox__caption {
+  padding: 16px 20px;
+  color: var(--k-gold-soft);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.page-kids .kids-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--k-white);
+  padding: 36px;
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+}
+
+.page-kids .kids-form-group {
+  margin-bottom: 18px;
+}
+
+.page-kids .kids-form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--k-navy);
+  margin-bottom: 6px;
+}
+
+.page-kids .kids-form-input,
+.page-kids .kids-form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--k-line);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--k-ink);
+  background: var(--k-platinum);
+  transition: border-color 0.2s ease;
+}
+
+.page-kids .kids-form-input:focus,
+.page-kids .kids-form-select:focus {
+  outline: none;
+  border-color: var(--k-blue);
+  background: var(--k-white);
+}
+
+/* ------------------------------------------------------------
+   15. Footer Override (Navy Theme — Matches Home Page)
+   ------------------------------------------------------------ */
+.page-kids .footer {
+  background:
+    linear-gradient(135deg, rgba(11, 116, 209, 0.14), transparent 35%),
+    var(--k-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--k-white);
+}
+
+.page-kids .footer__heading {
+  color: var(--k-white);
+}
+
+.page-kids .footer__link,
+.page-kids .footer__tagline,
+.page-kids .footer__copyright,
+.page-kids .footer__credits {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-kids .footer__link:hover {
+  color: var(--k-gold-soft);
+}
+
+.page-kids .footer__social-icon {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--k-white);
+}
+
+.page-kids .footer__social-icon:hover {
+  background: var(--k-gold);
+  color: var(--k-navy);
+}
+
+.page-kids .footer__bottom {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ------------------------------------------------------------
+   16. Keyframe Animations
+   ------------------------------------------------------------ */
+@keyframes floatAnim {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* ------------------------------------------------------------
+   17. Responsive Media Queries
+   ------------------------------------------------------------ */
+@media (max-width: 1100px) {
+  .page-kids .kids-hero__stats,
+  .page-kids .kids-routine-grid,
+  .page-kids .kids-benefits-grid,
+  .page-kids .kids-age-grid,
+  .page-kids .kids-reviews-grid,
+  .page-kids .kids-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-kids .kids-safety-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .page-kids .kids-hero {
+    min-height: auto;
+    padding: calc(var(--nav-height, 72px) + 40px) 0 40px;
+  }
+
+  .page-kids .kids-hero__title {
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
+  }
+
+  .page-kids .kids-activity-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .page-kids .kids-hero__stats,
+  .page-kids .kids-routine-grid,
+  .page-kids .kids-benefits-grid,
+  .page-kids .kids-age-grid,
+  .page-kids .kids-safety-grid,
+  .page-kids .kids-gallery-grid,
+  .page-kids .kids-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-kids .kids-activity-card__features {
+    grid-template-columns: 1fr;
+  }
+
+  .page-kids .kids-cta-banner {
+    padding: 36px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-kids .btn-kids-primary,
+  .page-kids .btn-kids-secondary,
+  .page-kids .kids-hero__actions,
+  .page-kids .kids-cta-actions {
+    width: 100%;
+  }
+
+  .page-kids .kids-modal-card {
+    padding: 24px;
+  }
+}

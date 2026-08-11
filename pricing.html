@@ -5,14 +5,14 @@
   <link rel="apple-touch-icon" href="./favicon.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing Plans - MKB Health & Fitness Academy</title>
-  <meta name="description" content="Check out the affordable and flexible pricing plans for gym, swimming, and wellness services at MKB Health & Fitness Academy in Ravet, Pune.">
+  <title>Membership Pricing & Plans - MKB Health & Fitness Academy, Ravet</title>
+  <meta name="description" content="Affordable and transparent pricing for Gym, Swimming Pool, Combo All-Access, Personal Training, and Kids Activities at MKB Health & Fitness Academy in Ravet, Pune.">
   
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; style-src 'self' 'unsafe-inline' https:;">
   
-  <meta property="og:title" content="Pricing Plans - MKB Health & Fitness Academy">
-  <meta property="og:description" content="Check out the affordable and flexible pricing plans for gym, swimming, and wellness services at MKB Health & Fitness Academy in Ravet, Pune.">
+  <meta property="og:title" content="Membership Pricing & Plans - MKB Health & Fitness Academy">
+  <meta property="og:description" content="Check out the best membership deals for Gym, Swimming Pool, Combo All-Access, and Personal Training at MKB Fitness Academy in Ravet, Pune.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mkbfitnessacademy.com/pricing.html">
   <meta property="og:site_name" content="MKB Health & Fitness Academy">
@@ -24,8 +24,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/pricing.css">
 </head>
-<body>
+<body class="page-pricing">
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
@@ -47,17 +48,17 @@
             <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
             <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
             <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="personal-trainer.html" class="navbar__dropdown-item">🏋️♂️ Personal Trainer</a>
+            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
             <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
           </div>
         </div>
 
-        <a href="pricing.html" class="navbar__link">Pricing</a>
+        <a href="pricing.html" class="navbar__link navbar__link--active">Pricing</a>
         <a href="trainers.html" class="navbar__link">Trainers</a>
         <a href="contact.html" class="navbar__link">Contact</a>
       </div>
 
-      <a href="pricing.html" class="navbar__cta">Join Now</a>
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20join." target="_blank" rel="noopener noreferrer" class="navbar__cta">Join Now</a>
 
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle Navigation">
         <span></span><span></span><span></span>
@@ -66,221 +67,619 @@
   </nav>
 
   <!-- Page Hero -->
-  <header class="hero hero--page" data-animate="fade-in">
-    <div class="hero__bg">
-      <img src="./images/hero-gym.jpg" alt="Gym Motivation" loading="lazy">
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content container text-center">
-      <div class="hero__badge" data-animate="slide-up">💰 PRICING PLANS</div>
-      <h1 class="hero__title grad-text-gold" data-animate="slide-up">AFFORDABLE PLANS FOR EVERYONE</h1>
-      <p class="hero__subtitle" data-animate="slide-up">
-        Choose the perfect plan for your fitness journey at MKB Health & Fitness Academy.
+  <!-- Page Hero -->
+  <header class="pricing-hero" data-animate="fade-in">
+    <div class="pricing-hero__bg-shape"></div>
+    <div class="pricing-hero__content">
+      <span class="pricing-hero__eyebrow" data-animate="slide-up">MKB FITNESS ACADEMY</span>
+      <h1 class="pricing-hero__title" data-animate="slide-up">
+        Choose Your Fitness Journey
+      </h1>
+      <p class="pricing-hero__subtitle" data-animate="slide-up">
+        Flexible plans designed for strength, fitness, swimming, kids activities and complete wellness.
       </p>
     </div>
   </header>
 
-  <!-- Pricing Tabs Section -->
-  <section class="section" id="pricing">
-    <div class="container">
-      
-      <div class="pricing-tabs" data-animate="slide-up">
-        <button class="pricing-tab pricing-tab--active" data-tab="gym-plans">🏋️ Gym</button>
-        <button class="pricing-tab pricing-tab--blue" data-tab="swim-plans">🏊 Swimming</button>
-        <button class="pricing-tab pricing-tab--green" data-tab="wellness-plans">💆 Wellness</button>
-      </div>
+  <!-- Category Navigation -->
+  <nav class="pricing-nav" data-animate="slide-up" id="pricingNav">
+    <button class="pricing-nav__btn active" data-target="gym">GYM</button>
+    <button class="pricing-nav__btn" data-target="swimming">SWIMMING</button>
+    <button class="pricing-nav__btn" data-target="kids">KIDS ACTIVITIES</button>
+    <button class="pricing-nav__btn" data-target="pt">PERSONAL TRAINING</button>
+    <button class="pricing-nav__btn" data-target="wellness">WELLNESS THERAPY</button>
+    <button class="pricing-nav__btn" data-target="combo">COMBO PLANS</button>
+  </nav>
 
-      <!-- Gym Plans Panel -->
-      <div class="pricing-panel pricing-panel--active" id="gym-plans">
-        <div class="pricing-grid">
-          
-          <!-- 1 Month -->
-          <div class="pricing-card" data-animate="slide-up">
-            <h3 class="pricing-card__duration">1 Month</h3>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-old">₹1,999</div>
-              <div class="pricing-card__price-new">₹1,199</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength</li>
-              <li>Locker facility</li>
-              <li>All equipment</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <p class="text-muted"><small>ℹ️ Personal trainer charge separate</small></p>
-            <br>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20the%201%20Month%20Gym%20Membership%20(₹1199)." class="btn btn--whatsapp btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-whatsapp"></i> Enquire Now
-            </a>
-          </div>
-
-          <!-- 3 Months -->
-          <div class="pricing-card" data-animate="slide-up">
-            <h3 class="pricing-card__duration">3 Months</h3>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-old">₹4,999</div>
-              <div class="pricing-card__price-new">₹2,799</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength</li>
-              <li>Locker facility</li>
-              <li>All equipment</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <p class="text-muted"><small>ℹ️ Personal trainer charge separate</small></p>
-            <br>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20the%203%20Months%20Gym%20Membership%20(₹2799)." class="btn btn--whatsapp btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-whatsapp"></i> Enquire Now
-            </a>
-          </div>
-
-          <!-- 6 Months -->
-          <div class="pricing-card pricing-card--popular" data-animate="slide-up">
-            <div class="pricing-card__badge">MOST POPULAR</div>
-            <h3 class="pricing-card__duration">6 Months</h3>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-old">₹9,999</div>
-              <div class="pricing-card__price-new">₹4,799</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength</li>
-              <li>Locker facility</li>
-              <li>All equipment</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <p class="text-muted"><small>ℹ️ Personal trainer charge separate</small></p>
-            <br>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20the%206%20Months%20Gym%20Membership%20(₹4799)." class="btn btn--whatsapp btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-whatsapp"></i> Enquire Now
-            </a>
-          </div>
-
-          <!-- 12 Months -->
-          <div class="pricing-card" data-animate="slide-up">
-            <div class="pricing-card__badge">BEST VALUE</div>
-            <h3 class="pricing-card__duration">12 Months</h3>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-old">₹19,999</div>
-              <div class="pricing-card__price-new">₹8,719</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength</li>
-              <li>Locker facility</li>
-              <li>All equipment</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <p class="text-muted"><small>ℹ️ Personal trainer charge separate</small></p>
-            <br>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20the%2012%20Months%20Gym%20Membership%20(₹8719)." class="btn btn--whatsapp btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-whatsapp"></i> Enquire Now
-            </a>
-          </div>
+  <!-- Sliders Section -->
+  <section class="pricing-section">
+    <!-- GYM SLIDER -->
+    <div class="pricing-slider active" id="slider-gym">
+      <div class="pricing-slider__controls">
+        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
+        <div class="pricing-slider__arrows">
+          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
-
-      <!-- Swimming Plans Panel -->
-      <div class="pricing-panel" id="swim-plans">
-        <div class="pricing-grid">
-          
-          <!-- Regular Batch -->
-          <div class="pricing-card pricing-card--blue" data-animate="slide-up">
-            <h3 class="pricing-card__duration">Regular Batch</h3>
-            <p class="text-muted">Mon-Fri</p>
-            <br>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-old">₹4,000</div>
-              <div class="pricing-card__price-new">₹2,400</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Expert trainer guidance</li>
-              <li>Mon-Fri Access</li>
-            </ul>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20Swimming%20Regular%20Batch%20with%20Trainer%20(₹2400)." class="btn btn--blue btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              Book With Trainer
-            </a>
-            
-            <br>
-            <hr>
-            <br>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-old">₹3,000</div>
-              <div class="pricing-card__price-new">₹1,800</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Independent practice</li>
-              <li>Mon-Fri Access</li>
-            </ul>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20Swimming%20Regular%20Batch%20without%20Trainer%20(₹1800)." class="btn btn--blue btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              Book Without Trainer
-            </a>
+      <div class="pricing-slider__track">
+        
+        <!-- 1 Month -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Gym</div>
+          <h3 class="pricing-card__name">1 Month</h3>
+          <p class="pricing-card__desc">Flexible monthly gym access to get you started.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹1,499</span>
+            <span class="pricing-card__price-old">₹1,899</span>
           </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 21%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio equipment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Strength equipment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Locker/changing facilities</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Basic fitness guidance</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
 
-          <!-- Weekend Batch -->
-          <div class="pricing-card pricing-card--blue" data-animate="slide-up">
-            <h3 class="pricing-card__duration">Weekend Batch</h3>
-            <p class="text-muted">Sat-Sun</p>
-            <br>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-new">₹2,000</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Expert trainer guidance</li>
-              <li>Sat-Sun Access</li>
-            </ul>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20Swimming%20Weekend%20Batch%20with%20Trainer%20(₹2000)." class="btn btn--blue btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              Book With Trainer
-            </a>
-            
-            <br>
-            <hr>
-            <br>
-            <div class="pricing-card__price">
-              <div class="pricing-card__price-new">₹1,000</div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Independent practice</li>
-              <li>Sat-Sun Access</li>
-            </ul>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%20Swimming%20Weekend%20Batch%20without%20Trainer%20(₹1000)." class="btn btn--blue btn--sm pricing-card__cta" target="_blank" rel="noopener noreferrer">
-              Book Without Trainer
-            </a>
+        <!-- 3 Months -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Gym</div>
+          <h3 class="pricing-card__name">3 Months</h3>
+          <p class="pricing-card__desc">Quarterly commitment for steady progress.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹3,999</span>
+            <span class="pricing-card__price-old">₹4,999</span>
           </div>
+          <div class="pricing-card__billing">Billed Quarterly</div>
+          <div class="pricing-card__savings">Save 20%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio & strength training</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Workout guidance</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Member benefits</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
 
+        <!-- 6 Months (Featured) -->
+        <div class="pricing-card pricing-card--dark">
+          <div class="pricing-card__badge">BEST VALUE</div>
+          <div class="pricing-card__category">Gym</div>
+          <h3 class="pricing-card__name">6 Months</h3>
+          <p class="pricing-card__desc">Our most popular plan for dedicated members.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹6,999</span>
+            <span class="pricing-card__price-old">₹8,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Semi-Annually</div>
+          <div class="pricing-card__savings">Save 22%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio & strength equipment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Workout guidance</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Member benefits</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- 12 Months -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Gym</div>
+          <h3 class="pricing-card__name">12 Months</h3>
+          <p class="pricing-card__desc">Annual membership with maximum savings.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹11,999</span>
+            <span class="pricing-card__price-old">₹15,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Annually</div>
+          <div class="pricing-card__savings">Save 25%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio & strength equipment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Free Diet Consultation</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Guest passes (2/month)</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Pause membership (15 days)</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+      </div>
+      <div class="pricing-slider__dots"></div>
+    </div>
+
+    <!-- SWIMMING SLIDER -->
+    <div class="pricing-slider" id="slider-swimming">
+      <div class="pricing-slider__controls">
+        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
+        <div class="pricing-slider__arrows">
+          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
-
-      <!-- Wellness Plans Panel -->
-      <div class="pricing-panel" id="wellness-plans">
-        <div class="container--narrow">
-          <div class="offer-banner offer-banner--green" data-animate="fade-in">
-            <h3 class="offer-banner__title text-green">⏳ Wellness Therapy Center Opening Soon!</h3>
-            <p class="offer-banner__text">
-              Pre-Book on WhatsApp to get 10% OFF.
-            </p>
-            <a href="https://wa.me/919370813366?text=I%20would%20like%20to%20pre-book%20a%20Wellness%20Therapy%20appointment." class="btn btn--green" target="_blank" rel="noopener noreferrer">
-              Pre-Book Now
-            </a>
+      <div class="pricing-slider__track">
+        
+        <!-- Weekend Batch -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Swimming (Without Trainer)</div>
+          <h3 class="pricing-card__name">Weekend Batch</h3>
+          <p class="pricing-card__desc">Perfect for weekend relaxation and casual swimming.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹999</span>
+            <span class="pricing-card__price-old">₹1,299</span>
           </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 23%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Sat & Sun pool access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Changing room access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Flexible timings</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- 1 Month (Without Trainer) -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Swimming (Without Trainer)</div>
+          <h3 class="pricing-card__name">1 Month</h3>
+          <p class="pricing-card__desc">Regular pool access for experienced swimmers.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹1,999</span>
+            <span class="pricing-card__price-old">₹2,499</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 20%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Daily pool access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Changing room access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Flexible timings</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- 3 Months (With Trainer) -->
+        <div class="pricing-card pricing-card--dark">
+          <div class="pricing-card__badge">POPULAR</div>
+          <div class="pricing-card__category">Swimming (With Trainer)</div>
+          <h3 class="pricing-card__name">3 Months Coaching</h3>
+          <p class="pricing-card__desc">Learn and perfect your strokes with expert guidance.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹5,499</span>
+            <span class="pricing-card__price-old">₹6,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Quarterly</div>
+          <div class="pricing-card__savings">Save 21%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming pool access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Beginner-friendly sessions</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Certified instructor</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Skill progression</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+      </div>
+      <div class="pricing-slider__dots"></div>
+    </div>
+
+    <!-- KIDS ACTIVITIES SLIDER -->
+    <div class="pricing-slider" id="slider-kids">
+      <div class="pricing-slider__controls">
+        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
+        <div class="pricing-slider__arrows">
+          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
+      <div class="pricing-slider__track">
+        
+        <!-- Weekend Batch -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Kids Activities</div>
+          <h3 class="pricing-card__name">Weekend Batch</h3>
+          <p class="pricing-card__desc">Fun weekend activities for kids to stay active.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹1,199</span>
+            <span class="pricing-card__price-old">₹1,599</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 25%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Age-appropriate activities</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safe environment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Weekend activities</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
 
-      <!-- Personal Training Section -->
-      <br><br>
-      <div class="container--narrow" data-animate="slide-up">
-        <div class="card text-center">
-          <h3 class="card__title grad-text-gold">Personal Training (Custom 1-on-1)</h3>
-          <p class="card__text">PT charges are separate from membership</p>
-          <br>
-          <a href="./personal-trainer.html" class="btn btn--primary">
-            Explore Personal Training
-          </a>
+        <!-- Kids Swimming -->
+        <div class="pricing-card pricing-card--dark">
+          <div class="pricing-card__badge">MOST LOVED</div>
+          <div class="pricing-card__category">Kids Swimming</div>
+          <h3 class="pricing-card__name">Monthly Swim</h3>
+          <p class="pricing-card__desc">Safe and supervised swimming lessons for kids.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹2,499</span>
+            <span class="pricing-card__price-old">₹3,299</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 24%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming activities</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Dedicated kids pool area</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safe environment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Confidence building</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- Monthly Kids Plan -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Kids Activities</div>
+          <h3 class="pricing-card__name">Monthly Fitness</h3>
+          <p class="pricing-card__desc">General fitness and agility training for children.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹1,999</span>
+            <span class="pricing-card__price-old">₹2,599</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 23%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Age-appropriate activities</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fun fitness sessions</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Agility and coordination</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+      </div>
+      <div class="pricing-slider__dots"></div>
+    </div>
+
+    <!-- PERSONAL TRAINING SLIDER -->
+    <div class="pricing-slider" id="slider-pt">
+      <div class="pricing-slider__controls">
+        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
+        <div class="pricing-slider__arrows">
+          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
+      <div class="pricing-slider__track">
+        
+        <!-- 1 Month -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Personal Training</div>
+          <h3 class="pricing-card__name">1 Month</h3>
+          <p class="pricing-card__desc">Intensive 1-on-1 coaching to kickstart your goals.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹5,999</span>
+            <span class="pricing-card__price-old">₹7,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 25%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>One-to-one trainer</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized workout plan</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Nutrition guidance</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
 
+        <!-- 3 Months -->
+        <div class="pricing-card pricing-card--dark">
+          <div class="pricing-card__badge">RECOMMENDED</div>
+          <div class="pricing-card__category">Personal Training</div>
+          <h3 class="pricing-card__name">3 Months</h3>
+          <p class="pricing-card__desc">Transformative quarterly coaching program.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹15,999</span>
+            <span class="pricing-card__price-old">₹21,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Quarterly</div>
+          <div class="pricing-card__savings">Save 27%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>One-to-one trainer</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized workout plan</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Progress tracking</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Advanced nutrition guidance</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Dedicated coaching</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- 6 Months -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Personal Training</div>
+          <h3 class="pricing-card__name">6 Months</h3>
+          <p class="pricing-card__desc">Long-term coaching for lasting results.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹29,999</span>
+            <span class="pricing-card__price-old">₹39,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Semi-Annually</div>
+          <div class="pricing-card__savings">Save 25%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>One-to-one trainer</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized workout plan</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Continuous progress tracking</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Nutrition & lifestyle guidance</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+      </div>
+      <div class="pricing-slider__dots"></div>
+    </div>
+
+    <!-- WELLNESS THERAPY SLIDER -->
+    <div class="pricing-slider" id="slider-wellness">
+      <div class="pricing-slider__controls">
+        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
+        <div class="pricing-slider__arrows">
+          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="pricing-slider__track">
+        
+        <!-- Single Session -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Wellness Therapy</div>
+          <h3 class="pricing-card__name">Single Session</h3>
+          <p class="pricing-card__desc">Experience a single wellness and recovery session.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹999</span>
+            <span class="pricing-card__price-old">₹1,299</span>
+          </div>
+          <div class="pricing-card__billing">Per Session</div>
+          <div class="pricing-card__savings">Save 23%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness consultation</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Recovery session (45m)</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Stretching / relaxation</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- 5 Sessions -->
+        <div class="pricing-card pricing-card--dark">
+          <div class="pricing-card__badge">POPULAR</div>
+          <div class="pricing-card__category">Wellness Therapy</div>
+          <h3 class="pricing-card__name">5 Sessions</h3>
+          <p class="pricing-card__desc">A bundle of 5 recovery sessions for post-workout.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹4,499</span>
+            <span class="pricing-card__price-old">₹5,999</span>
+          </div>
+          <div class="pricing-card__billing">Bundle</div>
+          <div class="pricing-card__savings">Save 25%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness consultation</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>5 Recovery sessions</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized wellness guidance</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- Monthly Plan -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Wellness Therapy</div>
+          <h3 class="pricing-card__name">Monthly Plan</h3>
+          <p class="pricing-card__desc">Regular wellness integration for optimal recovery.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹6,999</span>
+            <span class="pricing-card__price-old">₹8,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 22%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Up to 10 Recovery sessions</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Stretching / relaxation session</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized wellness guidance</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+      </div>
+      <div class="pricing-slider__dots"></div>
+    </div>
+
+    <!-- COMBO PLANS SLIDER -->
+    <div class="pricing-slider" id="slider-combo">
+      <div class="pricing-slider__controls">
+        <div class="pricing-slider__hint"><i class="fas fa-arrows-left-right"></i> Swipe or use arrows to view plans</div>
+        <div class="pricing-slider__arrows">
+          <button class="pricing-slider__arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="pricing-slider__arrow next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="pricing-slider__track">
+        
+        <!-- Gym + Swimming -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Combo Plan</div>
+          <h3 class="pricing-card__name">Gym + Swimming</h3>
+          <p class="pricing-card__desc">The perfect blend of strength and cardiovascular training.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹2,999</span>
+            <span class="pricing-card__price-old">₹3,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 25%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming pool access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Locker facilities</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Basic fitness guidance</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- Complete Fitness Plan -->
+        <div class="pricing-card pricing-card--dark">
+          <div class="pricing-card__badge">BEST VALUE</div>
+          <div class="pricing-card__category">Combo Plan</div>
+          <h3 class="pricing-card__name">Complete Fitness Plan</h3>
+          <p class="pricing-card__desc">The ultimate all-inclusive MKB Fitness Academy experience.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹9,999</span>
+            <span class="pricing-card__price-old">₹13,999</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 28%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personal training sessions (4x)</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness sessions (2x)</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Progress tracking</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+        <!-- Gym + Wellness -->
+        <div class="pricing-card pricing-card--light">
+          <div class="pricing-card__category">Combo Plan</div>
+          <h3 class="pricing-card__name">Gym + Wellness</h3>
+          <p class="pricing-card__desc">Train hard and recover optimally with combined wellness.</p>
+          <div class="pricing-card__price-wrap">
+            <span class="pricing-card__price-new">₹3,499</span>
+            <span class="pricing-card__price-old">₹4,499</span>
+          </div>
+          <div class="pricing-card__billing">Billed Monthly</div>
+          <div class="pricing-card__savings">Save 22%</div>
+          <div class="pricing-card__divider"></div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness sessions (4x)</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
+            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
+          </ul>
+          <a href="#" class="pricing-card__cta">Choose Plan →</a>
+        </div>
+
+      </div>
+      <div class="pricing-slider__dots"></div>
+    </div>
+  </section>
+
+  <!-- Features Comparison -->
+  <section class="pricing-features">
+    <h2 class="pricing-cta__title" style="margin-bottom: 10px;">Why Choose <span>MKB Fitness?</span></h2>
+    <p class="pricing-cta__text">More than just a gym, we provide a complete wellness ecosystem.</p>
+    <div class="pricing-features__grid">
+      <div class="pricing-feature">
+        <i class="fas fa-dumbbell"></i>
+        <h4>Modern Facilities</h4>
+        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">State-of-the-art equipment and clean spaces.</p>
+      </div>
+      <div class="pricing-feature">
+        <i class="fas fa-user-tie"></i>
+        <h4>Expert Trainers</h4>
+        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">Certified professionals dedicated to your goals.</p>
+      </div>
+      <div class="pricing-feature">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Safe Environment</h4>
+        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">Secure access and supervision for all ages.</p>
+      </div>
+      <div class="pricing-feature">
+        <i class="fas fa-calendar-check"></i>
+        <h4>Flexible Plans</h4>
+        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">Options to suit your lifestyle and budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="pricing-faq">
+    <div class="pricing-faq__header">
+      <h2 class="pricing-faq__title">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-item__btn">Can I upgrade my membership later? <i class="fas fa-plus"></i></button>
+      <div class="faq-item__content">
+        <p>Yes, absolutely. You can upgrade from a shorter plan to a longer plan or add additional services like Swimming or Personal Training at any time. The remaining value of your current plan will be pro-rated.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__btn">Can I freeze my membership? <i class="fas fa-plus"></i></button>
+      <div class="faq-item__content">
+        <p>Yes, our 6-month and 12-month memberships come with a complimentary pause feature (up to 15-30 days) allowing you to freeze your account in case of travel or illness.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__btn">Are swimming classes included? <i class="fas fa-plus"></i></button>
+      <div class="faq-item__content">
+        <p>General swimming pool access is separate from the Gym unless you purchase a Combo Plan. We offer both "With Trainer" coaching plans and "Without Trainer" access plans.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__btn">Do you offer personal training? <i class="fas fa-plus"></i></button>
+      <div class="faq-item__content">
+        <p>Yes, we have highly qualified personal trainers available for 1-on-1 sessions. You can choose from our monthly, quarterly, or semi-annual PT packages.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__btn">Are kids programs available? <i class="fas fa-plus"></i></button>
+      <div class="faq-item__content">
+        <p>Yes, we have dedicated Kids Activities and Kids Swimming batches with certified instructors to ensure a safe, fun, and engaging environment.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__btn">Can I book a trial session? <i class="fas fa-plus"></i></button>
+      <div class="faq-item__content">
+        <p>Yes, we offer trial sessions for new members to experience our facilities and meet our trainers before committing to a plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="pricing-cta">
+    <h2 class="pricing-cta__title">Your <span>Stronger Self</span> Starts Here.</h2>
+    <p class="pricing-cta__text">Choose a plan that fits your goals and start your fitness journey today.</p>
+    <div class="pricing-cta__btns">
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20join." target="_blank" rel="noopener noreferrer" class="btn-primary">JOIN NOW</a>
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20book%20a%20FREE%20TRIAL." target="_blank" rel="noopener noreferrer" class="btn-secondary">BOOK A FREE TRIAL</a>
     </div>
   </section>
 
@@ -344,27 +743,6 @@
 
   <!-- JavaScript -->
   <script src="./js/main.js" defer></script>
-  
-  <script>
-    // Tab Switching Logic
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.pricing-tab');
-      const panels = document.querySelectorAll('.pricing-panel');
-      
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('pricing-tab--active'));
-          panels.forEach(p => p.classList.remove('pricing-panel--active'));
-          
-          tab.classList.add('pricing-tab--active');
-          const targetId = tab.getAttribute('data-tab');
-          const targetPanel = document.getElementById(targetId);
-          if(targetPanel) {
-            targetPanel.classList.add('pricing-panel--active');
-          }
-        });
-      });
-    });
-  </script>
+  <script src="./js/pricing-slider.js" defer></script>
 </body>
 </html>

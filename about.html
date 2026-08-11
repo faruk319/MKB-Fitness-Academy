@@ -12,9 +12,10 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/about.css">
   
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -36,7 +37,7 @@
   }
   </script>
 </head>
-<body>
+<body class="page-about">
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
@@ -58,7 +59,7 @@
             <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
             <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
             <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="personal-trainer.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
+            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
             <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
           </div>
         </div>
@@ -76,134 +77,321 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero hero--page" style="background-image: url('images/hero-gym.jpg');">
-    <div class="hero__overlay"></div>
-    <div class="container hero__content" data-animate="fade-up">
-      <span class="section-badge">💪 ESTABLISHED IN 2019</span>
-      <h1 class="hero__title">ABOUT MKB FITNESS ACADEMY</h1>
-      <p class="hero__subtitle">Ravet’s premier fitness, swimming pool, kids fitness & body recovery hub dedicated to empowering healthier lives.</p>
+  <!-- 1. Hero Banner -->
+  <header class="about-hero">
+    <div class="about-hero__bg"></div>
+    <div class="about-hero__overlay"></div>
+    <div class="about-hero__lanes"></div>
+    
+    <div class="container">
+      <div class="about-hero__content" data-animate="fade-up">
+        <span class="kicker kicker--light">Est. 2019 • Ravet, Pune</span>
+        <h1 class="about-hero__title">OUR STORY</h1>
+        <p class="about-hero__subtitle">Discover the passion, people, and purpose behind Ravet's premier fitness and wellness destination.</p>
+        
+        <div class="about-hero__stats">
+          <div class="hero-badge">
+            <span>4.9★</span>
+            <span>Rating</span>
+          </div>
+          <div class="hero-badge">
+            <span>500+</span>
+            <span>Members</span>
+          </div>
+          <div class="hero-badge">
+            <span>10+</span>
+            <span>Coaches</span>
+          </div>
+          <div class="hero-badge">
+            <span>2019</span>
+            <span>Since</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Our Story & Mission Section -->
-  <section class="section about-story">
-    <div class="container about-story__inner">
-      <div class="about-story__text" data-animate="fade-right">
-        <span class="section-label">Our Story</span>
-        <h2 class="section-title">A Legacy of Health & Wellness</h2>
-        <p>Founded in 2019 and proudly located at Sector 29, Ravet, Pune, MKB Fitness Academy has evolved into a comprehensive wellness destination. We serve kids (3+ years), adults, seniors, IT professionals, and athletes.</p>
-        <p>With a passionate team of trainers and state-of-the-art facilities, we've established ourselves as the top-rated fitness center in the area. We are incredibly proud of our 4.9★ rating on Justdial, supported by over 43+ glowing reviews from our community.</p>
-      </div>
-      <div class="about-story__stats" data-animate="fade-left">
-        <div class="stats-grid">
-          <div class="stat-box">
-            <span class="stat-box__number">4.9★</span>
-            <span class="stat-box__label">Justdial Rating</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-box__number">500+</span>
-            <span class="stat-box__label">Active Members</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-box__number">10+</span>
-            <span class="stat-box__label">Certified Coaches</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-box__number">2019</span>
-            <span class="stat-box__label">Established</span>
+  <!-- 2. Our Story -->
+  <section class="section-padding story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image" data-animate="fade-right">
+          <img src="images/hero-gym.jpg" alt="MKB Fitness Academy">
+        </div>
+        <div class="story-content" data-animate="fade-left">
+          <span class="kicker">The Journey</span>
+          <h2>Building a Healthier Community</h2>
+          <p>MKB Fitness Academy was born out of a simple vision: to create a space where fitness meets holistic wellness. We aren't just another gym; we are a community-driven academy focused on comprehensive health transformations.</p>
+          
+          <div class="story-features">
+            <div class="story-feature">
+              <span class="story-feature__num">01</span>
+              <div class="story-feature__text">
+                <h4>Founded in 2019</h4>
+                <p>Started with a core focus on weight training and foundational fitness in Ravet, Pune.</p>
+              </div>
+            </div>
+            <div class="story-feature">
+              <span class="story-feature__num">02</span>
+              <div class="story-feature__text">
+                <h4>Growing Community</h4>
+                <p>Over 500 active members and 43+ glowing reviews proving our dedication to results.</p>
+              </div>
+            </div>
+            <div class="story-feature">
+              <span class="story-feature__num">03</span>
+              <div class="story-feature__text">
+                <h4>Premium Facilities</h4>
+                <p>Evolved into a multi-disciplinary hub featuring a gym, pool, kids programs, and soon, wellness therapy.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Core Pillars & Values Section -->
-  <section class="section pillars-section bg-darker">
+  <!-- 3. Mission & Vision -->
+  <section class="section-padding mission-section">
     <div class="container">
-      <div class="section-header text-center" data-animate="fade-up">
-        <span class="section-label">Our Philosophy</span>
-        <h2 class="section-title">Built On 4 Core Pillars</h2>
+      <div class="section-header section-header--light" data-animate="fade-up">
+        <span class="kicker kicker--light">Purpose & Direction</span>
+        <h2>Mission & Vision</h2>
+        <p>Our guiding principles that drive us to deliver excellence every single day.</p>
       </div>
-      <div class="values-grid" data-animate="fade-up" data-delay="0.2s">
-        <div class="value-card">
+      
+      <div class="mission-grid">
+        <div class="mission-card" data-animate="fade-up">
+          <div class="mission-card__icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To empower individuals of all ages and fitness levels to achieve their health goals through expert guidance, state-of-the-art facilities, and a supportive, inclusive community environment. We strive to make premium fitness accessible.</p>
+        </div>
+        <div class="mission-card" data-animate="fade-up" style="transition-delay: 0.2s">
+          <div class="mission-card__icon">👁️</div>
+          <h3>Our Vision</h3>
+          <p>To be recognized as Pune's most trusted and comprehensive wellness destination, seamlessly integrating physical training, aquatic fitness, and holistic recovery therapies under one unified academy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Core Values -->
+  <section class="section-padding values-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="kicker">Core Principles</span>
+        <h2>What Drives Us</h2>
+        <p>The four foundational pillars that define the MKB Fitness Academy experience.</p>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-card" data-animate="fade-up" style="transition-delay: 0.1s">
           <div class="value-card__icon">💪</div>
-          <h3 class="value-card__title">Strength</h3>
-          <p class="value-card__text">Building physical & mental endurance for a robust lifestyle.</p>
+          <h3>Strength</h3>
+          <p>Building physical resilience and mental fortitude to tackle everyday challenges.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card" data-animate="fade-up" style="transition-delay: 0.2s">
           <div class="value-card__icon">🎯</div>
-          <h3 class="value-card__title">Discipline</h3>
-          <p class="value-card__text">Consistency in workouts & lifestyle habits to achieve your goals.</p>
+          <h3>Discipline</h3>
+          <p>Fostering consistency in training and lifestyle choices for long-term success.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card" data-animate="fade-up" style="transition-delay: 0.3s">
           <div class="value-card__icon">🤝</div>
-          <h3 class="value-card__title">Community</h3>
-          <p class="value-card__text">A supportive & motivating environment for all our members.</p>
+          <h3>Community</h3>
+          <p>Creating a motivating, supportive, and inclusive environment for everyone.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card" data-animate="fade-up" style="transition-delay: 0.4s">
           <div class="value-card__icon">🏆</div>
-          <h3 class="value-card__title">Results</h3>
-          <p class="value-card__text">Proven, goal-driven transformation plans that deliver.</p>
+          <h3>Results</h3>
+          <p>Delivering measurable, science-backed transformations that change lives.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose MKB Fitness Academy Section -->
-  <section class="section features-section">
+  <!-- 5. Why We Started -->
+  <section class="section-padding why-section">
     <div class="container">
-      <div class="section-header text-center" data-animate="fade-up">
-        <span class="section-label">Why We Stand Out</span>
-        <h2 class="section-title">6 Reasons Members Choose Us</h2>
-      </div>
-      <div class="feature-grid" data-animate="fade-up" data-delay="0.2s">
-        <div class="feature-item">
-          <div class="feature-item__icon">🏅</div>
-          <h3 class="feature-item__title">Certified & Passionate Trainers</h3>
+      <div class="why-container" data-animate="fade-up">
+        <div class="section-header">
+          <span class="kicker">The Inspiration</span>
+          <h2>Why We Started</h2>
         </div>
-        <div class="feature-item">
-          <div class="feature-item__icon">🏋️</div>
-          <h3 class="feature-item__title">State-Of-The-Art Gym Equipment</h3>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon">🏊</div>
-          <h3 class="feature-item__title">Safe & Hygienic Chlorinated Swimming Pool</h3>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon">💆</div>
-          <h3 class="feature-item__title">Professional Wellness Therapy & Posture Correction (Soon)</h3>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon">💰</div>
-          <h3 class="feature-item__title">Transparent & Unbeatable Pricing Plans</h3>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__icon">⏰</div>
-          <h3 class="feature-item__title">Open 7 Days A Week (6 AM – 12 PM & 4 PM – 10 PM)</h3>
+        
+        <div class="why-content">
+          <p>In 2019, we noticed a critical gap in the local fitness industry. People were either paying exorbitant fees for premium facilities, or compromising on quality, hygiene, and expert guidance at budget gyms. Furthermore, most centers only focused on lifting weights, completely ignoring holistic recovery and aquatic fitness.</p>
+          <p>MKB Fitness Academy was established to bridge this gap. We wanted to create a facility that offered top-tier equipment, certified coaching, and diverse programs like swimming and kids fitness, all under one roof, without the intimidating atmosphere of elite clubs.</p>
+          
+          <blockquote class="why-quote">
+            <p>"Fitness is not a destination; it is a lifelong journey of self-improvement. We built this academy to walk that journey with you, every step of the way."</p>
+            <footer>— Founder, MKB Fitness Academy</footer>
+          </blockquote>
+          
+          <p>Today, as we expand into wellness and recovery therapies, our initial commitment remains unchanged: providing a safe, hygienic, and highly effective environment for your physical transformation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Google Maps Location Section -->
-  <section class="section location-section bg-darker">
+  <!-- 6. Milestones Timeline -->
+  <section class="section-padding timeline-section">
     <div class="container">
-      <div class="section-header text-center" data-animate="fade-up">
-        <span class="section-label">Location</span>
-        <h2 class="section-title">Visit MKB Fitness Academy</h2>
+      <div class="section-header" data-animate="fade-up">
+        <span class="kicker">Our History</span>
+        <h2>Key Milestones</h2>
+        <p>Tracing our path of growth and continuous improvement since day one.</p>
       </div>
-      <div class="map-container" data-animate="fade-up" data-delay="0.2s">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.970591559441!2d73.74246831535492!3d18.633878070966456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e6717fdb03%3A0xc3b8ab9dd3fc3b83!2sMKB%20HEALTH%20%26%20FITNESS%20ACADEMY!5e0!3m2!1sen!2sin!4v1684824700000!5m2!1sen!2sin" 
-          width="100%" 
-          height="450" 
-          style="border:0; border-radius: 12px;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      
+      <div class="timeline">
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2019</span>
+            <h3>Founded MKB Fitness Academy</h3>
+            <p>Opened our doors in Ravet, Pune, focusing on core gym facilities and personal training.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2020</span>
+            <h3>Survived & Thrived</h3>
+            <p>Navigated the global pandemic, adapted to safety protocols, and emerged stronger with our community's support.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <h3>Facility Expansion</h3>
+            <p>Significantly expanded our gym floor and upgraded to state-of-the-art international equipment.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h3>Aquatics & Kids Programs</h3>
+            <p>Launched our hygienic chlorinated swimming pool and specialized fitness activities for kids (3+ years).</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h3>500+ Member Milestone</h3>
+            <p>Celebrated reaching a community of over 500 active, dedicated members training with us.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3>Advanced Personal Training</h3>
+            <p>Introduced customized, goal-oriented personal training programs led by 10+ certified coaches.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025</span>
+            <h3>Wellness Therapy (Coming Soon)</h3>
+            <p>Announcing our upcoming wellness therapy center for recovery, massage, and posture correction.</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 7. Our Facility -->
+  <section class="section-padding facility-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="kicker">The Space</span>
+        <h2>Our Facility</h2>
+        <p>A glimpse into our state-of-the-art environment designed for optimal performance and recovery.</p>
+      </div>
+      
+      <div class="facility-gallery" data-animate="fade-up">
+        <div class="facility-item">
+          <img src="images/hero-gym.jpg" alt="Gym Floor">
+          <div class="facility-caption">
+            <h3>Modern Gym Floor</h3>
+          </div>
+        </div>
+        <div class="facility-item">
+          <img src="images/hero-swimming.jpg" alt="Swimming Pool">
+          <div class="facility-caption">
+            <h3>Chlorinated Pool</h3>
+          </div>
+        </div>
+        <div class="facility-item">
+          <img src="images/hero-wellness.jpg" alt="Wellness Center">
+          <div class="facility-caption">
+            <h3>Wellness Space</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Achievements & Stats -->
+  <section class="section-padding achievements-section">
+    <div class="container">
+      <div class="achievements-grid" data-animate="scale">
+        <div class="achievement-box">
+          <span class="achievement-num">500+</span>
+          <span class="achievement-label">Active Members</span>
+        </div>
+        <div class="achievement-box">
+          <span class="achievement-num">10+</span>
+          <span class="achievement-label">Certified Coaches</span>
+        </div>
+        <div class="achievement-box">
+          <span class="achievement-num">4.9★</span>
+          <span class="achievement-label">Justdial Rating</span>
+        </div>
+        <div class="achievement-box">
+          <span class="achievement-num">6+</span>
+          <span class="achievement-label">Years of Excellence</span>
+        </div>
+        <div class="achievement-box">
+          <span class="achievement-num">43+</span>
+          <span class="achievement-label">Client Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CTA Banner -->
+  <section class="cta-section" data-animate="fade-up">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Life?</h2>
+        <div class="cta-buttons">
+          <a href="pricing.html" class="btn btn--gold">Join Now</a>
+          <a href="contact.html" class="btn btn--light">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Google Maps Location Section -->
+  <section class="section-padding map-section">
+    <div class="map-wrapper" data-animate="fade-up">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.970591559441!2d73.74246831535492!3d18.633878070966456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e6717fdb03%3A0xc3b8ab9dd3fc3b83!2sMKB%20HEALTH%20%26%20FITNESS%20ACADEMY!5e0!3m2!1sen!2sin!4v1684824700000!5m2!1sen!2sin" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </section>
 
