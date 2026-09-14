@@ -5,13 +5,3 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
-
-# Playwright MCP
-.playwright-mcp/
-
-# Screenshots folder (not needed in repo)
-screenshots/
-poster/
-
-# Backup of the pre-redesign site (not deployed)
-old-site/

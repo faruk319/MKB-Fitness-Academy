@@ -50,7 +50,7 @@ images/         (optimised JPGs, ≤1600px)
 ## 🚀 Deploy to Hostinger
 
 1. hPanel → **Files → File Manager** → open `public_html`.
-2. Upload everything **except** `old-site/`, `poster/`, `screenshots/`, `.git/`.
+2. Upload everything except `.git/`.
 3. Or: hPanel → **Advanced → Git** → connect this repo, branch `main`, deploy path `public_html`.
 
 ## ✏️ Editing prices
