@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /old-site/
+Sitemap: https://www.mkbfitnessacademy.com/sitemap.xml
