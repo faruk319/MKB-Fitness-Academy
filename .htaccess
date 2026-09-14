@@ -83,16 +83,16 @@ ServerSignature Off
   ExpiresByType font/ttf "access plus 1 year"
 </IfModule>
 
-# ---------- Force HTTPS ----------
+# ---------- Force HTTPS + www (single canonical host) ----------
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^(.*)$ https://www.mkbfitnessacademy.com%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 # ---------- Custom Error Pages ----------
-ErrorDocument 404 /index.html
-ErrorDocument 403 /index.html
+ErrorDocument 404 /404.html
 
 # ---------- Prevent PHP Execution (Extra Security after WordPress removal) ----------
 <FilesMatch "\.php$">
