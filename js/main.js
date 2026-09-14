@@ -1,445 +1,100 @@
-/* ============================================================
-   MKB Health & Fitness Academy — Main JavaScript
-   Navigation, Animations, WhatsApp, Counters, Pricing Tabs
-   ============================================================ */
+/* MKB Fitness Academy — site script */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+  var WA_NUMBER = '919370813366';
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbz5o_vIXu9OYUHtALGjkQrBLF1bkva39qHSJb3yy5iNP1xF4KDtBeVliBxIiuancKZ5/exec';
 
-  // Enable JS-dependent animations
-  document.body.classList.add('js-active');
-
-  /* ---------- 1. NAVBAR SCROLL EFFECT ---------- */
-  const navbar = document.querySelector('.navbar');
-  const handleNavScroll = () => {
-    if (!navbar) return;
-    if (window.scrollY > 50) {
-      navbar.classList.add('navbar--scrolled');
-    } else {
-      navbar.classList.remove('navbar--scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
-
-
-  /* ---------- 2. MOBILE HAMBURGER MENU ---------- */
-  const hamburger = document.querySelector('.navbar__hamburger');
-  const navLinks = document.querySelector('.navbar__links');
-
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('navbar__hamburger--active');
-      navLinks.classList.toggle('navbar__links--open');
-      document.body.style.overflow = navLinks.classList.contains('navbar__links--open') ? 'hidden' : '';
+  /* Mobile nav */
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-
-    // Close menu on link click
-    navLinks.querySelectorAll('.navbar__link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('navbar__hamburger--active');
-        navLinks.classList.remove('navbar__links--open');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Close menu on outside click
-    document.addEventListener('click', (e) => {
-      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        hamburger.classList.remove('navbar__hamburger--active');
-        navLinks.classList.remove('navbar__links--open');
-        document.body.style.overflow = '';
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
+  /* Footer year */
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
-  /* ---------- 3. ACTIVE NAV LINK ---------- */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.navbar__link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href) {
-      const linkPage = href.split('/').pop();
-      if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-        link.classList.add('navbar__link--active');
-      }
-    }
-  });
-
-
-  /* ---------- 4. SCROLL ANIMATIONS (Intersection Observer) ---------- */
-  const animateElements = document.querySelectorAll('[data-animate]');
-  if (animateElements.length > 0) {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.1
-    };
-
-    const animateObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Stagger animation
-          const delay = entry.target.dataset.delay || index * 80;
-          setTimeout(() => {
-            entry.target.classList.add('animate-in');
-          }, Math.min(delay, 500));
-          animateObserver.unobserve(entry.target);
+  /* Pricing sub-nav: highlight the section in view */
+  var subnav = document.querySelector('.subnav');
+  if (subnav && 'IntersectionObserver' in window) {
+    var links = subnav.querySelectorAll('a[href^="#"]');
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          var a = map[en.target.id];
+          if (a) a.classList.add('active');
         }
       });
-    }, observerOptions);
-
-    animateElements.forEach(el => animateObserver.observe(el));
-  }
-
-
-  /* ---------- 5. ANIMATED COUNTERS ---------- */
-  const counters = document.querySelectorAll('[data-counter]');
-  if (counters.length > 0) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseFloat(el.dataset.counter);
-          const suffix = el.dataset.suffix || '';
-          const prefix = el.dataset.prefix || '';
-          const duration = 2000;
-          const startTime = performance.now();
-
-          const isFloat = target % 1 !== 0;
-
-          const updateCounter = (currentTime) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease-out cubic
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
-            const currentValue = easedProgress * target;
-
-            if (isFloat) {
-              el.textContent = prefix + currentValue.toFixed(1) + suffix;
-            } else {
-              el.textContent = prefix + Math.floor(currentValue) + suffix;
-            }
-
-            if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-            } else {
-              if (isFloat) {
-                el.textContent = prefix + target.toFixed(1) + suffix;
-              } else {
-                el.textContent = prefix + target + suffix;
-              }
-            }
-          };
-
-          requestAnimationFrame(updateCounter);
-          counterObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    counters.forEach(el => counterObserver.observe(el));
-  }
-
-
-  /* ---------- 6. PRICING TABS & HASH DEEP LINKING ---------- */
-  const pricingTabs = document.querySelectorAll('.pricing-tab');
-  const pricingPanels = document.querySelectorAll('.pricing-panel');
-
-  if (pricingTabs.length > 0 && pricingPanels.length > 0) {
-    const activateTab = (targetId) => {
-      const activeTab = Array.from(pricingTabs).find(t => t.dataset.tab === targetId);
-      if (!activeTab) return;
-
-      pricingTabs.forEach(t => t.classList.remove('pricing-tab--active'));
-      activeTab.classList.add('pricing-tab--active');
-
-      pricingPanels.forEach(panel => {
-        if (panel.id === targetId) {
-          panel.classList.add('pricing-panel--active');
-        } else {
-          panel.classList.remove('pricing-panel--active');
-        }
-      });
-    };
-
-    pricingTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.tab;
-        activateTab(target);
-        if (history.pushState) {
-          history.pushState(null, null, '#' + target);
-        } else {
-          location.hash = target;
-        }
-      });
-    });
-
-    // Check URL hash on page load
-    const hash = window.location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) {
-      activateTab(hash);
-    }
-  }
-
-
-  /* ---------- 6.2. PRICING CARDS SLIDER CONTROL ---------- */
-  const sliderContainers = document.querySelectorAll('.pricing-slider-container');
-  sliderContainers.forEach(container => {
-    const track = container.querySelector('.pricing-slider-track');
-    const prevBtn = container.querySelector('.slider-btn--prev');
-    const nextBtn = container.querySelector('.slider-btn--next');
-
-    if (track) {
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          const card = track.querySelector('.pricing-card');
-          const cardWidth = card ? card.offsetWidth + 28 : 320;
-          track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-        });
-      }
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          const card = track.querySelector('.pricing-card');
-          const cardWidth = card ? card.offsetWidth + 28 : 320;
-          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        });
-      }
-    }
-  });
-
-
-  /* ---------- 6.5. FAQ ACCORDION INTERACTIVITY ---------- */
-  const faqTriggers = document.querySelectorAll('.faq-trigger, .faq-question');
-  if (faqTriggers.length > 0) {
-    faqTriggers.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const faqItem = btn.closest('.faq-item');
-        if (!faqItem) return;
-
-        const isCurrentlyActive = faqItem.classList.contains('faq-item--active');
-
-        // Close all other FAQ items for a clean single-open accordion feel
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.classList.remove('faq-item--active');
-          const itemBtn = item.querySelector('.faq-trigger, .faq-question');
-          if (itemBtn) itemBtn.setAttribute('aria-expanded', 'false');
-        });
-
-        // Toggle clicked item
-        if (!isCurrentlyActive) {
-          faqItem.classList.add('faq-item--active');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(map).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
     });
   }
 
-
-  /* ---------- 6.6. LIVE BUSINESS HOURS CALCULATOR ---------- */
-  const statusBadge = document.getElementById('live-status-badge');
-  if (statusBadge) {
-    const updateBusinessStatus = () => {
-      // Get current IST time
-      const now = new Date();
-      const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: 'numeric', minute: 'numeric' };
-      const istString = now.toLocaleTimeString('en-US', options);
-      const parts = istString.split(':');
-      const hour = parseInt(parts[0], 10);
-      const minute = parseInt(parts[1], 10);
-      const timeInMinutes = hour * 60 + minute;
-
-      // Morning slot: 6:00 AM (360 min) to 12:00 PM (720 min)
-      // Evening slot: 4:00 PM (960 min) to 10:00 PM (1320 min)
-      const isMorningSlot = timeInMinutes >= 360 && timeInMinutes < 720;
-      const isEveningSlot = timeInMinutes >= 960 && timeInMinutes < 1320;
-
-      if (isMorningSlot || isEveningSlot) {
-        statusBadge.className = 'status-badge status-badge--open';
-        statusBadge.innerHTML = '<span class="status-dot"></span> Open Now';
-      } else {
-        statusBadge.className = 'status-badge status-badge--closed';
-        statusBadge.innerHTML = '<span class="status-dot"></span> Closed Now';
-      }
-    };
-    updateBusinessStatus();
-  }
-
-
-  /* ---------- 6.7. COPY TO CLIPBOARD TOAST HELPER ---------- */
-  const copyBtns = document.querySelectorAll('[data-copy]');
-  const toast = document.getElementById('toast-copy');
-  
-  if (copyBtns.length > 0) {
-    copyBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const textToCopy = btn.dataset.copy;
-        if (!textToCopy) return;
-
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          if (toast) {
-            toast.textContent = `📋 Copied: ${textToCopy}`;
-            toast.classList.add('toast-copy--show');
-            setTimeout(() => {
-              toast.classList.remove('toast-copy--show');
-            }, 3000);
-          }
-        }).catch(err => {
-          console.warn('Failed to copy text: ', err);
-        });
-      });
-    });
-  }
-
-
-  /* ---------- 7. BACK TO TOP BUTTON ---------- */
-  const backToTop = document.querySelector('.back-to-top');
-  if (backToTop) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) {
-        backToTop.classList.add('back-to-top--visible');
-      } else {
-        backToTop.classList.remove('back-to-top--visible');
-      }
-    }, { passive: true });
-
-    backToTop.addEventListener('click', (e) => {
+  /* Contact form: log to Google Sheet, then open WhatsApp */
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+      var name = form.querySelector('#name').value.trim();
+      var phone = form.querySelector('#phone').value.trim();
+      var email = form.querySelector('#email').value.trim();
+      var program = form.querySelector('#program').value;
+      var message = form.querySelector('#message').value.trim();
+      var alertBox = document.getElementById('form-alert');
+      var btn = form.querySelector('button[type="submit"]');
 
-
-  /* ---------- 8. CONTACT FORM & GOOGLE SHEET INTEGRATION ---------- */
-  const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5o_vIXu9OYUHtALGjkQrBLF1bkva39qHSJb3yy5iNP1xF4KDtBeVliBxIiuancKZ5/exec';
-
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const name = contactForm.querySelector('#name')?.value?.trim();
-      const phone = contactForm.querySelector('#phone')?.value?.trim();
-      const email = contactForm.querySelector('#email')?.value?.trim() || 'N/A';
-      const program = contactForm.querySelector('#program')?.value || 'General Inquiry';
-      const message = contactForm.querySelector('#message')?.value?.trim() || '';
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const formAlert = document.getElementById('form-alert');
+      function show(text, isError) {
+        alertBox.textContent = text;
+        alertBox.className = 'form-alert' + (isError ? ' error' : '');
+        alertBox.hidden = false;
+      }
 
       if (!name || !phone) {
-        if (formAlert) {
-          formAlert.className = 'form-alert form-alert--error';
-          formAlert.textContent = '❌ Please enter your name and phone number.';
-          formAlert.style.display = 'block';
-        } else {
-          alert('Please enter your name and phone number.');
-        }
+        show('Please enter your name and phone number.', true);
         return;
       }
 
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = '⏳ Saving Inquiry & Opening WhatsApp...';
-      }
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
 
-      // Prepare FormData for Google Sheet submission
-      const formData = new FormData();
-      formData.append('timestamp', new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
-      formData.append('name', name);
-      formData.append('phone', phone);
-      formData.append('email', email);
-      formData.append('program', program);
-      formData.append('message', message);
+      var data = new FormData();
+      data.append('timestamp', new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
+      data.append('name', name);
+      data.append('phone', phone);
+      data.append('email', email || 'N/A');
+      data.append('program', program);
+      data.append('message', message);
 
-      try {
-        if (!GOOGLE_SHEET_SCRIPT_URL.includes('REPLACE_WITH_YOUR_SCRIPT_ID')) {
-          // Await fetch so request completes to Google Cloud before browser redirects/opens WhatsApp
-          await fetch(GOOGLE_SHEET_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: formData
-          });
-        }
-      } catch (err) {
-        console.warn('Google Sheet submission error:', err);
-      }
+      var text = 'Hi MKB Fitness Academy,\nName: ' + name + '\nPhone: ' + phone + '\nInterested in: ' + program;
+      if (email) text += '\nEmail: ' + email;
+      if (message) text += '\nMessage: ' + message;
+      var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 
-      // Show Success Message
-      if (formAlert) {
-        formAlert.className = 'form-alert form-alert--success';
-        formAlert.innerHTML = '✅ <strong>Inquiry Saved to Sheet!</strong> Opening WhatsApp chat...';
-        formAlert.style.display = 'block';
-      }
-
-      // Format WhatsApp message with all user details
-      let waMessage = `Hi MKB Fitness Academy! I have submitted an inquiry:\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n🏋️ *Interest:* ${program}`;
-      if (email && email !== 'N/A') waMessage += `\n📩 *Email:* ${email}`;
-      if (message) waMessage += `\n💬 *Message:* ${message}`;
-
-      const waURL = `https://wa.me/919370813366?text=${encodeURIComponent(waMessage)}`;
-      
-      // Open WhatsApp chat
-      window.open(waURL, '_blank');
-
-      // Reset form
-      contactForm.reset();
-      if (submitBtn) {
-        submitBtn.textContent = '✓ Saved & Opened WhatsApp!';
-        setTimeout(() => {
-          submitBtn.textContent = '🚀 Submit Inquiry & Chat on WhatsApp';
-          submitBtn.disabled = false;
-        }, 3000);
-      }
+      fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body: data })
+        .catch(function () {})
+        .then(function () {
+          show('Sent. Opening WhatsApp…');
+          window.open(waUrl, '_blank');
+          form.reset();
+          btn.disabled = false;
+          btn.textContent = 'Send & open WhatsApp';
+        });
     });
   }
-
-
-  /* ---------- 9. LAZY LOADING IMAGES ---------- */
-  const lazyImages = document.querySelectorAll('img[data-src]');
-  if (lazyImages.length > 0) {
-    const imgObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
-          imgObserver.unobserve(img);
-        }
-      });
-    }, { rootMargin: '200px' });
-
-    lazyImages.forEach(img => imgObserver.observe(img));
-  }
-
-
-  /* ---------- 10. SMOOTH SCROLL FOR ANCHOR LINKS ---------- */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const offset = parseInt(navbar?.style.height || '72');
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-      }
-    });
-  });
-
-
-  /* ---------- 11. WHATSAPP TOOLTIP AUTO-HIDE ---------- */
-  const waFloat = document.querySelector('.whatsapp-float');
-  if (waFloat) {
-    // Show tooltip briefly on page load
-    const tooltip = waFloat.querySelector('.whatsapp-float__tooltip');
-    if (tooltip) {
-      setTimeout(() => {
-        tooltip.style.opacity = '1';
-        setTimeout(() => {
-          tooltip.style.opacity = '0';
-        }, 3000);
-      }, 2000);
-    }
-  }
-
-});
+})();

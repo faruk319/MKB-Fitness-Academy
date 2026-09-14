@@ -36,33 +36,23 @@ MKB Fitness Academy is a premium fitness center located at **Sector 29, Aditya M
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-
-## 📁 Project Structure
+Static HTML — no framework, no build step.
 
 ```
-├── index.html              # Homepage
-├── about.html              # About Us
-├── gym.html                # Gym Page
-├── swimming.html           # Swimming Page
-├── kids.html               # Kids Activities
-├── personal-trainer.html   # Personal Training
-├── wellness.html           # Wellness & Therapy
-├── pricing.html            # Pricing Plans
-├── trainers.html           # Our Trainers
-├── contact.html            # Contact Us
-├── css/
-│   ├── style.css           # Global styles
-│   └── homepage.css        # Homepage specific styles
-├── js/
-│   └── main.js             # Main JavaScript
-├── images/                 # Website images
-├── .htaccess               # Server configuration
-└── favicon.svg             # Site favicon
+index.html  gym.html  swimming.html  kids.html  trainers.html
+wellness.html  pricing.html  about.html  contact.html
+css/style.css   (single stylesheet)
+js/main.js      (mobile nav, pricing sub-nav, contact form → Google Sheet + WhatsApp)
+images/         (optimised JPGs, ≤1600px)
+.htaccess       (HTTPS redirect, security headers, caching)
 ```
 
----
+## 🚀 Deploy to Hostinger
 
-Made with ❤️ by **MKB Fitness Academy**
+1. hPanel → **Files → File Manager** → open `public_html`.
+2. Upload everything **except** `old-site/`, `poster/`, `screenshots/`, `.git/`.
+3. Or: hPanel → **Advanced → Git** → connect this repo, branch `main`, deploy path `public_html`.
+
+## ✏️ Editing prices
+
+All prices live in `pricing.html` and in the matching section on each program page. Search for the `₹` amount and edit in both places.

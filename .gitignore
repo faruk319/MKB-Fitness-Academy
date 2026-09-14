@@ -12,3 +12,6 @@ Thumbs.db
 # Screenshots folder (not needed in repo)
 screenshots/
 poster/
+
+# Backup of the pre-redesign site (not deployed)
+old-site/

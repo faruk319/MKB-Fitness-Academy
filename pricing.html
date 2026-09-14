@@ -1,643 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="apple-touch-icon" href="./favicon.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membership Pricing & Plans - MKB Health & Fitness Academy, Ravet</title>
-  <meta name="description" content="Affordable and transparent pricing for Gym, Swimming Pool, Combo All-Access, Personal Training, and Kids Activities at MKB Health & Fitness Academy in Ravet, Pune.">
-  
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; style-src 'self' 'unsafe-inline' https:;">
-  
-  <meta property="og:title" content="Membership Pricing & Plans - MKB Health & Fitness Academy">
-  <meta property="og:description" content="Check out the best membership deals for Gym, Swimming Pool, Combo All-Access, and Personal Training at MKB Fitness Academy in Ravet, Pune.">
+  <title>Pricing & Membership Plans | MKB Fitness Academy, Ravet</title>
+  <meta name="description" content="Gym, swimming, kids, personal training, wellness and combo plans at MKB Fitness Academy, Ravet. Gym from ₹1,499/month.">
+  <link rel="canonical" href="https://www.mkbfitnessacademy.com/pricing.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Pricing & Membership Plans | MKB Fitness Academy, Ravet">
+  <meta property="og:description" content="Gym, swimming, kids, personal training, wellness and combo plans at MKB Fitness Academy, Ravet. Gym from ₹1,499/month.">
+  <meta property="og:image" content="https://www.mkbfitnessacademy.com/images/hero-gym.jpg">
+  <meta property="og:url" content="https://www.mkbfitnessacademy.com/pricing.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mkbfitnessacademy.com/pricing.html">
-  <meta property="og:site_name" content="MKB Health & Fitness Academy">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/pricing.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "MKB Fitness Academy",
+    "url": "https://www.mkbfitnessacademy.com/",
+    "image": "https://www.mkbfitnessacademy.com/images/hero-gym.jpg",
+    "telephone": "+919503834888",
+    "email": "mkbfitness17@gmail.com",
+    "address": {"@type": "PostalAddress", "streetAddress": "Sector 29, Aditya Malhar Road, Ravet", "addressLocality": "Pune", "addressRegion": "Maharashtra", "postalCode": "412101", "addressCountry": "IN"},
+    "geo": {"@type": "GeoCoordinates", "latitude": 18.650320, "longitude": 73.748043},
+    "hasMap": "https://maps.app.goo.gl/Cg6YAVG2EAMckhj2A",
+    "sameAs": ["https://www.instagram.com/mkb_fitness_academy_/", "https://www.facebook.com/mkbfitnessacademy"],
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "06:00", "closes": "12:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "16:00", "closes": "22:00"}
+    ]
+  }
+  </script>
 </head>
-<body class="page-pricing">
-
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo">
-        <div class="navbar__logo-text">
-          <span>MKB FITNESS ACADEMY</span>
-          <span>SWIMMING & WELLNESS | RAVET, PUNE</span>
-        </div>
-      </a>
-
-      <div class="navbar__links" id="nav-links">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        
-        <div class="navbar__dropdown">
-          <span class="navbar__link navbar__dropdown-btn">Programs ▾</span>
-          <div class="navbar__dropdown-menu">
-            <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
-            <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
-            <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
-            <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
-          </div>
-        </div>
-
-        <a href="pricing.html" class="navbar__link navbar__link--active">Pricing</a>
-        <a href="trainers.html" class="navbar__link">Trainers</a>
-        <a href="contact.html" class="navbar__link">Contact</a>
-      </div>
-
-      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20join." target="_blank" rel="noopener noreferrer" class="navbar__cta">Join Now</a>
-
-      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Page Hero -->
-  <!-- Page Hero -->
-  <header class="pricing-hero" data-animate="fade-in">
-    <div class="pricing-hero__bg-shape"></div>
-    <div class="pricing-hero__content">
-      <span class="pricing-hero__eyebrow" data-animate="slide-up">MKB FITNESS ACADEMY</span>
-      <h1 class="pricing-hero__title" data-animate="slide-up">
-        Choose Your Fitness Journey
-      </h1>
-      <p class="pricing-hero__subtitle" data-animate="slide-up">
-        Flexible plans designed for strength, fitness, swimming, kids activities and complete wellness.
-      </p>
-    </div>
-  </header>
-
-  <!-- Sliders Section -->
-  <section class="pricing-section">
-  <!-- Category Navigation -->
-  <nav class="pricing-nav" id="pricingNav">
-    <button class="pricing-nav__btn active" data-target="gym">GYM</button>
-    <button class="pricing-nav__btn" data-target="swimming">SWIMMING</button>
-    <button class="pricing-nav__btn" data-target="kids">KIDS ACTIVITIES</button>
-    <button class="pricing-nav__btn" data-target="pt">PERSONAL TRAINING</button>
-    <button class="pricing-nav__btn" data-target="wellness">WELLNESS THERAPY</button>
-    <button class="pricing-nav__btn" data-target="combo">COMBO PLANS</button>
-  </nav>
-  <div class="pricing-slider active" id="main-slider">
-    <div class="pricing-slider__track">
-      <div data-category="gym" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Gym</div>
-          <h3 class="pricing-card__name">1 Month</h3>
-          <p class="pricing-card__desc">Flexible monthly gym access to get you started.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹1,499</span>
-            <span class="pricing-card__price-old">₹1,899</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 21%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio equipment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Strength equipment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Locker/changing facilities</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Basic fitness guidance</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%201%20Month%20Plan%20%28%E2%82%B91%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="gym" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Gym</div>
-          <h3 class="pricing-card__name">3 Months</h3>
-          <p class="pricing-card__desc">Quarterly commitment for steady progress.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹3,999</span>
-            <span class="pricing-card__price-old">₹4,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Quarterly</div>
-          <div class="pricing-card__savings">Save 20%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio & strength training</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Workout guidance</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Member benefits</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%203%20Months%20Plan%20%28%E2%82%B93%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="gym" class="pricing-card pricing-card--dark">
-          <div class="pricing-card__badge">BEST VALUE</div>
-          <div class="pricing-card__category">Gym</div>
-          <h3 class="pricing-card__name">6 Months</h3>
-          <p class="pricing-card__desc">Our most popular plan for dedicated members.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹6,999</span>
-            <span class="pricing-card__price-old">₹8,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Semi-Annually</div>
-          <div class="pricing-card__savings">Save 22%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio & strength equipment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Workout guidance</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Member benefits</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%206%20Months%20Plan%20%28%E2%82%B96%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="gym" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Gym</div>
-          <h3 class="pricing-card__name">12 Months</h3>
-          <p class="pricing-card__desc">Annual membership with maximum savings.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹11,999</span>
-            <span class="pricing-card__price-old">₹15,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Annually</div>
-          <div class="pricing-card__savings">Save 25%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Cardio & strength equipment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Free Diet Consultation</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Guest passes (2/month)</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Pause membership (15 days)</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Gym%20-%2012%20Months%20Plan%20%28%E2%82%B911%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="swimming" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Swimming (Without Trainer)</div>
-          <h3 class="pricing-card__name">Weekend Batch</h3>
-          <p class="pricing-card__desc">Perfect for weekend relaxation and casual swimming.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹999</span>
-            <span class="pricing-card__price-old">₹1,299</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 23%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Sat & Sun pool access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Changing room access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Flexible timings</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Swimming%20%28Without%20Trainer%29%20-%20Weekend%20Batch%20Plan%20%28%E2%82%B9999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="swimming" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Swimming (Without Trainer)</div>
-          <h3 class="pricing-card__name">1 Month</h3>
-          <p class="pricing-card__desc">Regular pool access for experienced swimmers.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹1,999</span>
-            <span class="pricing-card__price-old">₹2,499</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 20%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Daily pool access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Changing room access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Flexible timings</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Swimming%20%28Without%20Trainer%29%20-%201%20Month%20Plan%20%28%E2%82%B91%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="swimming" class="pricing-card pricing-card--dark">
-          <div class="pricing-card__badge">POPULAR</div>
-          <div class="pricing-card__category">Swimming (With Trainer)</div>
-          <h3 class="pricing-card__name">3 Months Coaching</h3>
-          <p class="pricing-card__desc">Learn and perfect your strokes with expert guidance.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹5,499</span>
-            <span class="pricing-card__price-old">₹6,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Quarterly</div>
-          <div class="pricing-card__savings">Save 21%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming pool access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Beginner-friendly sessions</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Certified instructor</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Skill progression</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safety supervision</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Swimming%20%28With%20Trainer%29%20-%203%20Months%20Coaching%20Plan%20%28%E2%82%B95%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="kids" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Kids Activities</div>
-          <h3 class="pricing-card__name">Weekend Batch</h3>
-          <p class="pricing-card__desc">Fun weekend activities for kids to stay active.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹1,199</span>
-            <span class="pricing-card__price-old">₹1,599</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 25%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Age-appropriate activities</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safe environment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Weekend activities</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Kids%20Activities%20-%20Weekend%20Batch%20Plan%20%28%E2%82%B91%2C199%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="kids" class="pricing-card pricing-card--dark">
-          <div class="pricing-card__badge">MOST LOVED</div>
-          <div class="pricing-card__category">Kids Swimming</div>
-          <h3 class="pricing-card__name">Monthly Swim</h3>
-          <p class="pricing-card__desc">Safe and supervised swimming lessons for kids.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹2,499</span>
-            <span class="pricing-card__price-old">₹3,299</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 24%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming activities</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Dedicated kids pool area</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Safe environment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Confidence building</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Kids%20Swimming%20-%20Monthly%20Swim%20Plan%20%28%E2%82%B92%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="kids" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Kids Activities</div>
-          <h3 class="pricing-card__name">Monthly Fitness</h3>
-          <p class="pricing-card__desc">General fitness and agility training for children.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹1,999</span>
-            <span class="pricing-card__price-old">₹2,599</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 23%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Age-appropriate activities</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fun fitness sessions</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Agility and coordination</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Expert supervision</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Kids%20Activities%20-%20Monthly%20Fitness%20Plan%20%28%E2%82%B91%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="pt" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Personal Training</div>
-          <h3 class="pricing-card__name">1 Month</h3>
-          <p class="pricing-card__desc">Intensive 1-on-1 coaching to kickstart your goals.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹5,999</span>
-            <span class="pricing-card__price-old">₹7,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 25%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>One-to-one trainer</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized workout plan</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Nutrition guidance</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Personal%20Training%20-%201%20Month%20Plan%20%28%E2%82%B95%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="pt" class="pricing-card pricing-card--dark">
-          <div class="pricing-card__badge">RECOMMENDED</div>
-          <div class="pricing-card__category">Personal Training</div>
-          <h3 class="pricing-card__name">3 Months</h3>
-          <p class="pricing-card__desc">Transformative quarterly coaching program.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹15,999</span>
-            <span class="pricing-card__price-old">₹21,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Quarterly</div>
-          <div class="pricing-card__savings">Save 27%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>One-to-one trainer</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized workout plan</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Progress tracking</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Advanced nutrition guidance</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Dedicated coaching</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Personal%20Training%20-%203%20Months%20Plan%20%28%E2%82%B915%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="pt" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Personal Training</div>
-          <h3 class="pricing-card__name">6 Months</h3>
-          <p class="pricing-card__desc">Long-term coaching for lasting results.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹29,999</span>
-            <span class="pricing-card__price-old">₹39,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Semi-Annually</div>
-          <div class="pricing-card__savings">Save 25%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>One-to-one trainer</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized workout plan</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Continuous progress tracking</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Nutrition & lifestyle guidance</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Personal%20Training%20-%206%20Months%20Plan%20%28%E2%82%B929%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="wellness" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Wellness Therapy</div>
-          <h3 class="pricing-card__name">Single Session</h3>
-          <p class="pricing-card__desc">Experience a single wellness and recovery session.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹999</span>
-            <span class="pricing-card__price-old">₹1,299</span>
-          </div>
-          <div class="pricing-card__billing">Per Session</div>
-          <div class="pricing-card__savings">Save 23%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness consultation</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Recovery session (45m)</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Stretching / relaxation</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Wellness%20Therapy%20-%20Single%20Session%20Plan%20%28%E2%82%B9999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="wellness" class="pricing-card pricing-card--dark">
-          <div class="pricing-card__badge">POPULAR</div>
-          <div class="pricing-card__category">Wellness Therapy</div>
-          <h3 class="pricing-card__name">5 Sessions</h3>
-          <p class="pricing-card__desc">A bundle of 5 recovery sessions for post-workout.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹4,499</span>
-            <span class="pricing-card__price-old">₹5,999</span>
-          </div>
-          <div class="pricing-card__billing">Bundle</div>
-          <div class="pricing-card__savings">Save 25%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness consultation</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>5 Recovery sessions</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized wellness guidance</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Wellness%20Therapy%20-%205%20Sessions%20Plan%20%28%E2%82%B94%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="wellness" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Wellness Therapy</div>
-          <h3 class="pricing-card__name">Monthly Plan</h3>
-          <p class="pricing-card__desc">Regular wellness integration for optimal recovery.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹6,999</span>
-            <span class="pricing-card__price-old">₹8,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 22%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Up to 10 Recovery sessions</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Stretching / relaxation session</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personalized wellness guidance</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Wellness%20Therapy%20-%20Monthly%20Plan%20Plan%20%28%E2%82%B96%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="combo" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Combo Plan</div>
-          <h3 class="pricing-card__name">Gym + Swimming</h3>
-          <p class="pricing-card__desc">The perfect blend of strength and cardiovascular training.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹2,999</span>
-            <span class="pricing-card__price-old">₹3,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 25%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming pool access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Locker facilities</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Basic fitness guidance</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Combo%20Plan%20-%20Gym%20%2B%20Swimming%20Plan%20%28%E2%82%B92%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="combo" class="pricing-card pricing-card--dark">
-          <div class="pricing-card__badge">BEST VALUE</div>
-          <div class="pricing-card__category">Combo Plan</div>
-          <h3 class="pricing-card__name">Complete Fitness Plan</h3>
-          <p class="pricing-card__desc">The ultimate all-inclusive MKB Fitness Academy experience.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹9,999</span>
-            <span class="pricing-card__price-old">₹13,999</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 28%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Swimming access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Personal training sessions (4x)</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness sessions (2x)</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Progress tracking</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Combo%20Plan%20-%20Complete%20Fitness%20Plan%20Plan%20%28%E2%82%B99%2C999%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
-      <div data-category="combo" class="pricing-card pricing-card--light">
-          <div class="pricing-card__category">Combo Plan</div>
-          <h3 class="pricing-card__name">Gym + Wellness</h3>
-          <p class="pricing-card__desc">Train hard and recover optimally with combined wellness.</p>
-          <div class="pricing-card__price-wrap">
-            <span class="pricing-card__price-new">₹3,499</span>
-            <span class="pricing-card__price-old">₹4,499</span>
-          </div>
-          <div class="pricing-card__billing">Billed Monthly</div>
-          <div class="pricing-card__savings">Save 22%</div>
-          <div class="pricing-card__divider"></div>
-          <ul class="pricing-card__features">
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Full gym access</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Wellness sessions (4x)</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Mobility support</span></li>
-            <li class="pricing-card__feature"><i class="fas fa-check"></i> <span>Fitness assessment</span></li>
-          </ul>
-          <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%20want%20to%20join%20the%20Combo%20Plan%20-%20Gym%20%2B%20Wellness%20Plan%20%28%E2%82%B93%2C499%29." class="pricing-card__cta" target="_blank">Choose Plan →</a>
-        </div>
-
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="MKB Fitness Academy home"><strong>MKB</strong> Fitness Academy</a>
+    <nav class="nav" id="nav"><a href="gym.html">Gym</a><a href="swimming.html">Swimming</a><a href="kids.html">Kids</a><a href="trainers.html">Training</a><a href="wellness.html">Wellness</a><a href="pricing.html" class=active aria-current=page>Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <div class="header-actions">
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="btn btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     </div>
   </div>
+</header>
+<main>
+<section class="hero hero-plain wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Pricing</p>
+    <h1>Simple plans. No hidden fees.</h1>
+    <p class="lead">All prices in INR, inclusive of taxes. Pay at the front desk or via UPI.</p>
+  </div>
 </section>
-
-  <!-- Features Comparison -->
-  <section class="pricing-features">
-    <h2 class="pricing-cta__title" style="margin-bottom: 10px;">Why Choose <span>MKB Fitness?</span></h2>
-    <p class="pricing-cta__text">More than just a gym, we provide a complete wellness ecosystem.</p>
-    <div class="pricing-features__grid">
-      <div class="pricing-feature">
-        <i class="fas fa-dumbbell"></i>
-        <h4>Modern Facilities</h4>
-        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">State-of-the-art equipment and clean spaces.</p>
-      </div>
-      <div class="pricing-feature">
-        <i class="fas fa-user-tie"></i>
-        <h4>Expert Trainers</h4>
-        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">Certified professionals dedicated to your goals.</p>
-      </div>
-      <div class="pricing-feature">
-        <i class="fas fa-shield-alt"></i>
-        <h4>Safe Environment</h4>
-        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">Secure access and supervision for all ages.</p>
-      </div>
-      <div class="pricing-feature">
-        <i class="fas fa-calendar-check"></i>
-        <h4>Flexible Plans</h4>
-        <p style="color:var(--clr-pricing-text-muted); font-size: 0.9rem;">Options to suit your lifestyle and budget.</p>
-      </div>
+<nav class="subnav" aria-label="Pricing categories"><a href="#gym">Gym</a><a href="#swimming">Swimming</a><a href="#kids">Kids</a><a href="#training">Personal Training</a><a href="#wellness">Wellness</a><a href="#combo">Combo</a></nav>
+<section class="section " id="gym">
+  <div class="wrap">
+    <h2>Gym</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Gym</p>
+  <h3>1 Month</h3>
+  <p class="price">₹1,499 <s>₹1,899</s></p>
+  <p class="period">per month</p>
+  <ul><li>Full gym access</li><li>Cardio & strength equipment</li><li>Locker & changing room</li><li>Basic fitness guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%201%20Month%20plan%20%28%E2%82%B91%2C499%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Gym</p>
+  <h3>3 Months</h3>
+  <p class="price">₹3,999 <s>₹4,999</s></p>
+  <p class="period">per quarter</p>
+  <ul><li>Full gym access</li><li>Cardio & strength equipment</li><li>Fitness assessment</li><li>Workout guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%203%20Months%20plan%20%28%E2%82%B93%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Best value</span><p class="plan-cat">Gym</p>
+  <h3>6 Months</h3>
+  <p class="price">₹6,999 <s>₹8,999</s></p>
+  <p class="period">per 6 months</p>
+  <ul><li>Full gym access</li><li>Cardio & strength equipment</li><li>Fitness assessment</li><li>Workout guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%206%20Months%20plan%20%28%E2%82%B96%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Gym</p>
+  <h3>12 Months</h3>
+  <p class="price">₹11,999 <s>₹15,999</s></p>
+  <p class="period">per year</p>
+  <ul><li>Full gym access</li><li>Free diet consultation</li><li>2 guest passes per month</li><li>Pause up to 15 days</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%2012%20Months%20plan%20%28%E2%82%B911%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div>
+  </div>
+</section>
+<section class="section alt" id="swimming">
+  <div class="wrap">
+    <h2>Swimming</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Swimming</p>
+  <h3>Weekend Batch</h3>
+  <p class="price">₹999 <s>₹1,299</s></p>
+  <p class="period">per month · no trainer</p>
+  <ul><li>Sat & Sun pool access</li><li>Safety supervision</li><li>Changing room access</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Swimming%20%E2%80%93%20Weekend%20Batch%20plan%20%28%E2%82%B9999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Swimming</p>
+  <h3>1 Month</h3>
+  <p class="price">₹1,999 <s>₹2,499</s></p>
+  <p class="period">per month · no trainer</p>
+  <ul><li>Daily pool access</li><li>Safety supervision</li><li>Changing room access</li><li>Flexible timings</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Swimming%20%E2%80%93%201%20Month%20plan%20%28%E2%82%B91%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Popular</span><p class="plan-cat">Swimming</p>
+  <h3>3 Months Coaching</h3>
+  <p class="price">₹5,499 <s>₹6,999</s></p>
+  <p class="period">per quarter · with trainer</p>
+  <ul><li>Certified instructor</li><li>Beginner-friendly sessions</li><li>Skill progression</li><li>Safety supervision</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Swimming%20%E2%80%93%203%20Months%20Coaching%20plan%20%28%E2%82%B95%2C499%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div>
+  </div>
+</section>
+<section class="section " id="kids">
+  <div class="wrap">
+    <h2>Kids</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Kids</p>
+  <h3>Weekend Batch</h3>
+  <p class="price">₹1,199 <s>₹1,599</s></p>
+  <p class="period">per month</p>
+  <ul><li>Age-appropriate activities</li><li>Weekend sessions</li><li>Expert supervision</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Kids%20%E2%80%93%20Weekend%20Batch%20plan%20%28%E2%82%B91%2C199%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Most loved</span><p class="plan-cat">Kids</p>
+  <h3>Monthly Swimming</h3>
+  <p class="price">₹2,499 <s>₹3,299</s></p>
+  <p class="period">per month</p>
+  <ul><li>Dedicated kids pool area</li><li>Certified coaches</li><li>Confidence building</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Kids%20%E2%80%93%20Monthly%20Swimming%20plan%20%28%E2%82%B92%2C499%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Kids</p>
+  <h3>Monthly Fitness</h3>
+  <p class="price">₹1,999 <s>₹2,599</s></p>
+  <p class="period">per month</p>
+  <ul><li>Fun fitness sessions</li><li>Agility & coordination</li><li>Expert supervision</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Kids%20%E2%80%93%20Monthly%20Fitness%20plan%20%28%E2%82%B91%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div>
+  </div>
+</section>
+<section class="section alt" id="training">
+  <div class="wrap">
+    <h2>Personal Training</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Personal Training</p>
+  <h3>1 Month</h3>
+  <p class="price">₹5,999 <s>₹7,999</s></p>
+  <p class="period">per month</p>
+  <ul><li>One-to-one trainer</li><li>Personalised workout plan</li><li>Fitness assessment</li><li>Nutrition guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Personal%20Training%20%E2%80%93%201%20Month%20plan%20%28%E2%82%B95%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Recommended</span><p class="plan-cat">Personal Training</p>
+  <h3>3 Months</h3>
+  <p class="price">₹15,999 <s>₹21,999</s></p>
+  <p class="period">per quarter</p>
+  <ul><li>One-to-one trainer</li><li>Personalised workout plan</li><li>Progress tracking</li><li>Advanced nutrition guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Personal%20Training%20%E2%80%93%203%20Months%20plan%20%28%E2%82%B915%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Personal Training</p>
+  <h3>6 Months</h3>
+  <p class="price">₹29,999 <s>₹39,999</s></p>
+  <p class="period">per 6 months</p>
+  <ul><li>One-to-one trainer</li><li>Personalised workout plan</li><li>Continuous progress tracking</li><li>Nutrition & lifestyle guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Personal%20Training%20%E2%80%93%206%20Months%20plan%20%28%E2%82%B929%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div>
+  </div>
+</section>
+<section class="section " id="wellness">
+  <div class="wrap">
+    <h2>Wellness</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Wellness</p>
+  <h3>Single Session</h3>
+  <p class="price">₹999 <s>₹1,299</s></p>
+  <p class="period">per session</p>
+  <ul><li>Wellness consultation</li><li>45-minute recovery session</li><li>Stretching / relaxation</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Wellness%20%E2%80%93%20Single%20Session%20plan%20%28%E2%82%B9999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Popular</span><p class="plan-cat">Wellness</p>
+  <h3>5 Sessions</h3>
+  <p class="price">₹4,499 <s>₹5,999</s></p>
+  <p class="period">bundle</p>
+  <ul><li>Wellness consultation</li><li>5 recovery sessions</li><li>Mobility support</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Wellness%20%E2%80%93%205%20Sessions%20plan%20%28%E2%82%B94%2C499%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Wellness</p>
+  <h3>Monthly</h3>
+  <p class="price">₹6,999 <s>₹8,999</s></p>
+  <p class="period">per month</p>
+  <ul><li>Up to 10 recovery sessions</li><li>Mobility support</li><li>Personalised wellness guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Wellness%20%E2%80%93%20Monthly%20plan%20%28%E2%82%B96%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div>
+  </div>
+</section>
+<section class="section alt" id="combo">
+  <div class="wrap">
+    <h2>Combo</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Combo</p>
+  <h3>Gym + Swimming</h3>
+  <p class="price">₹2,999 <s>₹3,999</s></p>
+  <p class="period">per month</p>
+  <ul><li>Full gym access</li><li>Swimming pool access</li><li>Locker facilities</li><li>Basic fitness guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Combo%20%E2%80%93%20Gym%20%2B%20Swimming%20plan%20%28%E2%82%B92%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Best value</span><p class="plan-cat">Combo</p>
+  <h3>Complete Fitness</h3>
+  <p class="price">₹9,999 <s>₹13,999</s></p>
+  <p class="period">per month</p>
+  <ul><li>Gym + swimming + kids activities</li><li>Personal training sessions</li><li>Wellness therapy sessions</li><li>Priority booking</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Combo%20%E2%80%93%20Complete%20Fitness%20plan%20%28%E2%82%B99%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div>
+  </div>
+</section>
+<section class="cta"><div class="wrap">
+  <h2>Not sure which plan?</h2><p>Message us and we'll suggest one.</p>
+  <div class="actions"><a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="btn" target=_blank rel=noopener>Chat on WhatsApp</a><a href="tel:+919503834888" class="btn btn-outline">Call +91 9503834888</a></div>
+</div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href="index.html" class="brand"><strong>MKB</strong> Fitness Academy</a>
+      <p>Gym, swimming pool, kids activities, personal training and wellness in Ravet, Pune. Since 2019.</p>
+      <p class="social"><a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/mkbfitnessacademy" target="_blank" rel="noopener">Facebook</a></p>
     </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="pricing-faq">
-    <div class="pricing-faq__header">
-      <h2 class="pricing-faq__title">Frequently Asked Questions</h2>
+    <div>
+      <h4>Programs</h4>
+      <a href="gym.html">Gym</a>
+      <a href="swimming.html">Swimming</a>
+      <a href="kids.html">Kids Activities</a>
+      <a href="trainers.html">Personal Training</a>
+      <a href="wellness.html">Wellness Therapy</a>
+      <a href="pricing.html">Pricing</a>
     </div>
-    
-    <div class="faq-item">
-      <button class="faq-item__btn">Can I upgrade my membership later? <i class="fas fa-plus"></i></button>
-      <div class="faq-item__content">
-        <p>Yes, absolutely. You can upgrade from a shorter plan to a longer plan or add additional services like Swimming or Personal Training at any time. The remaining value of your current plan will be pro-rated.</p>
-      </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+919503834888">+91 9503834888</a>
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener">WhatsApp +91 9370813366</a>
+      <a href="mailto:mkbfitness17@gmail.com">mkbfitness17@gmail.com</a>
+      <a href="https://maps.app.goo.gl/Cg6YAVG2EAMckhj2A" target="_blank" rel="noopener">Sector 29, Aditya Malhar Road, Ravet, Pune 412101</a>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-item__btn">Can I freeze my membership? <i class="fas fa-plus"></i></button>
-      <div class="faq-item__content">
-        <p>Yes, our 6-month and 12-month memberships come with a complimentary pause feature (up to 15-30 days) allowing you to freeze your account in case of travel or illness.</p>
-      </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Morning 6:00 AM – 12:00 PM<br>Evening 4:00 PM – 10:00 PM<br>Open 7 days</p>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-item__btn">Are swimming classes included? <i class="fas fa-plus"></i></button>
-      <div class="faq-item__content">
-        <p>General swimming pool access is separate from the Gym unless you purchase a Combo Plan. We offer both "With Trainer" coaching plans and "Without Trainer" access plans.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-item__btn">Do you offer personal training? <i class="fas fa-plus"></i></button>
-      <div class="faq-item__content">
-        <p>Yes, we have highly qualified personal trainers available for 1-on-1 sessions. You can choose from our monthly, quarterly, or semi-annual PT packages.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-item__btn">Are kids programs available? <i class="fas fa-plus"></i></button>
-      <div class="faq-item__content">
-        <p>Yes, we have dedicated Kids Activities and Kids Swimming batches with certified instructors to ensure a safe, fun, and engaging environment.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-item__btn">Can I book a trial session? <i class="fas fa-plus"></i></button>
-      <div class="faq-item__content">
-        <p>Yes, we offer trial sessions for new members to experience our facilities and meet our trainers before committing to a plan.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="pricing-cta">
-    <h2 class="pricing-cta__title">Your <span>Stronger Self</span> Starts Here.</h2>
-    <p class="pricing-cta__text">Choose a plan that fits your goals and start your fitness journey today.</p>
-    <div class="pricing-cta__btns">
-      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20join." target="_blank" rel="noopener noreferrer" class="btn-primary">JOIN NOW</a>
-      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20book%20a%20FREE%20TRIAL." target="_blank" rel="noopener noreferrer" class="btn-secondary">BOOK A FREE TRIAL</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
-            <span class="footer__logo-text">MKB FITNESS ACADEMY</span>
-          </a>
-          <p class="footer__tagline">Premier Gym, Swimming Pool, Kids Activities & Wellness Therapy at Ravet, Pune.</p>
-          <div class="footer__social">
-            <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--ig" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer__heading">Quick Links</h4>
-          <a href="index.html" class="footer__link">Home</a>
-          <a href="about.html" class="footer__link">About Us</a>
-          <a href="gym.html" class="footer__link">Gym Facility</a>
-          <a href="swimming.html" class="footer__link">Swimming Pool</a>
-          <a href="kids.html" class="footer__link">Kids Activities</a>
-          <a href="personal-trainer.html" class="footer__link">Personal Trainer</a>
-          <a href="wellness.html" class="footer__link">Wellness Therapy</a>
-          <a href="pricing.html" class="footer__link">Pricing Plans</a>
-          <a href="trainers.html" class="footer__link">Our Trainers</a>
-          <a href="contact.html" class="footer__link">Contact Us</a>
-        </div>
-        <div>
-          <h4 class="footer__heading">Contact Us</h4>
-          <p class="footer__link">📍 Sector 29, Aditya Malhar Road, Ravet, Pune-412101</p>
-          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--clr-gold);">9503834888</a></p>
-          <p class="footer__link">📱 <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" style="color:#25D366;">+91 9370813366</a></p>
-          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--clr-gold);">mkbfitness17@gmail.com</a></p>
-        </div>
-        <div>
-          <h4 class="footer__heading">Gym Timings</h4>
-          <p class="footer__link">🌅 Morning: 6:00 AM – 12:00 PM</p>
-          <p class="footer__link">🌆 Evening: 4:00 PM – 10:00 PM</p>
-          <p class="footer__link" style="color:var(--clr-gold); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copyright">© 2025 MKB Fitness Academy. All rights reserved.</p>
-        <p class="footer__credits">Designed for MKB Fitness Academy, Ravet, Pune</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/919370813366" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-float__tooltip">Chat with us</span>
-  </a>
-
-  <!-- JavaScript -->
-  <script src="./js/main.js" defer></script>
-  <script src="./js/pricing-slider.js" defer></script>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> MKB Fitness Academy</span>
+    <span><a href="https://maps.app.goo.gl/Cg6YAVG2EAMckhj2A" target="_blank" rel="noopener">Get directions</a></span>
+  </div>
+</footer>
+<a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a>
 </body>
 </html>

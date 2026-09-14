@@ -1,574 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="apple-touch-icon" href="./favicon.svg">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Train with world-class strength & cardio equipment, certified personal trainers, and customized fitness plans at MKB Fitness Academy in Ravet, Pune." />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';" />
-  
-  <title>Premium Gym Facility | MKB Health & Fitness Academy | Ravet, Pune</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/gym.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym in Ravet, Pune | MKB Fitness Academy</title>
+  <meta name="description" content="Gym in Ravet with strength, cardio and functional zones, certified coaches and flexible plans from ₹1,499/month.">
+  <link rel="canonical" href="https://www.mkbfitnessacademy.com/gym.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Gym in Ravet, Pune | MKB Fitness Academy">
+  <meta property="og:description" content="Gym in Ravet with strength, cardio and functional zones, certified coaches and flexible plans from ₹1,499/month.">
+  <meta property="og:image" content="https://www.mkbfitnessacademy.com/images/hero-gym.jpg">
+  <meta property="og:url" content="https://www.mkbfitnessacademy.com/gym.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "MKB Health & Fitness Academy",
-    "image": "https://mkbfitnessacademy.com/images/hero-gym.jpg",
-    "@id": "",
-    "url": "https://mkbfitnessacademy.com/gym.html",
+    "@type": "HealthClub",
+    "name": "MKB Fitness Academy",
+    "url": "https://www.mkbfitnessacademy.com/",
+    "image": "https://www.mkbfitnessacademy.com/images/hero-gym.jpg",
     "telephone": "+919503834888",
-    "priceRange": "₹₹",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Sector 29, Aditya Malhar Road",
-      "addressLocality": "Ravet, Pune",
-      "postalCode": "412101",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
+    "email": "mkbfitness17@gmail.com",
+    "address": {"@type": "PostalAddress", "streetAddress": "Sector 29, Aditya Malhar Road, Ravet", "addressLocality": "Pune", "addressRegion": "Maharashtra", "postalCode": "412101", "addressCountry": "IN"},
+    "geo": {"@type": "GeoCoordinates", "latitude": 18.650320, "longitude": 73.748043},
+    "hasMap": "https://maps.app.goo.gl/Cg6YAVG2EAMckhj2A",
+    "sameAs": ["https://www.instagram.com/mkb_fitness_academy_/", "https://www.facebook.com/mkbfitnessacademy"],
     "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "06:00",
-        "closes": "12:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "16:00",
-        "closes": "22:00"
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "43"
-    }
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "06:00", "closes": "12:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "16:00", "closes": "22:00"}
+    ]
   }
   </script>
 </head>
-<body class="page-gym">
-
-  <!-- Header -->
-  <nav class="navbar" id="navbar">
-    <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo">
-        <div class="navbar__logo-text">
-          <span>MKB FITNESS ACADEMY</span>
-          <span>SWIMMING & WELLNESS | RAVET, PUNE</span>
-        </div>
-      </a>
-
-      <div class="navbar__links" id="nav-links">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        
-        <div class="navbar__dropdown">
-          <span class="navbar__link navbar__dropdown-btn navbar__link--active">Programs ▾</span>
-          <div class="navbar__dropdown-menu">
-            <a href="gym.html" class="navbar__dropdown-item">🏋️ Gym Facility</a>
-            <a href="swimming.html" class="navbar__dropdown-item">🏊 Swimming Pool</a>
-            <a href="kids.html" class="navbar__dropdown-item">👶 Kids Activities</a>
-            <a href="trainers.html" class="navbar__dropdown-item">🏋️‍♂️ Personal Trainer</a>
-            <a href="wellness.html" class="navbar__dropdown-item">💆 Wellness Therapy <span class="badge-soon">Soon</span></a>
-          </div>
-        </div>
-
-        <a href="pricing.html" class="navbar__link">Pricing</a>
-        <a href="trainers.html" class="navbar__link">Trainers</a>
-        <a href="contact.html" class="navbar__link">Contact</a>
-      </div>
-
-      <a href="pricing.html" class="navbar__cta">Join Now</a>
-
-      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
-      </button>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="MKB Fitness Academy home"><strong>MKB</strong> Fitness Academy</a>
+    <nav class="nav" id="nav"><a href="gym.html" class=active aria-current=page>Gym</a><a href="swimming.html">Swimming</a><a href="kids.html">Kids</a><a href="trainers.html">Training</a><a href="wellness.html">Wellness</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <div class="header-actions">
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="btn btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     </div>
-  </nav>
-
-  <main>
-    <!-- 1. Hero Section -->
-    <header class="gym-hero">
-      <div class="gym-hero__bg"></div>
-      <div class="gym-hero__overlay"></div>
-      <div class="gym-hero__stripes"></div>
-      
-      <div class="gym-hero__container">
-        <div class="gym-hero__content" data-animate>
-          <span class="gym-hero__kicker">PREMIUM GYM FACILITY • RAVET, PUNE</span>
-          <h1 class="gym-hero__title">UNLEASH YOUR STRENGTH</h1>
-          <p class="gym-hero__subtitle">Transform your body and mind in Pune's most elite fitness environment. World-class equipment, certified coaches, and an atmosphere built for champions.</p>
-          <div class="gym-hero__actions">
-            <a href="#pricing" class="btn btn--gold">Join Now</a>
-            <a href="#overview" class="btn btn--glass">Explore Facility</a>
-          </div>
-        </div>
-
-        <div class="gym-hero__panel glass-panel" data-animate>
-          <div class="gym-hero__panel-title">Today's Operating Hours</div>
-          <div class="gym-hero__timing">
-            <div class="gym-hero__timing-icon">☀️</div>
-            <div class="gym-hero__timing-text">
-              <p>6:00 AM – 12:00 PM</p>
-              <span>Morning Session</span>
-            </div>
-          </div>
-          <div class="gym-hero__timing">
-            <div class="gym-hero__timing-icon">🌙</div>
-            <div class="gym-hero__timing-text">
-              <p>4:00 PM – 10:00 PM</p>
-              <span>Evening Session</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="gym-hero__badges" data-animate>
-        <div class="gym-hero__badges-grid">
-          <div class="gym-badge glass-panel">
-            <span class="gym-badge__num">500+</span>
-            <span class="gym-badge__text">Active<br>Members</span>
-          </div>
-          <div class="gym-badge glass-panel">
-            <span class="gym-badge__num">10+</span>
-            <span class="gym-badge__text">Certified<br>Coaches</span>
-          </div>
-          <div class="gym-badge glass-panel">
-            <span class="gym-badge__num">6</span>
-            <span class="gym-badge__text">Workout<br>Zones</span>
-          </div>
-          <div class="gym-badge glass-panel">
-            <span class="gym-badge__num">7</span>
-            <span class="gym-badge__text">Days A<br>Week</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- 2. Gym Overview Section -->
-    <section id="overview" class="section gym-overview">
-      <div class="container">
-        <div class="gym-overview__grid">
-          <div class="gym-overview__img-wrapper" data-animate>
-            <img src="images/hero-gym.jpg" alt="MKB Gym Overview" class="gym-overview__img">
-          </div>
-          <div class="gym-overview__content" data-animate>
-            <span class="section-header__kicker">About Our Facility</span>
-            <h2 class="section-header__title">Elevate Your Fitness Experience</h2>
-            <p>At MKB Fitness Academy, we provide a spacious, well-ventilated, and meticulously maintained environment. Whether you are a beginner or a seasoned athlete, our premium setup is designed to help you achieve your peak physical condition.</p>
-            
-            <div class="gym-overview__features">
-              <div class="gym-overview__feature">
-                <span class="gym-overview__num">01</span>
-                <div class="gym-overview__feature-text">
-                  <h3>World-Class Equipment</h3>
-                  <p>Train with industry-leading biometric machines, free weights, and cardio equipment that ensures optimal performance and safety.</p>
-                </div>
-              </div>
-              <div class="gym-overview__feature">
-                <span class="gym-overview__num">02</span>
-                <div class="gym-overview__feature-text">
-                  <h3>Expert Guidance</h3>
-                  <p>Our certified trainers provide continuous support, form correction, and motivation to keep you on track towards your goals.</p>
-                </div>
-              </div>
-              <div class="gym-overview__feature">
-                <span class="gym-overview__num">03</span>
-                <div class="gym-overview__feature-text">
-                  <h3>Results-Driven Programs</h3>
-                  <p>We don't just offer equipment; we offer a complete roadmap to transformation with personalized workout and nutrition plans.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Equipment & Zones Gallery -->
-    <section class="section gym-zones section--dark">
-      <div class="container">
-        <div class="section-header" data-animate>
-          <span class="section-header__kicker">Specialized Areas</span>
-          <h2 class="section-header__title">Explore Our 6 Training Zones</h2>
-          <p>A comprehensively designed space for every type of workout</p>
-        </div>
-        
-        <div class="gym-zones__grid">
-          <div class="gym-zone-card glass-panel" data-animate>
-            <div class="gym-zone-card__icon">🏋️</div>
-            <h3>Strength Training Zone</h3>
-            <p>Equipped with Olympic barbells, heavy dumbbells, cable crossovers, and specialized strength machines for raw power.</p>
-          </div>
-          <div class="gym-zone-card glass-panel" data-animate>
-            <div class="gym-zone-card__icon">🫀</div>
-            <h3>Cardio Zone</h3>
-            <p>High-performance motorized treadmills, cross trainers, spin bikes, and rowing machines for endurance building.</p>
-          </div>
-          <div class="gym-zone-card glass-panel" data-animate>
-            <div class="gym-zone-card__icon">🤸</div>
-            <h3>Functional Fitness Area</h3>
-            <p>Kettlebells, battle ropes, TRX suspension trainers, plyometric jump boxes, and agility equipment.</p>
-          </div>
-          <div class="gym-zone-card glass-panel" data-animate>
-            <div class="gym-zone-card__icon">🧘</div>
-            <h3>Yoga & Stretching Studio</h3>
-            <p>A dedicated peaceful area equipped with mats and blocks for warm-up, flexibility, and mind-body wellness sessions.</p>
-          </div>
-          <div class="gym-zone-card glass-panel" data-animate>
-            <div class="gym-zone-card__icon">💃</div>
-            <h3>Zumba & Dance Fitness</h3>
-            <p>High-energy group dance workouts led by expert instructors for maximum calorie burning and fun.</p>
-          </div>
-          <div class="gym-zone-card glass-panel" data-animate>
-            <div class="gym-zone-card__icon">🏃</div>
-            <h3>Weight Management</h3>
-            <p>Customized weight loss, muscle gain and fat transformation plans guided by expert fitness consultants.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Training Programs -->
-    <section class="section gym-programs">
-      <div class="container">
-        <div class="section-header" data-animate>
-          <span class="section-header__kicker">Achieve Your Goals</span>
-          <h2 class="section-header__title">Our Training Programs</h2>
-        </div>
-        
-        <div class="gym-programs__grid">
-          <div class="gym-program-card" data-animate>
-            <div class="gym-program-card__icon">💪</div>
-            <h3>Strength Training</h3>
-            <p>Build raw power and muscle mass with heavy compound movements.</p>
-          </div>
-          <div class="gym-program-card" data-animate>
-            <div class="gym-program-card__icon">🔥</div>
-            <h3>Weight Loss</h3>
-            <p>Burn fat with structured HIIT and high-intensity cardio circuits.</p>
-          </div>
-          <div class="gym-program-card" data-animate>
-            <div class="gym-program-card__icon">🏗️</div>
-            <h3>Muscle Building</h3>
-            <p>Hypertrophy-focused progressive overload to sculpt your physique.</p>
-          </div>
-          <div class="gym-program-card" data-animate>
-            <div class="gym-program-card__icon">⚡</div>
-            <h3>CrossFit</h3>
-            <p>Functional high-intensity varied workouts for overall athleticism.</p>
-          </div>
-          <div class="gym-program-card" data-animate>
-            <div class="gym-program-card__icon">🫀</div>
-            <h3>HIIT</h3>
-            <p>Maximum calorie burn in minimum time with intense intervals.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Benefits Section -->
-    <section class="section gym-benefits">
-      <div class="container">
-        <div class="section-header" data-animate>
-          <span class="section-header__kicker">Why Choose Us</span>
-          <h2 class="section-header__title">The MKB Advantage</h2>
-        </div>
-        
-        <div class="gym-benefits__grid">
-          <div class="gym-benefit-item" data-animate>
-            <div class="gym-benefit-item__icon">✓</div>
-            <div class="gym-benefit-item__content">
-              <h3>Certified Trainers</h3>
-              <p>Our team holds 5+ years of professional fitness coaching experience.</p>
-            </div>
-          </div>
-          <div class="gym-benefit-item" data-animate>
-            <div class="gym-benefit-item__icon">✓</div>
-            <div class="gym-benefit-item__content">
-              <h3>Premium Hygiene</h3>
-              <p>A clean, spacious, and well-ventilated gym ensuring a safe workout environment.</p>
-            </div>
-          </div>
-          <div class="gym-benefit-item" data-animate>
-            <div class="gym-benefit-item__icon">✓</div>
-            <div class="gym-benefit-item__content">
-              <h3>Zoned Layout</h3>
-              <p>Separate, dedicated zones for cardio, strength, and functional training.</p>
-            </div>
-          </div>
-          <div class="gym-benefit-item" data-animate>
-            <div class="gym-benefit-item__icon">✓</div>
-            <div class="gym-benefit-item__content">
-              <h3>Free Body Analysis</h3>
-              <p>Complimentary body composition analysis for all new members.</p>
-            </div>
-          </div>
-          <div class="gym-benefit-item" data-animate>
-            <div class="gym-benefit-item__icon">✓</div>
-            <div class="gym-benefit-item__content">
-              <h3>Customized Plans</h3>
-              <p>Personalized workout routines based on your unique body and goals.</p>
-            </div>
-          </div>
-          <div class="gym-benefit-item" data-animate>
-            <div class="gym-benefit-item__icon">✓</div>
-            <div class="gym-benefit-item__content">
-              <h3>Flexible Timings</h3>
-              <p>Open 7 days a week with convenient morning and evening shifts.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Animated Statistics -->
-    <section class="section gym-stats section--dark">
-      <div class="container">
-        <div class="gym-stats__grid">
-          <div class="gym-stat-box glass-panel" data-animate>
-            <span class="gym-stat-box__num">500+</span>
-            <span class="gym-stat-box__text">Active Members</span>
-          </div>
-          <div class="gym-stat-box glass-panel" data-animate>
-            <span class="gym-stat-box__num">50+</span>
-            <span class="gym-stat-box__text">Equipment Pieces</span>
-          </div>
-          <div class="gym-stat-box glass-panel" data-animate>
-            <span class="gym-stat-box__num">10+</span>
-            <span class="gym-stat-box__text">Certified Coaches</span>
-          </div>
-          <div class="gym-stat-box glass-panel" data-animate>
-            <span class="gym-stat-box__num">6+</span>
-            <span class="gym-stat-box__text">Years Experience</span>
-          </div>
-          <div class="gym-stat-box glass-panel" data-animate>
-            <span class="gym-stat-box__num">4.9★</span>
-            <span class="gym-stat-box__text">Google Rating</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Membership Pricing -->
-    <section id="pricing" class="section gym-pricing section--dark">
-      <div class="container">
-        <div class="section-header" data-animate>
-          <span class="section-header__kicker">Monsoon Offer — Flat 20% OFF</span>
-          <h2 class="section-header__title">Gym Membership Plans</h2>
-        </div>
-        
-        <div class="gym-pricing__grid">
-          <!-- Plan 1 -->
-          <div class="gym-price-card glass-panel" data-animate>
-            <h3>1 Month</h3>
-            <div class="gym-price-card__amount">
-              <span class="gym-price-card__old">₹1,999</span>
-              <span class="gym-price-card__new">₹1,199</span>
-            </div>
-            <ul class="gym-price-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength equipment</li>
-              <li>Locker facility</li>
-              <li>All equipment usage</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%201%20Month%20Gym%20Membership%20(₹1199)." target="_blank" rel="noopener noreferrer" class="btn btn--glass">Enquire Now</a>
-          </div>
-
-          <!-- Plan 2 -->
-          <div class="gym-price-card glass-panel" data-animate>
-            <div class="gym-price-card__badge">SAVE ₹2,200</div>
-            <h3>3 Months</h3>
-            <div class="gym-price-card__amount">
-              <span class="gym-price-card__old">₹4,999</span>
-              <span class="gym-price-card__new">₹2,799</span>
-            </div>
-            <ul class="gym-price-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength equipment</li>
-              <li>Locker facility</li>
-              <li>All equipment usage</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%203%20Months%20Gym%20Membership%20(₹2799)." target="_blank" rel="noopener noreferrer" class="btn btn--glass">Enquire Now</a>
-          </div>
-
-          <!-- Plan 3 -->
-          <div class="gym-price-card gym-price-card--popular glass-panel" data-animate>
-            <div class="gym-price-card__badge">MOST POPULAR — SAVE ₹5,200</div>
-            <h3>6 Months</h3>
-            <div class="gym-price-card__amount">
-              <span class="gym-price-card__old">₹9,999</span>
-              <span class="gym-price-card__new">₹4,799</span>
-            </div>
-            <ul class="gym-price-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength equipment</li>
-              <li>Locker facility</li>
-              <li>All equipment usage</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%206%20Months%20Gym%20Membership%20(₹4799)." target="_blank" rel="noopener noreferrer" class="btn btn--gold">Get Started</a>
-          </div>
-
-          <!-- Plan 4 -->
-          <div class="gym-price-card glass-panel" data-animate>
-            <div class="gym-price-card__badge">BEST VALUE — SAVE ₹11,280</div>
-            <h3>12 Months</h3>
-            <div class="gym-price-card__amount">
-              <span class="gym-price-card__old">₹19,999</span>
-              <span class="gym-price-card__new">₹8,719</span>
-            </div>
-            <ul class="gym-price-card__features">
-              <li>Full gym access</li>
-              <li>Cardio + Strength equipment</li>
-              <li>Locker facility</li>
-              <li>All equipment usage</li>
-              <li>Free fitness assessment</li>
-            </ul>
-            <div class="gym-price-card__note">ℹ️ Personal trainer charge separate</div>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20want%20to%20enquire%20about%2012%20Months%20Gym%20Membership%20(₹8719)." target="_blank" rel="noopener noreferrer" class="btn btn--glass">Enquire Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. Personal Trainer Banner -->
-    <section class="section gym-pt-banner">
-      <div class="container">
-        <div class="gym-pt-wrapper" data-animate>
-          <div class="gym-pt-content">
-            <h2>Need A Personal Trainer?</h2>
-            <p>Accelerate your transformation with 1-on-1 dedicated coaching, strict form correction, and personalized diet plans tailored just for you. Note: Personal trainer charges are separate from the general membership.</p>
-          </div>
-          <div class="gym-pt-action">
-            <a href="trainers.html" class="btn btn--gold">Explore Personal Training</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. Gym Timings -->
-    <section class="section gym-timing-section">
-      <div class="container">
-        <div class="section-header" data-animate>
-          <span class="section-header__kicker">Operating Hours</span>
-          <h2 class="section-header__title">When To Visit Us</h2>
-        </div>
-        
-        <div class="gym-timings__grid">
-          <div class="gym-timing-card" data-animate>
-            <div class="gym-timing-card__icon">☀️</div>
-            <h3>Morning Session</h3>
-            <p>6:00 AM – 12:00 PM</p>
-          </div>
-          
-          <div class="gym-timing-card" data-animate>
-            <div class="gym-timing-card__icon">🌙</div>
-            <h3>Evening Session</h3>
-            <p>4:00 PM – 10:00 PM</p>
-          </div>
-          
-          <div class="gym-timing-card" data-animate>
-            <div class="gym-timing-card__icon">📅</div>
-            <h3>Open Days</h3>
-            <p>Monday to Sunday<small>(Open 7 Days a week)</small></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. CTA Banner -->
-    <section class="section gym-cta">
-      <div class="container" data-animate>
-        <h2>Start Your Fitness Journey Today</h2>
-        <p>Join MKB Fitness Academy and take the first step towards a stronger, healthier version of yourself.</p>
-        <div class="gym-cta__actions">
-          <a href="#pricing" class="btn btn--gold">View Pricing</a>
-          <a href="contact.html" class="btn btn--glass">Contact Us</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
-            <span class="footer__logo-text">MKB FITNESS ACADEMY</span>
-          </a>
-          <p class="footer__tagline">Premier Gym, Swimming Pool, Kids Activities & Wellness Therapy at Ravet, Pune.</p>
-          <div class="footer__social">
-            <a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--ig" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" rel="noopener" class="footer__social-icon footer__social-icon--wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer__heading">Quick Links</h4>
-          <a href="index.html" class="footer__link">Home</a>
-          <a href="about.html" class="footer__link">About Us</a>
-          <a href="gym.html" class="footer__link">Gym Facility</a>
-          <a href="swimming.html" class="footer__link">Swimming Pool</a>
-          <a href="kids.html" class="footer__link">Kids Activities</a>
-          <a href="trainers.html" class="footer__link">Personal Trainer</a>
-          <a href="wellness.html" class="footer__link">Wellness Therapy</a>
-          <a href="pricing.html" class="footer__link">Pricing Plans</a>
-          <a href="trainers.html" class="footer__link">Our Trainers</a>
-          <a href="contact.html" class="footer__link">Contact Us</a>
-        </div>
-        <div>
-          <h4 class="footer__heading">Contact Us</h4>
-          <p class="footer__link">📍 Sector 29, Aditya Malhar Road, Ravet, Pune-412101</p>
-          <p class="footer__link">📞 <a href="tel:9503834888" style="color:var(--clr-gold);">9503834888</a></p>
-          <p class="footer__link">📱 <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy,%20I%20have%20an%20inquiry." target="_blank" style="color:#25D366;">+91 9370813366</a></p>
-          <p class="footer__link">📩 <a href="mailto:mkbfitness17@gmail.com" style="color:var(--clr-gold);">mkbfitness17@gmail.com</a></p>
-        </div>
-        <div>
-          <h4 class="footer__heading">Gym Timings</h4>
-          <p class="footer__link">🌅 Morning: 6:00 AM – 12:00 PM</p>
-          <p class="footer__link">🌆 Evening: 4:00 PM – 10:00 PM</p>
-          <p class="footer__link" style="color:var(--clr-gold); font-weight:600;">📅 Mon to Sun (Open All 7 Days)</p>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copyright">© 2025 MKB Fitness Academy. All rights reserved.</p>
-        <p class="footer__credits">Designed for MKB Fitness Academy, Ravet, Pune</p>
-      </div>
+  </div>
+</header>
+<main>
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Gym · Ravet</p>
+    <h1>Train in a clean, well-equipped gym.</h1>
+    <p class="lead">Six training zones, certified coaches and a free body analysis when you join.</p>
+    <div class="actions"><a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="btn" target=_blank rel=noopener>Chat on WhatsApp</a><a href="pricing.html" class="btn btn-outline">View pricing</a></div>
+  </div>
+  <img src="images/hero-gym.jpg" alt="Strength training zone" width="1600" height="892" fetchpriority="high">
+</section>
+<section class="section ">
+  <div class="wrap">
+    <p class="eyebrow">Facility</p><h2>Training zones</h2>
+    <div class="grid cols-3"><div class="card"><h3>Strength</h3><p>Olympic barbells, dumbbells, cable crossovers and strength machines.</p></div><div class="card"><h3>Cardio</h3><p>Treadmills, cross trainers, spin bikes and rowers.</p></div><div class="card"><h3>Functional</h3><p>Kettlebells, battle ropes, TRX, plyo boxes and agility gear.</p></div><div class="card"><h3>Yoga & stretching</h3><p>Dedicated studio with mats and blocks.</p></div><div class="card"><h3>Zumba & dance</h3><p>Group sessions led by instructors.</p></div><div class="card"><h3>Weight management</h3><p>Structured fat-loss and muscle-gain programs.</p></div></div>
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <h2>Programs</h2>
+    <div class="grid cols-4"><div class="card"><h3>Strength training</h3><p>Compound lifts and progressive overload.</p></div><div class="card"><h3>Weight loss</h3><p>HIIT circuits and cardio plans.</p></div><div class="card"><h3>Muscle building</h3><p>Hypertrophy-focused routines.</p></div><div class="card"><h3>CrossFit & HIIT</h3><p>High-intensity functional workouts.</p></div></div>
+  </div>
+</section>
+<section class="section ">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p><h2>Membership</h2>
+    <div class="grid plans"><div class="plan">
+  <p class="plan-cat">Gym</p>
+  <h3>1 Month</h3>
+  <p class="price">₹1,499 <s>₹1,899</s></p>
+  <p class="period">per month</p>
+  <ul><li>Full gym access</li><li>Cardio & strength equipment</li><li>Locker & changing room</li><li>Basic fitness guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%201%20Month%20plan%20%28%E2%82%B91%2C499%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Gym</p>
+  <h3>3 Months</h3>
+  <p class="price">₹3,999 <s>₹4,999</s></p>
+  <p class="period">per quarter</p>
+  <ul><li>Full gym access</li><li>Cardio & strength equipment</li><li>Fitness assessment</li><li>Workout guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%203%20Months%20plan%20%28%E2%82%B93%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan plan-featured">
+  <span class="tag">Best value</span><p class="plan-cat">Gym</p>
+  <h3>6 Months</h3>
+  <p class="price">₹6,999 <s>₹8,999</s></p>
+  <p class="period">per 6 months</p>
+  <ul><li>Full gym access</li><li>Cardio & strength equipment</li><li>Fitness assessment</li><li>Workout guidance</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%206%20Months%20plan%20%28%E2%82%B96%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div><div class="plan">
+  <p class="plan-cat">Gym</p>
+  <h3>12 Months</h3>
+  <p class="price">₹11,999 <s>₹15,999</s></p>
+  <p class="period">per year</p>
+  <ul><li>Full gym access</li><li>Free diet consultation</li><li>2 guest passes per month</li><li>Pause up to 15 days</li></ul>
+  <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27m%20interested%20in%20the%20Gym%20%E2%80%93%2012%20Months%20plan%20%28%E2%82%B911%2C999%29." class="btn btn-block" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div></div><p class="note">Personal trainer charges are separate. <a href="trainers.html">See personal training →</a></p>
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <h2>Timings</h2>
+    <table class="table">
+<tr><td>Morning</td><td>6:00 AM – 12:00 PM</td></tr>
+<tr><td>Evening</td><td>4:00 PM – 10:00 PM</td></tr>
+<tr><td>Days</td><td>Monday – Sunday</td></tr></table>
+  </div>
+</section>
+<section class="cta"><div class="wrap">
+  <h2>Join the gym.</h2><p>Free body analysis for new members.</p>
+  <div class="actions"><a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="btn" target=_blank rel=noopener>Chat on WhatsApp</a><a href="tel:+919503834888" class="btn btn-outline">Call +91 9503834888</a></div>
+</div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href="index.html" class="brand"><strong>MKB</strong> Fitness Academy</a>
+      <p>Gym, swimming pool, kids activities, personal training and wellness in Ravet, Pune. Since 2019.</p>
+      <p class="social"><a href="https://www.instagram.com/mkb_fitness_academy_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/mkbfitnessacademy" target="_blank" rel="noopener">Facebook</a></p>
     </div>
-  </footer>
-
-  <!-- Floating Buttons -->
-  <a href="https://wa.me/919370813366" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-  </a>
-
-  <button class="back-to-top" aria-label="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
-
-  <script src="./js/main.js" defer></script>
+    <div>
+      <h4>Programs</h4>
+      <a href="gym.html">Gym</a>
+      <a href="swimming.html">Swimming</a>
+      <a href="kids.html">Kids Activities</a>
+      <a href="trainers.html">Personal Training</a>
+      <a href="wellness.html">Wellness Therapy</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+919503834888">+91 9503834888</a>
+      <a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener">WhatsApp +91 9370813366</a>
+      <a href="mailto:mkbfitness17@gmail.com">mkbfitness17@gmail.com</a>
+      <a href="https://maps.app.goo.gl/Cg6YAVG2EAMckhj2A" target="_blank" rel="noopener">Sector 29, Aditya Malhar Road, Ravet, Pune 412101</a>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Morning 6:00 AM – 12:00 PM<br>Evening 4:00 PM – 10:00 PM<br>Open 7 days</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> MKB Fitness Academy</span>
+    <span><a href="https://maps.app.goo.gl/Cg6YAVG2EAMckhj2A" target="_blank" rel="noopener">Get directions</a></span>
+  </div>
+</footer>
+<a href="https://wa.me/919370813366?text=Hi%20MKB%20Fitness%20Academy%2C%20I%27d%20like%20to%20know%20more." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a>
 </body>
 </html>
