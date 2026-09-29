@@ -25,6 +25,28 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  /* Winter season swimming offer — expires on the given date (YYYY-MM-DD, IST).
+     Add class="season-note" data-expires="YYYY-MM-DD" to the notice in the HTML;
+     once the date passes the offer is marked expired and the struck-through
+     "was" prices are hidden automatically. */
+  var seasonNotes = document.querySelectorAll('.season-note[data-expires]');
+  if (seasonNotes.length) {
+    var now = new Date();
+    var expired = false;
+    Array.prototype.forEach.call(seasonNotes, function (note) {
+      // Date-only string parses as UTC midnight; end of that IST day is the cutoff.
+      var end = new Date(note.getAttribute('data-expires') + 'T23:59:59+05:30');
+      if (now > end) {
+        expired = true;
+        var badge = note.querySelector('.season-badge');
+        var msg = note.querySelector('[data-season-msg]');
+        if (badge) badge.textContent = 'Season ended';
+        if (msg) msg.textContent = 'Winter season swimming rates have ended. Message us for current pricing.';
+      }
+    });
+    if (expired) document.body.classList.add('offer-expired');
+  }
+
   /* Pricing sub-nav: highlight the section in view */
   var subnav = document.querySelector('.subnav');
   if (subnav && 'IntersectionObserver' in window) {
